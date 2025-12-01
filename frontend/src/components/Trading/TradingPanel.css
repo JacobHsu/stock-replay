@@ -1,0 +1,201 @@
+.trading-panel {
+  background: #1E222D;
+  border: 1px solid #2A2E39;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: #D1D4DC;
+  font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif;
+  overflow: hidden;
+}
+
+.panel-header {
+  background: #131722;
+  border-bottom: 1px solid #2A2E39;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: 0.5px;
+  color: #D1D4DC;
+}
+
+.panel-body {
+  padding: 16px;
+}
+
+.loading-text {
+  text-align: center;
+  color: #787B86;
+  font-style: normal;
+  margin: 20px 0;
+}
+
+/* Section Styles */
+.account-section,
+.position-section,
+.pl-section {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #2A2E39;
+}
+
+.account-section h3,
+.position-section h3,
+.pl-section h3 {
+  color: #787B86;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px 0;
+}
+
+/* Info Row Styles */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 13px;
+}
+
+.info-row .label {
+  color: #787B86;
+  font-weight: 400;
+}
+
+.info-row .value {
+  color: #D1D4DC;
+  font-weight: 600;
+}
+
+.info-row .value.total-value {
+  color: #D1D4DC;
+  font-size: 16px;
+}
+
+.info-row .value.profit {
+  color: #F23645; /* Red for profit (Taiwan style) */
+}
+
+.info-row .value.loss {
+  color: #089981; /* Green for loss (Taiwan style) */
+}
+
+.total-pl-row {
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #2A2E39;
+}
+
+.total-pl-row .value.total-pl {
+  font-size: 15px;
+}
+
+/* No Position Style */
+.no-position {
+  color: #787B86;
+  font-style: normal;
+  text-align: center;
+  margin: 12px 0;
+}
+
+/* Controls Section */
+.controls-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #2A2E39;
+}
+
+.buy-button,
+.sell-button {
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif;
+}
+
+.buy-button {
+  background: #F23645;
+  color: #fff;
+}
+
+.buy-button:hover:not(:disabled) {
+  background: #CC2E3C;
+}
+
+.sell-button {
+  background: #089981;
+  color: #fff;
+}
+
+.sell-button:hover:not(:disabled) {
+  background: #0B7A6A;
+}
+
+.buy-button:disabled,
+.sell-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background: #2A2E39;
+  color: #787B86;
+}
+
+/* Current Price Info */
+.current-price-info {
+  margin-top: 12px;
+  padding: 10px;
+  background: #131722;
+  border: 1px solid #2A2E39;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current-price-info .label {
+  color: #787B86;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.current-price-info .value {
+  color: #D1D4DC;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .panel-header {
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+
+  .panel-body {
+    padding: 12px;
+  }
+
+  .info-row {
+    font-size: 12px;
+  }
+
+  .controls-section {
+    grid-template-columns: 1fr;
+  }
+
+  .buy-button,
+  .sell-button {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}

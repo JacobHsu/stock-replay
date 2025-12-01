@@ -1,0 +1,134 @@
+"""
+Stock search API endpoints for Taiwan stocks.
+"""
+
+import logging
+from typing import List
+
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
+
+from app.helpers.newsapi.stock_name_fetcher import get_tw_stock_chinese_name
+from app.helpers.stock_database import get_stock_database
+
+logger = logging.getLogger(__name__)
+
+router = APIRouter(prefix="/api/stocks", tags=["stocks"])
+
+
+class StockInfo(BaseModel):
+    """Stock information model."""
+
+    symbol: str  # e.g., "2330.TW"
+    code: str  # e.g., "2330"
+    name: str  # e.g., "台積電"
+    display_name: str  # e.g., "2330.TW - 台積電"
+
+
+class StockSearchResponse(BaseModel):
+    """Response model for stock search."""
+
+    results: List[StockInfo]
+
+
+@router.get("/search", response_model=StockSearchResponse)
+def search_stock(q: str) -> StockSearchResponse:
+    """
+    Search for Taiwan stocks by symbol or Chinese name.
+
+    Args:
+        q: Search query (stock code or Chinese name)
+
+    Returns:
+        List of matching stocks
+
+    Examples:
+        /api/stocks/search?q=2330
+        /api/stocks/search?q=台積電
+        /api/stocks/search?q=雷虎
+    """
+    try:
+        query = q.strip()
+
+        if not query:
+            return StockSearchResponse(results=[])
+
+        results = []
+        db = get_stock_database()
+
+        # If query is numeric or contains .TW, treat as stock code
+        if query.replace(".", "").replace("TW", "").replace("TWO", "").isdigit():
+            # Extract code
+            code = query.replace(".TW", "").replace(".TWO", "")
+
+            # Try to get from database first
+            stock_info = db.get_stock_info(code)
+
+            if stock_info:
+                results.append(
+                    StockInfo(
+                        symbol=stock_info["symbol"],
+                        code=stock_info["code"],
+                        name=stock_info["name"],
+                        display_name=f"{stock_info['symbol']} - {stock_info['name']}",
+                    )
+                )
+        else:
+            # Chinese name search using database
+            logger.info(f"Searching for Chinese name: {query}")
+
+            stock_infos = db.search_by_name(query, limit=10)
+
+            for stock_info in stock_infos:
+                results.append(
+                    StockInfo(
+                        symbol=stock_info["symbol"],
+                        code=stock_info["code"],
+                        name=stock_info["name"],
+                        display_name=f"{stock_info['symbol']} - {stock_info['name']}",
+                    )
+                )
+
+        return StockSearchResponse(results=results)
+
+    except Exception as e:
+        logger.error(f"Stock search error: {e}")
+        raise HTTPException(status_code=500, detail=f"Search failed: {str(e)}")
+
+
+@router.get("/info/{symbol}", response_model=StockInfo)
+def get_stock_info(symbol: str) -> StockInfo:
+    """
+    Get stock information by symbol.
+
+    Args:
+        symbol: Stock symbol (e.g., "2330.TW")
+
+    Returns:
+        Stock information
+    """
+    try:
+        # Ensure symbol has .TW suffix
+        if not symbol.endswith(".TW") and not symbol.endswith(".TWO"):
+            symbol = f"{symbol}.TW"
+
+        code = symbol.replace(".TW", "").replace(".TWO", "")
+
+        # Fetch Chinese name
+        chinese_name = get_tw_stock_chinese_name(symbol)
+
+        if not chinese_name:
+            raise HTTPException(status_code=404, detail=f"Stock {symbol} not found")
+
+        return StockInfo(
+            symbol=symbol,
+            code=code,
+            name=chinese_name,
+            display_name=f"{symbol} - {chinese_name}",
+        )
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Get stock info error: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to get stock info: {str(e)}")

@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #131722;
+    color: #D1D4DC;
+    font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* TradingView Style Components */
+  .tv-panel {
+    background-color: #1E222D;
+    border: 1px solid #2A2E39;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tv-button {
+    background-color: #1E222D;
+    border: 1px solid #363A45;
+    color: #D1D4DC;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .tv-button:hover {
+    background-color: #2A2E39;
+    border-color: #2962FF;
+  }
+  
+  .tv-button-primary {
+    background-color: #2962FF;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+  }
+  
+  .tv-button-primary:hover {
+    background-color: #1E53E5;
+    box-shadow: 0 4px 12px rgba(41, 98, 255, 0.15);
+  }
+  
+  .tv-button-success {
+    background-color: #089981;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  
+  .tv-button-success:hover {
+    background-color: #0B7A6A;
+  }
+  
+  .tv-button-danger {
+    background-color: #F23645;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  
+  .tv-button-danger:hover {
+    background-color: #CC2E3C;
+  }
+  
+  .tv-input {
+    background-color: #131722;
+    border: 1px solid #2A2E39;
+    color: #D1D4DC;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: border-color 0.2s;
+  }
+  
+  .tv-input:focus {
+    outline: none;
+    border-color: #2962FF;
+  }
+  
+  .tv-input:hover {
+    border-color: #363A45;
+  }
+  
+  /* Backward compatibility - map cyber classes to tv classes */
+  .cyber-panel {
+    background-color: #1E222D;
+    border: 1px solid #2A2E39;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cyber-button {
+    background-color: #1E222D;
+    border: 1px solid #363A45;
+    color: #D1D4DC;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .cyber-button:hover {
+    background-color: #2A2E39;
+    border-color: #2962FF;
+  }
+  
+  .cyber-button-secondary {
+    background-color: #2962FF;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+  }
+  
+  .cyber-button-secondary:hover {
+    background-color: #1E53E5;
+  }
+  
+  .cyber-input {
+    background-color: #131722;
+    border: 1px solid #2A2E39;
+    color: #D1D4DC;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: border-color 0.2s;
+  }
+  
+  .cyber-input:focus {
+    outline: none;
+    border-color: #2962FF;
+  }
+}
