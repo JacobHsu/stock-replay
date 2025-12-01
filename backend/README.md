@@ -251,10 +251,24 @@ git push origin main
 - 點擊 "New Project" → "Deploy from GitHub repo"
 - 選擇你的 repository
 
-**3. 設定 Root Directory**
-- 進入 Settings 標籤
-- 設定 Root Directory 為：`backend`
-- 點擊 Save
+**3. 設定 Root Directory（重要！）**
+
+因為 backend 在子目錄中，有兩種方法：
+
+**方法 A：使用 railway.toml（推薦，最簡單）**
+
+專案根目錄已有 `railway.toml` 檔案，Railway 會自動讀取。
+無需手動設定，直接部署即可！
+
+**方法 B：手動設定**
+
+如果方法 A 不行：
+1. 點擊 service → Settings（齒輪圖示）
+2. 找到 Source 區塊 → Configure
+3. Root Directory 輸入：`backend`
+4. Save
+
+如果沒設定，Railway 會找不到 `requirements.txt` 而部署失敗！
 
 **4. 設定環境變數**
 
