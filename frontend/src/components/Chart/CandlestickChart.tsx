@@ -26,6 +26,7 @@ export default function CandlestickChart({
   const chartRef = useRef<IChartApi | null>(null)
   const candlestickSeriesRef = useRef<ISeriesApi<'Candlestick'> | null>(null)
   const volumeSeriesRef = useRef<ISeriesApi<'Histogram'> | null>(null)
+  const ma20SeriesRef = useRef<ISeriesApi<'Line'> | null>(null)
   const currentPriceRangeRef = useRef<{ min: number; max: number } | null>(null)
 
   // Initialize chart only once
@@ -75,6 +76,20 @@ export default function CandlestickChart({
 
     candlestickSeriesRef.current = candlestickSeries
 
+    // Add MA20 line series
+    const ma20Series = chart.addLineSeries({
+      color: '#2962FF',
+      lineWidth: 2,
+      title: 'MA20',
+      priceFormat: {
+        type: 'price',
+        precision: 2,
+        minMove: 0.01,
+      },
+    })
+
+    ma20SeriesRef.current = ma20Series
+
     // Add volume series
     const volumeSeries = chart.addHistogramSeries({
       priceFormat: {
@@ -109,9 +124,27 @@ export default function CandlestickChart({
     }
   }, [height])
 
+  // Calculate MA20
+  const calculateMA20 = (data: CandleData[]) => {
+    const ma20Data = []
+    for (let i = 0; i < data.length; i++) {
+      if (i < 19) {
+        // Not enough data for MA20 yet
+        continue
+      }
+      const sum = data.slice(i - 19, i + 1).reduce((acc, item) => acc + item.close, 0)
+      const ma20 = sum / 20
+      ma20Data.push({
+        time: (new Date(data[i].timestamp).getTime() / 1000) as Time,
+        value: ma20,
+      })
+    }
+    return ma20Data
+  }
+
   // Update data when it changes
   useEffect(() => {
-    if (!candlestickSeriesRef.current || !volumeSeriesRef.current || !data.length) return
+    if (!candlestickSeriesRef.current || !volumeSeriesRef.current || !ma20SeriesRef.current || !data.length) return
 
     // Calculate price range - use provided range if available, otherwise calculate from data
     let minPrice: number
@@ -145,6 +178,10 @@ export default function CandlestickChart({
     }))
 
     candlestickSeriesRef.current.setData(visibleData)
+
+    // Update MA20
+    const ma20Data = calculateMA20(data)
+    ma20SeriesRef.current.setData(ma20Data)
 
     // Combine trade markers and news markers
     const allMarkers = []

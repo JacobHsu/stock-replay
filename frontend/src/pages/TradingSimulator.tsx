@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import CandlestickChart from '../components/Chart/CandlestickChart'
+import TradingViewChart from '../components/Chart/TradingViewChart'
 import PlaybackControls from '../components/Player/PlaybackControls'
 import TradingPanel from '../components/Trading/TradingPanel'
 import NewsModal from '../components/News/NewsModal'
@@ -435,15 +436,8 @@ export default function TradingSimulator() {
   }, [symbol, period])
 
   return (
-    <div className="container mx-auto px-4 py-8 space-y-6">
-      {/* Header */}
-      <div className="text-center space-y-2">
-        <h1 className="text-3xl font-semibold text-tv-text">
-          Stock Trading Simulator
-        </h1>
-      </div>
-
-      {/* NEW: Chart Header with TradingView Style */}
+    <div className="container mx-auto px-4 py-6 space-y-4">
+      {/* Chart Header with TradingView Style */}
       <ChartHeader
         symbol={symbol}
         onSymbolChange={setSymbol}
@@ -480,35 +474,39 @@ export default function TradingSimulator() {
         </div>
       )}
 
-      {/* Chart */}
+      {/* Charts and Trading Account Layout */}
       {chartData.length > 0 && (
-        <div className="space-y-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            {/* Chart Section */}
-            <div className="lg:col-span-2">
-              <div className="tv-panel p-4">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-sm font-semibold text-tv-text uppercase tracking-wide">
-                    {symbol}
-                  </h3>
-                  <div className="text-tv-textSecondary text-xs">
-                    {chartData.length} bars
-                  </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          {/* Left Column: Charts */}
+          <div className="lg:col-span-2 space-y-3">
+            {/* TradingView Reference Chart */}
+            <TradingViewChart symbol={symbol} period={period} height={380} />
+            
+            {/* Playback Chart */}
+            <div className="tv-panel p-4">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-sm font-semibold text-tv-text uppercase tracking-wide">
+                  {symbol}
+                </h3>
+                <div className="text-tv-textSecondary text-xs">
+                  {chartData.length} bars
                 </div>
-                <CandlestickChart 
-                  key={sessionKey} 
-                  data={chartData} 
-                  height={500} 
-                  priceRange={priceRange}
-                  totalCount={totalCount}
-                  trades={tradeHistory}
-                  newsMarkers={newsMarkers}
-                />
               </div>
+              <CandlestickChart 
+                key={sessionKey} 
+                data={chartData} 
+                height={380} 
+                priceRange={priceRange}
+                totalCount={totalCount}
+                trades={tradeHistory}
+                newsMarkers={newsMarkers}
+              />
             </div>
+          </div>
 
-            {/* Trading Panel Section */}
-            <div className="lg:col-span-1">
+          {/* Right Column: Trading Account + Playback Controls */}
+          <div className="lg:col-span-1 space-y-3">
+            {accountStatus && (
               <TradingPanel
                 accountStatus={accountStatus}
                 currentPrice={chartData.length > 0 ? chartData[chartData.length - 1].close : null}
@@ -516,23 +514,47 @@ export default function TradingSimulator() {
                 onSell={handleSell}
                 isLoading={isTrading}
               />
-            </div>
+            )}
+            
+            <PlaybackControls
+              isPlaying={isPlaying}
+              currentIndex={currentIndex}
+              totalCount={totalCount}
+              playbackSpeed={playbackSpeed}
+              currentDate={chartData.length > 0 ? chartData[chartData.length - 1].timestamp : undefined}
+              currentCandle={chartData.length > 0 ? {
+                open: chartData[chartData.length - 1].open,
+                close: chartData[chartData.length - 1].close
+              } : undefined}
+              onPlay={handlePlay}
+              onPause={handlePause}
+              onNext={handleNext}
+              onPrevious={handlePrevious}
+              onReset={handleReset}
+              onSeek={handleSeek}
+              onSpeedChange={handleSpeedChange}
+            />
           </div>
+        </div>
+      )}
 
-          {/* Playback Controls */}
-          <PlaybackControls
-            isPlaying={isPlaying}
-            currentIndex={currentIndex}
-            totalCount={totalCount}
-            playbackSpeed={playbackSpeed}
-            onPlay={handlePlay}
-            onPause={handlePause}
-            onNext={handleNext}
-            onPrevious={handlePrevious}
-            onReset={handleReset}
-            onSeek={handleSeek}
-            onSpeedChange={handleSpeedChange}
-          />
+      {/* Show TradingView chart even when no playback data */}
+      {chartData.length === 0 && (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="lg:col-span-2">
+            <TradingViewChart symbol={symbol} period={period} height={380} />
+          </div>
+          <div className="lg:col-span-1">
+            {accountStatus && (
+              <TradingPanel
+                accountStatus={accountStatus}
+                currentPrice={null}
+                onBuy={handleBuy}
+                onSell={handleSell}
+                isLoading={isTrading}
+              />
+            )}
+          </div>
         </div>
       )}
 

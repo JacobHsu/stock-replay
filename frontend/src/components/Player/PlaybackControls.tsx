@@ -5,6 +5,11 @@ interface PlaybackControlsProps {
   currentIndex: number
   totalCount: number
   playbackSpeed: number
+  currentDate?: string
+  currentCandle?: {
+    open: number
+    close: number
+  }
   onPlay: () => void
   onPause: () => void
   onNext: () => void
@@ -19,6 +24,8 @@ export default function PlaybackControls({
   currentIndex,
   totalCount,
   playbackSpeed,
+  currentDate,
+  currentCandle,
   onPlay,
   onPause,
   onNext,
@@ -34,6 +41,18 @@ export default function PlaybackControls({
     onSeek(index)
   }
 
+  const formatDate = (dateStr: string) => {
+    const date = new Date(dateStr)
+    return date.toLocaleDateString('zh-TW', { 
+      month: '2-digit', 
+      day: '2-digit' 
+    })
+  }
+
+  // Determine if current candle is bullish (red) or bearish (green)
+  const isRed = currentCandle && currentCandle.close >= currentCandle.open
+  const candleColor = isRed ? '#F23645' : '#089981'
+
   return (
     <div className="tv-panel p-6 space-y-4">
       {/* Header */}
@@ -42,12 +61,29 @@ export default function PlaybackControls({
           Playback Control
         </h3>
         <div className="text-tv-textSecondary text-sm">
-          {currentIndex} / {totalCount}
+          {currentDate ? (
+            <span>{formatDate(currentDate)} • 第 {currentIndex + 1}/{totalCount} 天</span>
+          ) : (
+            <span>{currentIndex + 1} / {totalCount}</span>
+          )}
         </div>
       </div>
 
-      {/* Progress Bar */}
-      <div className="space-y-2">
+      {/* Progress Bar with Custom Candle Thumb */}
+      <div className="space-y-2 relative">
+        {/* Date label above thumb */}
+        {currentDate && (
+          <div 
+            className="absolute -top-8 text-xs text-white bg-tv-surface px-2 py-1 rounded shadow-lg transition-all duration-300 whitespace-nowrap"
+            style={{ 
+              left: `calc(${progress}% - 20px)`,
+              zIndex: 10
+            }}
+          >
+            {formatDate(currentDate)}
+          </div>
+        )}
+        
         <div className="relative h-1 bg-tv-bg rounded-full overflow-hidden">
           <div
             className="absolute inset-y-0 left-0 bg-tv-primary transition-all duration-300"
@@ -55,19 +91,37 @@ export default function PlaybackControls({
           />
         </div>
         
-        <input
-          type="range"
-          min="0"
-          max={Math.max(0, totalCount - 1)}
-          value={currentIndex}
-          onChange={handleSliderChange}
-          disabled={totalCount === 0}
-          className="w-full h-2 rounded-lg appearance-none cursor-pointer bg-transparent
-                     [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 
-                     [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-tv-primary 
-                     [&::-webkit-slider-thumb]:cursor-pointer
-                     disabled:opacity-50 disabled:cursor-not-allowed"
-        />
+        <div className="relative">
+          <input
+            type="range"
+            min="0"
+            max={Math.max(0, totalCount - 1)}
+            value={currentIndex}
+            onChange={handleSliderChange}
+            disabled={totalCount === 0}
+            className="w-full h-2 rounded-lg appearance-none cursor-pointer bg-transparent
+                       [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-2 [&::-webkit-slider-thumb]:h-4 
+                       [&::-webkit-slider-thumb]:rounded-sm [&::-webkit-slider-thumb]:cursor-pointer
+                       [&::-webkit-slider-thumb]:shadow-lg
+                       [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:w-2 [&::-moz-range-thumb]:h-4 
+                       [&::-moz-range-thumb]:rounded-sm [&::-moz-range-thumb]:cursor-pointer
+                       [&::-moz-range-thumb]:shadow-lg [&::-moz-range-thumb]:border-0
+                       disabled:opacity-50 disabled:cursor-not-allowed"
+            style={{
+              ['--thumb-color' as any]: candleColor,
+            }}
+          />
+          <style dangerouslySetInnerHTML={{
+            __html: `
+              input[type="range"]::-webkit-slider-thumb {
+                background-color: ${candleColor};
+              }
+              input[type="range"]::-moz-range-thumb {
+                background-color: ${candleColor};
+              }
+            `
+          }} />
+        </div>
       </div>
 
       {/* Control Buttons */}
