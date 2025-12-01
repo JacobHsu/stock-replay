@@ -63,11 +63,15 @@ async def health_check() -> dict:
 
 
 if __name__ == "__main__":
+    import os
     import uvicorn
 
+    # Railway uses PORT environment variable
+    port = int(os.getenv("PORT", settings.port))
+    
     uvicorn.run(
         "app.main:app",
         host=settings.host,
-        port=settings.port,
+        port=port,
         reload=settings.debug,
     )

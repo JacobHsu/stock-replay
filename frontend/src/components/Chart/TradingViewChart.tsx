@@ -107,10 +107,9 @@ function TradingViewChart({ symbol, period = '1mo', height = 400 }: TradingViewC
     <div className="tv-panel p-4">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-sm font-semibold text-tv-text uppercase tracking-wide">
-          日線圖表 - {symbol}
+          {symbol}
         </h3>
         <div className="text-tv-textSecondary text-xs">
-          參考用（完整數據）
         </div>
       </div>
       <div
