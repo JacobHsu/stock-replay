@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import CandlestickChart from '../components/Chart/CandlestickChart'
 import TradingViewChart from '../components/Chart/TradingViewChart'
+import YahooFinanceChart from '../components/Chart/YahooFinanceChart'
 import PlaybackControls from '../components/Player/PlaybackControls'
 import TradingPanel from '../components/Trading/TradingPanel'
 import NewsModal from '../components/News/NewsModal'
@@ -19,8 +20,52 @@ import {
 } from '../services/api'
 import type { CandleData, TradingAccountStatus, Trade, DailyNews } from '../types'
 
+// Get initial symbol based on current time
+const getInitialSymbol = (): string => {
+  const now = new Date()
+  
+  // Get current time in different timezones
+  const taiwanTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Taipei' }))
+  const usTime = new Date(now.toLocaleString('en-US', { timeZone: 'America/New_York' }))
+  
+  const taiwanHour = taiwanTime.getHours()
+  const taiwanDay = taiwanTime.getDay()
+  const usHour = usTime.getHours()
+  const usDay = usTime.getDay()
+  
+  // Taiwan stock market hours: 9:00 - 13:30 (Mon-Fri)
+  const isTaiwanMarketHours = 
+    taiwanDay >= 1 && taiwanDay <= 5 && 
+    taiwanHour >= 9 && taiwanHour < 14
+  
+  // US stock market hours: 9:30 - 16:00 EST (Mon-Fri)
+  const isUSMarketHours = 
+    usDay >= 1 && usDay <= 5 && 
+    (usHour > 9 || (usHour === 9 && usTime.getMinutes() >= 30)) && 
+    usHour < 16
+  
+  console.log('[getInitialSymbol] 本地時間:', now.toLocaleString())
+  console.log('[getInitialSymbol] 台灣時間:', taiwanTime.toLocaleString(), '| 時:', taiwanHour, '| 星期:', taiwanDay, '| 開市:', isTaiwanMarketHours)
+  console.log('[getInitialSymbol] 美東時間:', usTime.toLocaleString(), '| 時:', usHour, '| 星期:', usDay, '| 開市:', isUSMarketHours)
+  
+  let selectedSymbol = 'BTC-USD'
+  let reason = '非交易時段'
+  
+  if (isTaiwanMarketHours) {
+    selectedSymbol = '2330.TW'
+    reason = '台股交易時段'
+  } else if (isUSMarketHours) {
+    selectedSymbol = 'SPY'
+    reason = '美股交易時段'
+  }
+  
+  console.log('[getInitialSymbol] 選擇:', selectedSymbol, '原因:', reason)
+  
+  return selectedSymbol
+}
+
 export default function TradingSimulator() {
-  const [symbol, setSymbol] = useState('AAPL')
+  const [symbol, setSymbol] = useState(getInitialSymbol())
   const [period, setPeriod] = useState('1mo')
   const [playbackId, setPlaybackId] = useState<string | null>(null)
   const [chartData, setChartData] = useState<CandleData[]>([])
@@ -174,7 +219,7 @@ export default function TradingSimulator() {
       const response = await createTradingAccount({
         playback_id,
         symbol,
-        initial_cash: 10000, // $10,000 initial capital
+        initial_cash: 1000000, // $1,000,000 initial capital
       })
       
       setTradingAccountId(response.account_id)
@@ -479,8 +524,12 @@ export default function TradingSimulator() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           {/* Left Column: Charts */}
           <div className="lg:col-span-2 space-y-3">
-            {/* TradingView Reference Chart */}
-            <TradingViewChart symbol={symbol} period={period} height={380} />
+            {/* Reference Chart - TradingView for US stocks, Yahoo Finance for Taiwan stocks */}
+            {symbol.endsWith('.TW') ? (
+              <YahooFinanceChart symbol={symbol} period={period} height={380} />
+            ) : (
+              <TradingViewChart symbol={symbol} period={period} height={380} />
+            )}
             
             {/* Playback Chart */}
             <div className="tv-panel p-4">
@@ -500,6 +549,7 @@ export default function TradingSimulator() {
                 totalCount={totalCount}
                 trades={tradeHistory}
                 newsMarkers={newsMarkers}
+                symbol={symbol}
               />
             </div>
           </div>
@@ -513,6 +563,7 @@ export default function TradingSimulator() {
                 onBuy={handleBuy}
                 onSell={handleSell}
                 isLoading={isTrading}
+                symbol={symbol}
               />
             )}
             
@@ -538,11 +589,15 @@ export default function TradingSimulator() {
         </div>
       )}
 
-      {/* Show TradingView chart even when no playback data */}
+      {/* Show reference chart even when no playback data */}
       {chartData.length === 0 && (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="lg:col-span-2">
-            <TradingViewChart symbol={symbol} period={period} height={380} />
+            {symbol.endsWith('.TW') ? (
+              <YahooFinanceChart symbol={symbol} period={period} height={380} />
+            ) : (
+              <TradingViewChart symbol={symbol} period={period} height={380} />
+            )}
           </div>
           <div className="lg:col-span-1">
             {accountStatus && (
@@ -552,6 +607,7 @@ export default function TradingSimulator() {
                 onBuy={handleBuy}
                 onSell={handleSell}
                 isLoading={isTrading}
+                symbol={symbol}
               />
             )}
           </div>

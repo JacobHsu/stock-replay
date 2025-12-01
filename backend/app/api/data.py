@@ -35,11 +35,15 @@ async def get_historical_data(
         StockDataResponse with historical data
     """
     try:
+        logger.info(f"[get_historical_data] symbol={symbol}, period={period}, start_date={start_date}, end_date={end_date}")
+        
         # Fetch data
         if start_date and end_date:
             df = fetch_stock_data(symbol, start_date, end_date)
         else:
             df = fetch_stock_data_by_period(symbol, period or "3mo")
+        
+        logger.info(f"[get_historical_data] Fetched {len(df) if df is not None else 0} rows")
 
         if df is None or df.empty:
             raise HTTPException(status_code=404, detail=f"No data found for symbol {symbol}")

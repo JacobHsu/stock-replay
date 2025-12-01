@@ -309,19 +309,6 @@ curl https://your-app.up.railway.app/health
    - Mount Path: `/app/data`
 3. 這樣 `data/news_cache.db` 會在重啟後保留
 
-#### 自動部署
-
-Railway 會自動監聽 GitHub：
-```bash
-# 每次推送都會自動重新部署
-git push origin main
-```
-
-#### 其他部署平台
-
-- **Render** - 免費但 15 分鐘無活動會休眠
-- **Fly.io** - 設定較複雜但效能好
-- **Vercel** - 不適合（Serverless 限制）
 
 ### 部署注意事項
 

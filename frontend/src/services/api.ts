@@ -18,7 +18,10 @@ import type {
   StockSearchResponse,
 } from '../types'
 
-const API_BASE_URL = 'http://localhost:8888'
+// 切換後端 URL
+// 本地測試：'http://localhost:8888'
+// Railway 線上：'https://stock-replay-production.up.railway.app'
+const API_BASE_URL = "http://localhost:8888";
 
 const api = axios.create({
   baseURL: API_BASE_URL,

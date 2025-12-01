@@ -55,7 +55,7 @@ class TradingAccountCreateRequest(BaseModel):
 
     playback_id: str = Field(..., description="Associated playback session ID")
     symbol: str = Field(..., description="Trading symbol")
-    initial_cash: float = Field(10000.0, description="Initial cash balance", gt=0)
+    initial_cash: float = Field(1000000.0, description="Initial cash balance", gt=0)
 
 
 class TradingAccountCreateResponse(BaseModel):

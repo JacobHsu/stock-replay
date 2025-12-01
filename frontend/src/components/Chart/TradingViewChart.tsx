@@ -16,6 +16,25 @@ function TradingViewChart({ symbol, period = '1mo', height = 400 }: TradingViewC
   const containerRef = useRef<HTMLDivElement>(null)
   const widgetRef = useRef<any>(null)
 
+  // Convert yfinance symbol to TradingView symbol format
+  const convertToTradingViewSymbol = (symbol: string): string => {
+    // BTC-USD (yfinance) -> BTCUSD (TradingView)
+    if (symbol === 'BTC-USD') {
+      return 'BTCUSD'
+    }
+    // 2330.TW (yfinance) -> TWSE:2330 (TradingView)
+    if (symbol === '2330.TW') {
+      return 'TWSE:2330'
+    }
+    // Handle other Taiwan stocks: XXXX.TW -> TWSE:XXXX
+    if (symbol.endsWith('.TW')) {
+      const stockCode = symbol.replace('.TW', '')
+      return `TWSE:${stockCode}`
+    }
+    // Keep other symbols as is (AAPL, SPY, etc.)
+    return symbol
+  }
+
   // Convert period to TradingView range format
   const getTradingViewRange = (period: string) => {
     switch (period) {
@@ -58,7 +77,7 @@ function TradingViewChart({ symbol, period = '1mo', height = 400 }: TradingViewC
         autosize: false,
         width: '100%',
         height: height,
-        symbol: symbol,
+        symbol: convertToTradingViewSymbol(symbol),
         interval: 'D',
         // range: getTradingViewRange(period), // Set time range based on period
         timezone: 'Asia/Taipei',

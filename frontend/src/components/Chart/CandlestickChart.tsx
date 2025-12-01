@@ -12,6 +12,7 @@ interface CandlestickChartProps {
   totalCount?: number
   trades?: Trade[]
   newsMarkers?: Set<string> // Set of dates (YYYY-MM-DD) with news
+  symbol?: string // Stock symbol to determine color scheme
 }
 
 export default function CandlestickChart({ 
@@ -20,8 +21,20 @@ export default function CandlestickChart({
   priceRange,
   totalCount,
   trades = [],
-  newsMarkers = new Set()
+  newsMarkers = new Set(),
+  symbol = ''
 }: CandlestickChartProps) {
+  // Determine if Taiwan stock (紅漲綠跌) or US/Crypto stock (綠漲紅跌)
+  const isTaiwanStock = symbol.endsWith('.TW')
+  
+  // Color configuration based on market
+  const colors = isTaiwanStock ? {
+    up: '#F23645',      // 台股：紅色上漲
+    down: '#089981',    // 台股：綠色下跌
+  } : {
+    up: '#089981',      // 美股/虛擬幣：綠色上漲
+    down: '#F23645',    // 美股/虛擬幣：紅色下跌
+  }
   const chartContainerRef = useRef<HTMLDivElement>(null)
   const chartRef = useRef<IChartApi | null>(null)
   const candlestickSeriesRef = useRef<ISeriesApi<'Candlestick'> | null>(null)
@@ -59,14 +72,14 @@ export default function CandlestickChart({
 
     chartRef.current = chart
 
-    // Add candlestick series with custom colors (紅漲綠跌 - 台灣/亞洲風格)
+    // Add candlestick series with custom colors
     const candlestickSeries = chart.addCandlestickSeries({
-      upColor: '#F23645',        // 上漲紅色 (TradingView red)
-      downColor: '#089981',      // 下跌綠色 (TradingView green)
-      borderUpColor: '#F23645',
-      borderDownColor: '#089981',
-      wickUpColor: '#F23645',
-      wickDownColor: '#089981',
+      upColor: colors.up,
+      downColor: colors.down,
+      borderUpColor: colors.up,
+      borderDownColor: colors.down,
+      wickUpColor: colors.up,
+      wickDownColor: colors.down,
       priceFormat: {
         type: 'price',
         precision: 2,
@@ -192,8 +205,8 @@ export default function CandlestickChart({
       const tradeMarkers = trades.map(trade => {
         const marker = {
           time: (new Date(trade.timestamp).getTime() / 1000) as Time,
-          position: trade.type === 'buy' ? 'belowBar' as const : 'aboveBar' as const, // Buy below (low), sell above (high)
-          color: trade.type === 'buy' ? '#F23645' : '#089981', // Red for buy, green for sell (Taiwan style)
+          position: trade.type === 'buy' ? 'belowBar' as const : 'aboveBar' as const,
+          color: trade.type === 'buy' ? colors.up : colors.down, // Use market-specific colors
           shape: trade.type === 'buy' ? 'arrowUp' as const : 'arrowDown' as const,
           text: `${trade.type.toUpperCase()} ${trade.shares}@${trade.price.toFixed(2)}`,
         }
@@ -229,12 +242,16 @@ export default function CandlestickChart({
       candlestickSeriesRef.current.setMarkers([])
     }
 
-    // Update volume - show all data (紅漲綠跌)
-    const visibleVolumeData = data.map((item) => ({
-      time: (new Date(item.timestamp).getTime() / 1000) as Time,
-      value: item.volume,
-      color: item.close >= item.open ? 'rgba(242, 54, 69, 0.5)' : 'rgba(8, 153, 129, 0.5)', // 上漲紅色，下跌綠色 (TradingView colors)
-    }))
+    // Update volume with market-specific colors
+    const visibleVolumeData = data.map((item) => {
+      const isUp = item.close >= item.open
+      const color = isUp ? colors.up : colors.down
+      return {
+        time: (new Date(item.timestamp).getTime() / 1000) as Time,
+        value: item.volume,
+        color: color.replace(')', ', 0.5)').replace('rgb', 'rgba'),
+      }
+    })
 
     volumeSeriesRef.current.setData(visibleVolumeData)
 

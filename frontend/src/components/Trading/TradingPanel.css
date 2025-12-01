@@ -74,12 +74,22 @@
   font-size: 16px;
 }
 
-.info-row .value.profit {
-  color: #F23645; /* Red for profit (Taiwan style) */
+/* Taiwan mode: 紅漲綠跌 */
+.trading-panel.tw-mode .info-row .value.profit {
+  color: #F23645; /* Red for profit */
 }
 
-.info-row .value.loss {
-  color: #089981; /* Green for loss (Taiwan style) */
+.trading-panel.tw-mode .info-row .value.loss {
+  color: #089981; /* Green for loss */
+}
+
+/* US/Crypto mode: 綠漲紅跌 */
+.trading-panel.us-mode .info-row .value.profit {
+  color: #089981; /* Green for profit */
+}
+
+.trading-panel.us-mode .info-row .value.loss {
+  color: #F23645; /* Red for loss */
 }
 
 .total-pl-row {
@@ -124,22 +134,42 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif;
 }
 
-.buy-button {
+/* Taiwan mode buttons: 買入紅色，賣出綠色 */
+.trading-panel.tw-mode .buy-button {
   background: #F23645;
   color: #fff;
 }
 
-.buy-button:hover:not(:disabled) {
+.trading-panel.tw-mode .buy-button:hover:not(:disabled) {
   background: #CC2E3C;
 }
 
-.sell-button {
+.trading-panel.tw-mode .sell-button {
   background: #089981;
   color: #fff;
 }
 
-.sell-button:hover:not(:disabled) {
+.trading-panel.tw-mode .sell-button:hover:not(:disabled) {
   background: #0B7A6A;
+}
+
+/* US/Crypto mode buttons: 買入綠色，賣出紅色 */
+.trading-panel.us-mode .buy-button {
+  background: #089981;
+  color: #fff;
+}
+
+.trading-panel.us-mode .buy-button:hover:not(:disabled) {
+  background: #0B7A6A;
+}
+
+.trading-panel.us-mode .sell-button {
+  background: #F23645;
+  color: #fff;
+}
+
+.trading-panel.us-mode .sell-button:hover:not(:disabled) {
+  background: #CC2E3C;
 }
 
 .buy-button:disabled,

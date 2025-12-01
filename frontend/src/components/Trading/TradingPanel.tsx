@@ -8,6 +8,7 @@ interface TradingPanelProps {
   onBuy: () => void
   onSell: () => void
   isLoading: boolean
+  symbol?: string // Stock symbol to determine color scheme
 }
 
 /**
@@ -20,7 +21,11 @@ const TradingPanel: React.FC<TradingPanelProps> = ({
   onBuy,
   onSell,
   isLoading,
+  symbol = '',
 }) => {
+  // Determine if Taiwan stock (紅漲綠跌) or US/Crypto stock (綠漲紅跌)
+  const isTaiwanStock = symbol.endsWith('.TW')
+  const colorMode = isTaiwanStock ? 'tw' : 'us'
   const formatCurrency = (value: number): string => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -57,7 +62,7 @@ const TradingPanel: React.FC<TradingPanelProps> = ({
   const canSell = hasPosition && position.shares >= 1 && !isLoading
 
   return (
-    <div className="trading-panel">
+    <div className={`trading-panel ${colorMode}-mode`}>
       <div className="panel-header">Trading Account</div>
 
       <div className="panel-body">
