@@ -10,6 +10,7 @@ interface PlaybackControlsProps {
     open: number
     close: number
   }
+  symbol?: string  // 新增：用於判斷顏色規則
   onPlay: () => void
   onPause: () => void
   onNext: () => void
@@ -26,6 +27,7 @@ export default function PlaybackControls({
   playbackSpeed,
   currentDate,
   currentCandle,
+  symbol = '',
   onPlay,
   onPause,
   onNext,
@@ -42,16 +44,23 @@ export default function PlaybackControls({
   }
 
   const formatDate = (dateStr: string) => {
+    // 使用 UTC 日期避免時區問題
     const date = new Date(dateStr)
-    return date.toLocaleDateString('zh-TW', { 
-      month: '2-digit', 
-      day: '2-digit' 
-    })
+    const month = String(date.getUTCMonth() + 1).padStart(2, '0')
+    const day = String(date.getUTCDate()).padStart(2, '0')
+    return `${month}/${day}`
   }
 
-  // Determine if current candle is bullish (red) or bearish (green)
-  const isRed = currentCandle && currentCandle.close >= currentCandle.open
-  const candleColor = isRed ? '#F23645' : '#089981'
+  // 判斷是否為台股（紅漲綠跌）或美股/虛擬幣（綠漲紅跌）
+  const isTaiwanStock = symbol.endsWith('.TW')
+  
+  // 判斷當前 K 線是漲還是跌
+  const isUp = currentCandle && currentCandle.close >= currentCandle.open
+  
+  // 根據市場和漲跌決定顏色
+  const candleColor = isTaiwanStock
+    ? (isUp ? '#F23645' : '#089981')  // 台股：紅漲綠跌
+    : (isUp ? '#089981' : '#F23645')  // 美股/虛擬幣：綠漲紅跌
 
   return (
     <div className="tv-panel p-6 space-y-4">

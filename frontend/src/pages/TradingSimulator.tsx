@@ -577,6 +577,7 @@ export default function TradingSimulator() {
                 open: chartData[chartData.length - 1].open,
                 close: chartData[chartData.length - 1].close
               } : undefined}
+              symbol={symbol}
               onPlay={handlePlay}
               onPause={handlePause}
               onNext={handleNext}

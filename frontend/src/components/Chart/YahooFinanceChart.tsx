@@ -88,7 +88,8 @@ export default function YahooFinanceChart({ symbol, period = '1mo', height = 400
         console.log('[YahooFinanceChart] Processed data count:', data.length)
         console.log('[YahooFinanceChart] First 3 items:', data.slice(0, 3))
 
-        candlestickSeries.setData(data)
+        // 初始不顯示數據，設置空數組
+        candlestickSeries.setData([])
         chart.timeScale().fitContent()
       } catch (err: any) {
         console.error('[YahooFinanceChart] Failed to fetch historical data:', err)
