@@ -32,11 +32,16 @@
 
 /* Section Styles */
 .account-section,
-.position-section,
-.pl-section {
+.position-section {
   margin-bottom: 20px;
   padding-bottom: 16px;
   border-bottom: 1px solid #2A2E39;
+}
+
+.pl-section {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  /* 不需要 border-bottom，因為 controls-section 有 border-top */
 }
 
 .account-section h3,

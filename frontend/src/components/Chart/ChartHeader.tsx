@@ -1,6 +1,7 @@
 import React from 'react'
 import StockSearch from '../StockSearch'
 import DayTradingButtons from '../DayTradingButtons'
+import CryptoButtons from '../CryptoButtons'
 
 interface ChartHeaderProps {
   symbol: string
@@ -32,6 +33,10 @@ export default function ChartHeader({
 }: ChartHeaderProps) {
   const [showStockSearch, setShowStockSearch] = React.useState(false)
 
+  // 判斷當前股票類型
+  const isTaiwanStock = symbol.endsWith('.TW') || symbol.endsWith('.TWO')
+  const isCrypto = symbol.includes('-USD')
+
   return (
     <div className="tv-panel p-6 space-y-6">
       {/* Header with Stock Symbol and Action Buttons */}
@@ -50,11 +55,19 @@ export default function ChartHeader({
               >
                 Change
               </button>
-              {/* Day Trading Quick Access Buttons - Inline */}
-              <DayTradingButtons
-                currentSymbol={symbol}
-                onSelectStock={onSymbolChange}
-              />
+              {/* 根據股票類型顯示對應的快速切換按鈕 */}
+              {isTaiwanStock && (
+                <DayTradingButtons
+                  currentSymbol={symbol}
+                  onSelectStock={onSymbolChange}
+                />
+              )}
+              {isCrypto && (
+                <CryptoButtons
+                  currentSymbol={symbol}
+                  onSelectCrypto={onSymbolChange}
+                />
+              )}
             </>
           ) : (
             <div className="w-96">

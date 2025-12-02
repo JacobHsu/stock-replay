@@ -128,6 +128,12 @@ export default function YahooFinanceChart({ symbol, period = '1mo', height = 400
       const code = symbol.replace('.TW', '').replace('.TWO', '')
       return `https://tw.tradingview.com/symbols/TWSE-${code}/technicals/`
     }
+    // 處理虛擬幣（如 BTC-USD）
+    if (symbol.includes('-')) {
+      const [base, quote] = symbol.split('-')
+      return `https://www.tradingview.com/symbols/${base}${quote}/`
+    }
+    // 美股
     return `https://www.tradingview.com/symbols/${symbol}/`
   }
 

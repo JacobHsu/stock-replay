@@ -616,9 +616,9 @@ export default function TradingSimulator() {
       )}
 
       {/* Footer */}
-      <div className="text-center text-tv-textMuted text-xs">
+      {/* <div className="text-center text-tv-textMuted text-xs">
         <p>Stock Trading Simulator • Educational Purpose Only</p>
-      </div>
+      </div> */}
       
       {/* News Modal */}
       {showNewsModal && currentNewsList.length > 0 && (

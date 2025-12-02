@@ -93,10 +93,6 @@ const TradingPanel: React.FC<TradingPanelProps> = ({
                 <span className="value">{formatCurrency(position.entry_price)}</span>
               </div>
               <div className="info-row">
-                <span className="label">Current Price:</span>
-                <span className="value">{formatCurrency(position.current_price)}</span>
-              </div>
-              <div className="info-row">
                 <span className="label">Market Value:</span>
                 <span className="value">{formatCurrency(position.market_value)}</span>
               </div>

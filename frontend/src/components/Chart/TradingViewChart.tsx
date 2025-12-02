@@ -18,20 +18,22 @@ function TradingViewChart({ symbol, period = '1mo', height = 400 }: TradingViewC
 
   // Convert yfinance symbol to TradingView symbol format
   const convertToTradingViewSymbol = (symbol: string): string => {
-    // BTC-USD (yfinance) -> BTCUSD (TradingView)
-    if (symbol === 'BTC-USD') {
-      return 'BTCUSD'
+    // 處理虛擬幣：XXX-USD -> XXXUSD
+    if (symbol.includes('-USD')) {
+      const base = symbol.replace('-USD', '')
+      return `${base}USD`
     }
-    // 2330.TW (yfinance) -> TWSE:2330 (TradingView)
-    if (symbol === '2330.TW') {
-      return 'TWSE:2330'
-    }
-    // Handle other Taiwan stocks: XXXX.TW -> TWSE:XXXX
+    // 處理台股：XXXX.TW -> TWSE:XXXX
     if (symbol.endsWith('.TW')) {
       const stockCode = symbol.replace('.TW', '')
       return `TWSE:${stockCode}`
     }
-    // Keep other symbols as is (AAPL, SPY, etc.)
+    // 處理台股：XXXX.TWO -> TPEX:XXXX
+    if (symbol.endsWith('.TWO')) {
+      const stockCode = symbol.replace('.TWO', '')
+      return `TPEX:${stockCode}`
+    }
+    // 美股保持原樣 (AAPL, SPY, etc.)
     return symbol
   }
 
@@ -120,6 +122,12 @@ function TradingViewChart({ symbol, period = '1mo', height = 400 }: TradingViewC
       const code = symbol.replace('.TW', '').replace('.TWO', '')
       return `https://tw.tradingview.com/symbols/TWSE-${code}/technicals/`
     }
+    // 處理虛擬幣（如 BTC-USD）
+    if (symbol.includes('-')) {
+      const [base, quote] = symbol.split('-')
+      return `https://www.tradingview.com/symbols/${base}${quote}/`
+    }
+    // 美股
     return `https://www.tradingview.com/symbols/${symbol}/`
   }
 
