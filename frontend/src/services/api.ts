@@ -193,4 +193,10 @@ export const getDayTradingLosers = async (): Promise<DayTradingStock[]> => {
   return response.data.stocks
 }
 
+// US ETF API
+export const getUSETFLosers = async (): Promise<DayTradingStock[]> => {
+  const response = await api.get<DayTradingLosersResponse>('/api/stocks/us-etf/losers')
+  return response.data.stocks
+}
+
 export default api

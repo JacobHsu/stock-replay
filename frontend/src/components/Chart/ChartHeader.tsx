@@ -2,6 +2,7 @@ import React from 'react'
 import StockSearch from '../StockSearch'
 import DayTradingButtons from '../DayTradingButtons'
 import CryptoButtons from '../CryptoButtons'
+import USETFButtons from '../USETFButtons'
 
 interface ChartHeaderProps {
   symbol: string
@@ -36,6 +37,7 @@ export default function ChartHeader({
   // 判斷當前股票類型
   const isTaiwanStock = symbol.endsWith('.TW') || symbol.endsWith('.TWO')
   const isCrypto = symbol.includes('-USD')
+  const isUSStock = !isTaiwanStock && !isCrypto // 美股（包含 ETF）
 
   return (
     <div className="tv-panel p-6 space-y-6">
@@ -66,6 +68,12 @@ export default function ChartHeader({
                 <CryptoButtons
                   currentSymbol={symbol}
                   onSelectCrypto={onSymbolChange}
+                />
+              )}
+              {isUSStock && (
+                <USETFButtons
+                  currentSymbol={symbol}
+                  onSelectETF={onSymbolChange}
                 />
               )}
             </>

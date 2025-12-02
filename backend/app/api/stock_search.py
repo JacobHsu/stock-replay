@@ -166,3 +166,22 @@ def get_day_trading_losers() -> DayTradingLosersResponse:
     except Exception as e:
         logger.error(f"Get day trading losers error: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to get day trading losers: {str(e)}")
+
+
+@router.get("/us-etf/losers", response_model=DayTradingLosersResponse)
+def get_us_etf_losers() -> DayTradingLosersResponse:
+    """
+    Get top 3 US ETFs with biggest losses.
+
+    Returns:
+        List of top 3 US ETFs with biggest losses
+    """
+    try:
+        from app.helpers.us_etf_losers import get_top3_us_etf_losers
+
+        etfs = get_top3_us_etf_losers()
+        return DayTradingLosersResponse(stocks=etfs)
+
+    except Exception as e:
+        logger.error(f"Get US ETF losers error: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to get US ETF losers: {str(e)}")
