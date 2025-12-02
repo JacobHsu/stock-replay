@@ -16,6 +16,8 @@ import type {
   NewsDateResponse,
   StockInfo,
   StockSearchResponse,
+  DayTradingStock,
+  DayTradingLosersResponse,
 } from '../types'
 
 // 切換後端 URL
@@ -183,6 +185,12 @@ export const searchStocks = async (query: string): Promise<StockInfo[]> => {
     params: { q: query }
   })
   return response.data.results
+}
+
+// Day Trading API
+export const getDayTradingLosers = async (): Promise<DayTradingStock[]> => {
+  const response = await api.get<DayTradingLosersResponse>('/api/stocks/day-trading/losers')
+  return response.data.stocks
 }
 
 export default api

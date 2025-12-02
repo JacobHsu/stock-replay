@@ -1,5 +1,6 @@
 import React from 'react'
 import StockSearch from '../StockSearch'
+import DayTradingButtons from '../DayTradingButtons'
 
 interface ChartHeaderProps {
   symbol: string
@@ -35,7 +36,7 @@ export default function ChartHeader({
     <div className="tv-panel p-6 space-y-6">
       {/* Header with Stock Symbol and Action Buttons */}
       <div className="flex items-start justify-between">
-        {/* Left: Stock Symbol (Large) with Change Button */}
+        {/* Left: Stock Symbol (Large) with Change Button and Day Trading Buttons */}
         <div className="flex items-center gap-4">
           {!showStockSearch ? (
             <>
@@ -49,6 +50,11 @@ export default function ChartHeader({
               >
                 Change
               </button>
+              {/* Day Trading Quick Access Buttons - Inline */}
+              <DayTradingButtons
+                currentSymbol={symbol}
+                onSelectStock={onSymbolChange}
+              />
             </>
           ) : (
             <div className="w-96">

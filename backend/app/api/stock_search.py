@@ -132,3 +132,37 @@ def get_stock_info(symbol: str) -> StockInfo:
     except Exception as e:
         logger.error(f"Get stock info error: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to get stock info: {str(e)}")
+
+
+class DayTradingStock(BaseModel):
+    """Day trading stock model."""
+
+    code: str
+    symbol: str
+    name: str
+    change_percent: float
+
+
+class DayTradingLosersResponse(BaseModel):
+    """Response for day trading losers."""
+
+    stocks: List[DayTradingStock]
+
+
+@router.get("/day-trading/losers", response_model=DayTradingLosersResponse)
+def get_day_trading_losers() -> DayTradingLosersResponse:
+    """
+    Get top 3 day trading stocks with biggest losses.
+
+    Returns:
+        List of top 3 stocks that can be day-traded with biggest losses
+    """
+    try:
+        from app.helpers.day_trading_scraper import get_top3_day_trading_losers
+
+        stocks = get_top3_day_trading_losers()
+        return DayTradingLosersResponse(stocks=stocks)
+
+    except Exception as e:
+        logger.error(f"Get day trading losers error: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to get day trading losers: {str(e)}")

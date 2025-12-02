@@ -153,3 +153,15 @@ export interface StockInfo {
 export interface StockSearchResponse {
   results: StockInfo[]
 }
+
+// Day Trading Types
+export interface DayTradingStock {
+  code: string
+  symbol: string
+  name: string
+  change_percent: number
+}
+
+export interface DayTradingLosersResponse {
+  stocks: DayTradingStock[]
+}
