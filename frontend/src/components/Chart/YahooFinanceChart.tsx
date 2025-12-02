@@ -121,11 +121,29 @@ export default function YahooFinanceChart({ symbol, period = '1mo', height = 400
     }
   }, [symbol, period, height])
 
+  // Generate TradingView URL
+  const getTradingViewUrl = (): string => {
+    if (symbol.endsWith('.TW') || symbol.endsWith('.TWO')) {
+      const code = symbol.replace('.TW', '').replace('.TWO', '')
+      return `https://tw.tradingview.com/symbols/TWSE-${code}/technicals/`
+    }
+    return `https://www.tradingview.com/symbols/${symbol}/`
+  }
+
   return (
     <div className="tv-panel p-4">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-sm font-semibold text-tv-text uppercase tracking-wide">
-          {symbol} - 歷史數據 ({period})
+        <h3 className="text-sm font-semibold uppercase tracking-wide">
+          <a
+            href={getTradingViewUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-tv-text hover:text-tv-primary transition-colors"
+            title="在 TradingView 中查看"
+          >
+            {symbol}
+          </a>
+          <span className="text-tv-textSecondary"> - 歷史數據 ({period})</span>
         </h3>
         {loading && (
           <div className="text-tv-textSecondary text-xs">載入中...</div>
