@@ -2,5366 +2,7512 @@
   "0050": {
     "symbol": "0050.TW",
     "code": "0050",
-    "name": "元大台灣50"
+    "name": "元大台灣50",
+    "market": "上市ETF",
+    "industry": "未分類"
   },
   "0051": {
     "symbol": "0051.TW",
     "code": "0051",
-    "name": "元大中型100"
+    "name": "元大中型100",
+    "market": "上市ETF",
+    "industry": "未分類"
   },
   "0052": {
     "symbol": "0052.TW",
     "code": "0052",
-    "name": "富邦科技"
+    "name": "富邦科技",
+    "market": "上市ETF",
+    "industry": "未分類"
   },
   "0053": {
     "symbol": "0053.TW",
     "code": "0053",
-    "name": "元大電子"
+    "name": "元大電子",
+    "market": "上市ETF",
+    "industry": "未分類"
   },
   "0055": {
     "symbol": "0055.TW",
     "code": "0055",
-    "name": "元大MSCI金融"
+    "name": "元大MSCI金融",
+    "market": "上市ETF",
+    "industry": "未分類"
   },
   "0056": {
     "symbol": "0056.TW",
     "code": "0056",
-    "name": "元大高股息"
+    "name": "元大高股息",
+    "market": "上市ETF",
+    "industry": "未分類"
   },
   "0057": {
     "symbol": "0057.TW",
     "code": "0057",
-    "name": "富邦摩台"
+    "name": "富邦摩台",
+    "market": "上市ETF",
+    "industry": "未分類"
   },
   "0061": {
     "symbol": "0061.TW",
     "code": "0061",
-    "name": "元大寶滬深"
+    "name": "元大寶滬深",
+    "market": "上市ETF",
+    "industry": "未分類"
   },
   "1101": {
     "symbol": "1101.TW",
     "code": "1101",
-    "name": "台泥"
+    "name": "台泥",
+    "market": "上市",
+    "industry": "水泥工業"
   },
   "1102": {
     "symbol": "1102.TW",
     "code": "1102",
-    "name": "亞泥"
+    "name": "亞泥",
+    "market": "上市",
+    "industry": "水泥工業"
   },
   "1103": {
     "symbol": "1103.TW",
     "code": "1103",
-    "name": "嘉泥"
+    "name": "嘉泥",
+    "market": "上市",
+    "industry": "水泥工業"
   },
   "1104": {
     "symbol": "1104.TW",
     "code": "1104",
-    "name": "環泥"
+    "name": "環泥",
+    "market": "上市",
+    "industry": "水泥工業"
   },
   "1108": {
     "symbol": "1108.TW",
     "code": "1108",
-    "name": "幸福"
+    "name": "幸福",
+    "market": "上市",
+    "industry": "水泥工業"
   },
   "1109": {
     "symbol": "1109.TW",
     "code": "1109",
-    "name": "信大"
+    "name": "信大",
+    "market": "上市",
+    "industry": "水泥工業"
   },
   "1110": {
     "symbol": "1110.TW",
     "code": "1110",
-    "name": "東泥"
+    "name": "東泥",
+    "market": "上市",
+    "industry": "水泥工業"
   },
   "1201": {
     "symbol": "1201.TW",
     "code": "1201",
-    "name": "味全"
+    "name": "味全",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1203": {
     "symbol": "1203.TW",
     "code": "1203",
-    "name": "味王"
+    "name": "味王",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1210": {
     "symbol": "1210.TW",
     "code": "1210",
-    "name": "大成"
+    "name": "大成",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1213": {
     "symbol": "1213.TW",
     "code": "1213",
-    "name": "大飲"
+    "name": "大飲",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1215": {
     "symbol": "1215.TW",
     "code": "1215",
-    "name": "卜蜂"
+    "name": "卜蜂",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1216": {
     "symbol": "1216.TW",
     "code": "1216",
-    "name": "統一"
+    "name": "統一",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1217": {
     "symbol": "1217.TW",
     "code": "1217",
-    "name": "愛之味"
+    "name": "愛之味",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1218": {
     "symbol": "1218.TW",
     "code": "1218",
-    "name": "泰山"
+    "name": "泰山",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1219": {
     "symbol": "1219.TW",
     "code": "1219",
-    "name": "福壽"
+    "name": "福壽",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1220": {
     "symbol": "1220.TW",
     "code": "1220",
-    "name": "台榮"
+    "name": "台榮",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1225": {
     "symbol": "1225.TW",
     "code": "1225",
-    "name": "福懋油"
+    "name": "福懋油",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1227": {
     "symbol": "1227.TW",
     "code": "1227",
-    "name": "佳格"
+    "name": "佳格",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1229": {
     "symbol": "1229.TW",
     "code": "1229",
-    "name": "聯華"
+    "name": "聯華",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1231": {
     "symbol": "1231.TW",
     "code": "1231",
-    "name": "聯華食"
+    "name": "聯華食",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1232": {
     "symbol": "1232.TW",
     "code": "1232",
-    "name": "大統益"
+    "name": "大統益",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1233": {
     "symbol": "1233.TW",
     "code": "1233",
-    "name": "天仁"
+    "name": "天仁",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1234": {
     "symbol": "1234.TW",
     "code": "1234",
-    "name": "黑松"
+    "name": "黑松",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1235": {
     "symbol": "1235.TW",
     "code": "1235",
-    "name": "興泰"
+    "name": "興泰",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1236": {
     "symbol": "1236.TW",
     "code": "1236",
-    "name": "宏亞"
+    "name": "宏亞",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1256": {
     "symbol": "1256.TW",
     "code": "1256",
-    "name": "鮮活果汁-KY"
+    "name": "鮮活果汁-KY",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1301": {
     "symbol": "1301.TW",
     "code": "1301",
-    "name": "台塑"
+    "name": "台塑",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1303": {
     "symbol": "1303.TW",
     "code": "1303",
-    "name": "南亞"
+    "name": "南亞",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1304": {
     "symbol": "1304.TW",
     "code": "1304",
-    "name": "台聚"
+    "name": "台聚",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1305": {
     "symbol": "1305.TW",
     "code": "1305",
-    "name": "華夏"
+    "name": "華夏",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1307": {
     "symbol": "1307.TW",
     "code": "1307",
-    "name": "三芳"
+    "name": "三芳",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1308": {
     "symbol": "1308.TW",
     "code": "1308",
-    "name": "亞聚"
+    "name": "亞聚",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1309": {
     "symbol": "1309.TW",
     "code": "1309",
-    "name": "台達化"
+    "name": "台達化",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1310": {
     "symbol": "1310.TW",
     "code": "1310",
-    "name": "台苯"
+    "name": "台苯",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1312": {
     "symbol": "1312.TW",
     "code": "1312",
-    "name": "國喬"
+    "name": "國喬",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1313": {
     "symbol": "1313.TW",
     "code": "1313",
-    "name": "聯成"
+    "name": "聯成",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1314": {
     "symbol": "1314.TW",
     "code": "1314",
-    "name": "中石化"
+    "name": "中石化",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1315": {
     "symbol": "1315.TW",
     "code": "1315",
-    "name": "達新"
+    "name": "達新",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1316": {
     "symbol": "1316.TW",
     "code": "1316",
-    "name": "上曜"
+    "name": "上曜",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "1319": {
     "symbol": "1319.TW",
     "code": "1319",
-    "name": "東陽"
+    "name": "東陽",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "1321": {
     "symbol": "1321.TW",
     "code": "1321",
-    "name": "大洋"
+    "name": "大洋",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1323": {
     "symbol": "1323.TW",
     "code": "1323",
-    "name": "永裕"
+    "name": "永裕",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1324": {
     "symbol": "1324.TW",
     "code": "1324",
-    "name": "地球"
+    "name": "地球",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1325": {
     "symbol": "1325.TW",
     "code": "1325",
-    "name": "恆大"
+    "name": "恆大",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1326": {
     "symbol": "1326.TW",
     "code": "1326",
-    "name": "台化"
+    "name": "台化",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1337": {
     "symbol": "1337.TW",
     "code": "1337",
-    "name": "再生-KY"
+    "name": "再生-KY",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1338": {
     "symbol": "1338.TW",
     "code": "1338",
-    "name": "廣華-KY"
+    "name": "廣華-KY",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "1339": {
     "symbol": "1339.TW",
     "code": "1339",
-    "name": "昭輝"
+    "name": "昭輝",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "1340": {
     "symbol": "1340.TW",
     "code": "1340",
-    "name": "勝悅-KY"
+    "name": "勝悅-KY",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1341": {
     "symbol": "1341.TW",
     "code": "1341",
-    "name": "富林-KY"
+    "name": "富林-KY",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "1342": {
     "symbol": "1342.TW",
     "code": "1342",
-    "name": "八貫"
+    "name": "八貫",
+    "market": "上市",
+    "industry": "其他業"
   },
   "1402": {
     "symbol": "1402.TW",
     "code": "1402",
-    "name": "遠東新"
+    "name": "遠東新",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1409": {
     "symbol": "1409.TW",
     "code": "1409",
-    "name": "新纖"
+    "name": "新纖",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1410": {
     "symbol": "1410.TW",
     "code": "1410",
-    "name": "南染"
+    "name": "南染",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1413": {
     "symbol": "1413.TW",
     "code": "1413",
-    "name": "宏洲"
+    "name": "宏洲",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1414": {
     "symbol": "1414.TW",
     "code": "1414",
-    "name": "東和"
+    "name": "東和",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1416": {
     "symbol": "1416.TW",
     "code": "1416",
-    "name": "廣豐"
+    "name": "廣豐",
+    "market": "上市",
+    "industry": "其他業"
   },
   "1417": {
     "symbol": "1417.TW",
     "code": "1417",
-    "name": "嘉裕"
+    "name": "嘉裕",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1418": {
     "symbol": "1418.TW",
     "code": "1418",
-    "name": "東華"
+    "name": "東華",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1419": {
     "symbol": "1419.TW",
     "code": "1419",
-    "name": "新紡"
+    "name": "新紡",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1423": {
     "symbol": "1423.TW",
     "code": "1423",
-    "name": "利華"
+    "name": "利華",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1432": {
     "symbol": "1432.TW",
     "code": "1432",
-    "name": "大魯閣"
+    "name": "大魯閣",
+    "market": "上市",
+    "industry": "運動休閒"
   },
   "1434": {
     "symbol": "1434.TW",
     "code": "1434",
-    "name": "福懋"
+    "name": "福懋",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1435": {
     "symbol": "1435.TW",
     "code": "1435",
-    "name": "中福"
+    "name": "中福",
+    "market": "上市",
+    "industry": "其他業"
   },
   "1436": {
     "symbol": "1436.TW",
     "code": "1436",
-    "name": "華友聯"
+    "name": "華友聯",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "1437": {
     "symbol": "1437.TW",
     "code": "1437",
-    "name": "勤益控"
+    "name": "勤益控",
+    "market": "上市",
+    "industry": "其他業"
   },
   "1438": {
     "symbol": "1438.TW",
     "code": "1438",
-    "name": "三地開發"
+    "name": "三地開發",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "1439": {
     "symbol": "1439.TW",
     "code": "1439",
-    "name": "雋揚"
+    "name": "雋揚",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "1440": {
     "symbol": "1440.TW",
     "code": "1440",
-    "name": "南紡"
+    "name": "南紡",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1441": {
     "symbol": "1441.TW",
     "code": "1441",
-    "name": "大東"
+    "name": "大東",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1442": {
     "symbol": "1442.TW",
     "code": "1442",
-    "name": "名軒"
+    "name": "名軒",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "1443": {
     "symbol": "1443.TW",
     "code": "1443",
-    "name": "立益"
+    "name": "立益",
+    "market": "上市",
+    "industry": "其他業"
   },
   "1444": {
     "symbol": "1444.TW",
     "code": "1444",
-    "name": "力麗"
+    "name": "力麗",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1445": {
     "symbol": "1445.TW",
     "code": "1445",
-    "name": "大宇"
+    "name": "大宇",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1446": {
     "symbol": "1446.TW",
     "code": "1446",
-    "name": "宏和"
+    "name": "宏和",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1447": {
     "symbol": "1447.TW",
     "code": "1447",
-    "name": "力鵬"
+    "name": "力鵬",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1449": {
     "symbol": "1449.TW",
     "code": "1449",
-    "name": "佳和"
+    "name": "佳和",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1451": {
     "symbol": "1451.TW",
     "code": "1451",
-    "name": "年興"
+    "name": "年興",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1452": {
     "symbol": "1452.TW",
     "code": "1452",
-    "name": "宏益"
+    "name": "宏益",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1453": {
     "symbol": "1453.TW",
     "code": "1453",
-    "name": "大將"
+    "name": "大將",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "1454": {
     "symbol": "1454.TW",
     "code": "1454",
-    "name": "台富"
+    "name": "台富",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1455": {
     "symbol": "1455.TW",
     "code": "1455",
-    "name": "集盛"
+    "name": "集盛",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1456": {
     "symbol": "1456.TW",
     "code": "1456",
-    "name": "怡華"
+    "name": "怡華",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "1457": {
     "symbol": "1457.TW",
     "code": "1457",
-    "name": "宜進"
+    "name": "宜進",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1459": {
     "symbol": "1459.TW",
     "code": "1459",
-    "name": "聯發"
+    "name": "聯發",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1460": {
     "symbol": "1460.TW",
     "code": "1460",
-    "name": "宏遠"
+    "name": "宏遠",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1463": {
     "symbol": "1463.TW",
     "code": "1463",
-    "name": "強盛新"
+    "name": "強盛新",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1464": {
     "symbol": "1464.TW",
     "code": "1464",
-    "name": "得力"
+    "name": "得力",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1465": {
     "symbol": "1465.TW",
     "code": "1465",
-    "name": "偉全"
+    "name": "偉全",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1466": {
     "symbol": "1466.TW",
     "code": "1466",
-    "name": "聚隆"
+    "name": "聚隆",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1467": {
     "symbol": "1467.TW",
     "code": "1467",
-    "name": "南緯"
+    "name": "南緯",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1468": {
     "symbol": "1468.TW",
     "code": "1468",
-    "name": "昶和"
+    "name": "昶和",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1470": {
     "symbol": "1470.TW",
     "code": "1470",
-    "name": "大統新創"
+    "name": "大統新創",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1471": {
     "symbol": "1471.TW",
     "code": "1471",
-    "name": "首利"
+    "name": "首利",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "1472": {
     "symbol": "1472.TW",
     "code": "1472",
-    "name": "三洋實業"
+    "name": "三洋實業",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "1473": {
     "symbol": "1473.TW",
     "code": "1473",
-    "name": "台南"
+    "name": "台南",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1474": {
     "symbol": "1474.TW",
     "code": "1474",
-    "name": "弘裕"
+    "name": "弘裕",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1475": {
     "symbol": "1475.TW",
     "code": "1475",
-    "name": "業旺"
+    "name": "業旺",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1476": {
     "symbol": "1476.TW",
     "code": "1476",
-    "name": "儒鴻"
+    "name": "儒鴻",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1477": {
     "symbol": "1477.TW",
     "code": "1477",
-    "name": "聚陽"
+    "name": "聚陽",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "1503": {
     "symbol": "1503.TW",
     "code": "1503",
-    "name": "士電"
+    "name": "士電",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1504": {
     "symbol": "1504.TW",
     "code": "1504",
-    "name": "東元"
+    "name": "東元",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1506": {
     "symbol": "1506.TW",
     "code": "1506",
-    "name": "正道"
+    "name": "正道",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1512": {
     "symbol": "1512.TW",
     "code": "1512",
-    "name": "瑞利"
+    "name": "瑞利",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "1513": {
     "symbol": "1513.TW",
     "code": "1513",
-    "name": "中興電"
+    "name": "中興電",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1514": {
     "symbol": "1514.TW",
     "code": "1514",
-    "name": "亞力"
+    "name": "亞力",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1515": {
     "symbol": "1515.TW",
     "code": "1515",
-    "name": "力山"
+    "name": "力山",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1516": {
     "symbol": "1516.TW",
     "code": "1516",
-    "name": "川飛"
+    "name": "川飛",
+    "market": "上市",
+    "industry": "其他業"
   },
   "1517": {
     "symbol": "1517.TW",
     "code": "1517",
-    "name": "利奇"
+    "name": "利奇",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1519": {
     "symbol": "1519.TW",
     "code": "1519",
-    "name": "華城"
+    "name": "華城",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1521": {
     "symbol": "1521.TW",
     "code": "1521",
-    "name": "大億"
+    "name": "大億",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "1522": {
     "symbol": "1522.TW",
     "code": "1522",
-    "name": "堤維西"
+    "name": "堤維西",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "1524": {
     "symbol": "1524.TW",
     "code": "1524",
-    "name": "耿鼎"
+    "name": "耿鼎",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "1525": {
     "symbol": "1525.TW",
     "code": "1525",
-    "name": "江申"
+    "name": "江申",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "1526": {
     "symbol": "1526.TW",
     "code": "1526",
-    "name": "日馳"
+    "name": "日馳",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1527": {
     "symbol": "1527.TW",
     "code": "1527",
-    "name": "鑽全"
+    "name": "鑽全",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1528": {
     "symbol": "1528.TW",
     "code": "1528",
-    "name": "恩德"
+    "name": "恩德",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1529": {
     "symbol": "1529.TW",
     "code": "1529",
-    "name": "樂事綠能"
+    "name": "樂事綠能",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1530": {
     "symbol": "1530.TW",
     "code": "1530",
-    "name": "亞崴"
+    "name": "亞崴",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1531": {
     "symbol": "1531.TW",
     "code": "1531",
-    "name": "高林股"
+    "name": "高林股",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1532": {
     "symbol": "1532.TW",
     "code": "1532",
-    "name": "勤美"
+    "name": "勤美",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1533": {
     "symbol": "1533.TW",
     "code": "1533",
-    "name": "車王電"
+    "name": "車王電",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "1535": {
     "symbol": "1535.TW",
     "code": "1535",
-    "name": "中宇"
+    "name": "中宇",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1536": {
     "symbol": "1536.TW",
     "code": "1536",
-    "name": "和大"
+    "name": "和大",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1537": {
     "symbol": "1537.TW",
     "code": "1537",
-    "name": "廣隆"
+    "name": "廣隆",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1538": {
     "symbol": "1538.TW",
     "code": "1538",
-    "name": "正峰"
+    "name": "正峰",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1539": {
     "symbol": "1539.TW",
     "code": "1539",
-    "name": "巨庭"
+    "name": "巨庭",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1540": {
     "symbol": "1540.TW",
     "code": "1540",
-    "name": "喬福"
+    "name": "喬福",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1541": {
     "symbol": "1541.TW",
     "code": "1541",
-    "name": "錩泰"
+    "name": "錩泰",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1558": {
     "symbol": "1558.TW",
     "code": "1558",
-    "name": "伸興"
+    "name": "伸興",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1560": {
     "symbol": "1560.TW",
     "code": "1560",
-    "name": "中砂"
+    "name": "中砂",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1563": {
     "symbol": "1563.TW",
     "code": "1563",
-    "name": "巧新"
+    "name": "巧新",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "1568": {
     "symbol": "1568.TW",
     "code": "1568",
-    "name": "倉佑"
+    "name": "倉佑",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "1582": {
     "symbol": "1582.TW",
     "code": "1582",
-    "name": "信錦"
+    "name": "信錦",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "1583": {
     "symbol": "1583.TW",
     "code": "1583",
-    "name": "程泰"
+    "name": "程泰",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1587": {
     "symbol": "1587.TW",
     "code": "1587",
-    "name": "吉茂"
+    "name": "吉茂",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "1589": {
     "symbol": "1589.TW",
     "code": "1589",
-    "name": "永冠-KY"
+    "name": "永冠-KY",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1590": {
     "symbol": "1590.TW",
     "code": "1590",
-    "name": "亞德客-KY"
+    "name": "亞德客-KY",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1597": {
     "symbol": "1597.TW",
     "code": "1597",
-    "name": "直得"
+    "name": "直得",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "1598": {
     "symbol": "1598.TW",
     "code": "1598",
-    "name": "岱宇"
+    "name": "岱宇",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1603": {
     "symbol": "1603.TW",
     "code": "1603",
-    "name": "華電"
+    "name": "華電",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1604": {
     "symbol": "1604.TW",
     "code": "1604",
-    "name": "聲寶"
+    "name": "聲寶",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1605": {
     "symbol": "1605.TW",
     "code": "1605",
-    "name": "華新"
+    "name": "華新",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1608": {
     "symbol": "1608.TW",
     "code": "1608",
-    "name": "華榮"
+    "name": "華榮",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1609": {
     "symbol": "1609.TW",
     "code": "1609",
-    "name": "大亞"
+    "name": "大亞",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1611": {
     "symbol": "1611.TW",
     "code": "1611",
-    "name": "中電"
+    "name": "中電",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1612": {
     "symbol": "1612.TW",
     "code": "1612",
-    "name": "宏泰"
+    "name": "宏泰",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1614": {
     "symbol": "1614.TW",
     "code": "1614",
-    "name": "三洋電"
+    "name": "三洋電",
+    "market": "上市",
+    "industry": "電器電纜"
   },
   "1615": {
     "symbol": "1615.TW",
     "code": "1615",
-    "name": "大山"
+    "name": "大山",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1616": {
     "symbol": "1616.TW",
     "code": "1616",
-    "name": "億泰"
+    "name": "億泰",
+    "market": "上市",
+    "industry": "電器電纜"
   },
   "1617": {
     "symbol": "1617.TW",
     "code": "1617",
-    "name": "榮星"
+    "name": "榮星",
+    "market": "上市",
+    "industry": "電器電纜"
   },
   "1618": {
     "symbol": "1618.TW",
     "code": "1618",
-    "name": "合機"
+    "name": "合機",
+    "market": "上市",
+    "industry": "電器電纜"
   },
   "1626": {
     "symbol": "1626.TW",
     "code": "1626",
-    "name": "艾美特-KY"
+    "name": "艾美特-KY",
+    "market": "上市",
+    "industry": "電器電纜"
   },
   "1702": {
     "symbol": "1702.TW",
     "code": "1702",
-    "name": "南僑"
+    "name": "南僑",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1707": {
     "symbol": "1707.TW",
     "code": "1707",
-    "name": "葡萄王"
+    "name": "葡萄王",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "1708": {
     "symbol": "1708.TW",
     "code": "1708",
-    "name": "東鹼"
+    "name": "東鹼",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1709": {
     "symbol": "1709.TW",
     "code": "1709",
-    "name": "和益"
+    "name": "和益",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1710": {
     "symbol": "1710.TW",
     "code": "1710",
-    "name": "東聯"
+    "name": "東聯",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "1711": {
     "symbol": "1711.TW",
     "code": "1711",
-    "name": "永光"
+    "name": "永光",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1712": {
     "symbol": "1712.TW",
     "code": "1712",
-    "name": "興農"
+    "name": "興農",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1713": {
     "symbol": "1713.TW",
     "code": "1713",
-    "name": "國化"
+    "name": "國化",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1714": {
     "symbol": "1714.TW",
     "code": "1714",
-    "name": "和桐"
+    "name": "和桐",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1717": {
     "symbol": "1717.TW",
     "code": "1717",
-    "name": "長興"
+    "name": "長興",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1718": {
     "symbol": "1718.TW",
     "code": "1718",
-    "name": "中纖"
+    "name": "中纖",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1720": {
     "symbol": "1720.TW",
     "code": "1720",
-    "name": "生達"
+    "name": "生達",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1721": {
     "symbol": "1721.TW",
     "code": "1721",
-    "name": "三晃"
+    "name": "三晃",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1722": {
     "symbol": "1722.TW",
     "code": "1722",
-    "name": "台肥"
+    "name": "台肥",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1723": {
     "symbol": "1723.TW",
     "code": "1723",
-    "name": "中碳"
+    "name": "中碳",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1725": {
     "symbol": "1725.TW",
     "code": "1725",
-    "name": "元禎"
+    "name": "元禎",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1726": {
     "symbol": "1726.TW",
     "code": "1726",
-    "name": "永記"
+    "name": "永記",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1727": {
     "symbol": "1727.TW",
     "code": "1727",
-    "name": "中華化"
+    "name": "中華化",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "1730": {
     "symbol": "1730.TW",
     "code": "1730",
-    "name": "花仙子"
+    "name": "花仙子",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "1731": {
     "symbol": "1731.TW",
     "code": "1731",
-    "name": "美吾華"
+    "name": "美吾華",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "1732": {
     "symbol": "1732.TW",
     "code": "1732",
-    "name": "毛寶"
+    "name": "毛寶",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "1733": {
     "symbol": "1733.TW",
     "code": "1733",
-    "name": "五鼎"
+    "name": "五鼎",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "1734": {
     "symbol": "1734.TW",
     "code": "1734",
-    "name": "杏輝"
+    "name": "杏輝",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "1735": {
     "symbol": "1735.TW",
     "code": "1735",
-    "name": "日勝化"
+    "name": "日勝化",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "1736": {
     "symbol": "1736.TW",
     "code": "1736",
-    "name": "喬山"
+    "name": "喬山",
+    "market": "上市",
+    "industry": "運動休閒"
   },
   "1737": {
     "symbol": "1737.TW",
     "code": "1737",
-    "name": "臺鹽"
+    "name": "臺鹽",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "1752": {
     "symbol": "1752.TW",
     "code": "1752",
-    "name": "南光"
+    "name": "南光",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "1760": {
     "symbol": "1760.TW",
     "code": "1760",
-    "name": "寶齡富錦"
+    "name": "寶齡富錦",
+    "market": "上市",
+    "industry": "未分類"
   },
   "1762": {
     "symbol": "1762.TW",
     "code": "1762",
-    "name": "中化生"
+    "name": "中化生",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "1773": {
     "symbol": "1773.TW",
     "code": "1773",
-    "name": "勝一"
+    "name": "勝一",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "1776": {
     "symbol": "1776.TW",
     "code": "1776",
-    "name": "展宇"
+    "name": "展宇",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "1783": {
     "symbol": "1783.TW",
     "code": "1783",
-    "name": "和康生"
+    "name": "和康生",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "1786": {
     "symbol": "1786.TW",
     "code": "1786",
-    "name": "科妍"
+    "name": "科妍",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "1789": {
     "symbol": "1789.TW",
     "code": "1789",
-    "name": "神隆"
+    "name": "神隆",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "1795": {
     "symbol": "1795.TW",
     "code": "1795",
-    "name": "美時"
+    "name": "美時",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "1802": {
     "symbol": "1802.TW",
     "code": "1802",
-    "name": "台玻"
+    "name": "台玻",
+    "market": "上市",
+    "industry": "玻璃陶瓷"
   },
   "1805": {
     "symbol": "1805.TW",
     "code": "1805",
-    "name": "寶徠"
+    "name": "寶徠",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "1806": {
     "symbol": "1806.TW",
     "code": "1806",
-    "name": "冠軍"
+    "name": "冠軍",
+    "market": "上市",
+    "industry": "玻璃陶瓷"
   },
   "1808": {
     "symbol": "1808.TW",
     "code": "1808",
-    "name": "潤隆"
+    "name": "潤隆",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "1809": {
     "symbol": "1809.TW",
     "code": "1809",
-    "name": "中釉"
+    "name": "中釉",
+    "market": "上市",
+    "industry": "玻璃陶瓷"
   },
   "1810": {
     "symbol": "1810.TW",
     "code": "1810",
-    "name": "和成"
+    "name": "和成",
+    "market": "上市",
+    "industry": "玻璃陶瓷"
   },
   "1817": {
     "symbol": "1817.TW",
     "code": "1817",
-    "name": "凱撒衛"
+    "name": "凱撒衛",
+    "market": "上市",
+    "industry": "玻璃陶瓷"
   },
   "1903": {
     "symbol": "1903.TW",
     "code": "1903",
-    "name": "士紙"
+    "name": "士紙",
+    "market": "上市",
+    "industry": "造紙工業"
   },
   "1904": {
     "symbol": "1904.TW",
     "code": "1904",
-    "name": "正隆"
+    "name": "正隆",
+    "market": "上市",
+    "industry": "造紙工業"
   },
   "1905": {
     "symbol": "1905.TW",
     "code": "1905",
-    "name": "華紙"
+    "name": "華紙",
+    "market": "上市",
+    "industry": "造紙工業"
   },
   "1906": {
     "symbol": "1906.TW",
     "code": "1906",
-    "name": "寶隆"
+    "name": "寶隆",
+    "market": "上市",
+    "industry": "造紙工業"
   },
   "1907": {
     "symbol": "1907.TW",
     "code": "1907",
-    "name": "永豐餘"
+    "name": "永豐餘",
+    "market": "上市",
+    "industry": "造紙工業"
   },
   "1909": {
     "symbol": "1909.TW",
     "code": "1909",
-    "name": "榮成"
+    "name": "榮成",
+    "market": "上市",
+    "industry": "造紙工業"
   },
   "2002": {
     "symbol": "2002.TW",
     "code": "2002",
-    "name": "中鋼"
+    "name": "中鋼",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2006": {
     "symbol": "2006.TW",
     "code": "2006",
-    "name": "東和鋼鐵"
+    "name": "東和鋼鐵",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2007": {
     "symbol": "2007.TW",
     "code": "2007",
-    "name": "燁興"
+    "name": "燁興",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2008": {
     "symbol": "2008.TW",
     "code": "2008",
-    "name": "高興昌"
+    "name": "高興昌",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2009": {
     "symbol": "2009.TW",
     "code": "2009",
-    "name": "第一銅"
+    "name": "第一銅",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2010": {
     "symbol": "2010.TW",
     "code": "2010",
-    "name": "春源"
+    "name": "春源",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2012": {
     "symbol": "2012.TW",
     "code": "2012",
-    "name": "春雨"
+    "name": "春雨",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2013": {
     "symbol": "2013.TW",
     "code": "2013",
-    "name": "中鋼構"
+    "name": "中鋼構",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2014": {
     "symbol": "2014.TW",
     "code": "2014",
-    "name": "中鴻"
+    "name": "中鴻",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2015": {
     "symbol": "2015.TW",
     "code": "2015",
-    "name": "豐興"
+    "name": "豐興",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2017": {
     "symbol": "2017.TW",
     "code": "2017",
-    "name": "官田鋼"
+    "name": "官田鋼",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2020": {
     "symbol": "2020.TW",
     "code": "2020",
-    "name": "美亞"
+    "name": "美亞",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2022": {
     "symbol": "2022.TW",
     "code": "2022",
-    "name": "聚亨"
+    "name": "聚亨",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2023": {
     "symbol": "2023.TW",
     "code": "2023",
-    "name": "燁輝"
+    "name": "燁輝",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2024": {
     "symbol": "2024.TW",
     "code": "2024",
-    "name": "志聯"
+    "name": "志聯",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2025": {
     "symbol": "2025.TW",
     "code": "2025",
-    "name": "千興"
+    "name": "千興",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2027": {
     "symbol": "2027.TW",
     "code": "2027",
-    "name": "大成鋼"
+    "name": "大成鋼",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2028": {
     "symbol": "2028.TW",
     "code": "2028",
-    "name": "威致"
+    "name": "威致",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2029": {
     "symbol": "2029.TW",
     "code": "2029",
-    "name": "盛餘"
+    "name": "盛餘",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2030": {
     "symbol": "2030.TW",
     "code": "2030",
-    "name": "彰源"
+    "name": "彰源",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2031": {
     "symbol": "2031.TW",
     "code": "2031",
-    "name": "新光鋼"
+    "name": "新光鋼",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2032": {
     "symbol": "2032.TW",
     "code": "2032",
-    "name": "新鋼"
+    "name": "新鋼",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2033": {
     "symbol": "2033.TW",
     "code": "2033",
-    "name": "佳大"
+    "name": "佳大",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2034": {
     "symbol": "2034.TW",
     "code": "2034",
-    "name": "允強"
+    "name": "允強",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2038": {
     "symbol": "2038.TW",
     "code": "2038",
-    "name": "海光"
+    "name": "海光",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2049": {
     "symbol": "2049.TW",
     "code": "2049",
-    "name": "上銀"
+    "name": "上銀",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "2059": {
     "symbol": "2059.TW",
     "code": "2059",
-    "name": "川湖"
+    "name": "川湖",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2062": {
     "symbol": "2062.TW",
     "code": "2062",
-    "name": "橋椿"
+    "name": "橋椿",
+    "market": "上市",
+    "industry": "居家生活"
   },
   "2069": {
     "symbol": "2069.TW",
     "code": "2069",
-    "name": "運錩"
+    "name": "運錩",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2101": {
     "symbol": "2101.TW",
     "code": "2101",
-    "name": "南港"
+    "name": "南港",
+    "market": "上市",
+    "industry": "橡膠工業"
   },
   "2102": {
     "symbol": "2102.TW",
     "code": "2102",
-    "name": "泰豐"
+    "name": "泰豐",
+    "market": "上市",
+    "industry": "橡膠工業"
   },
   "2103": {
     "symbol": "2103.TW",
     "code": "2103",
-    "name": "台橡"
+    "name": "台橡",
+    "market": "上市",
+    "industry": "橡膠工業"
   },
   "2104": {
     "symbol": "2104.TW",
     "code": "2104",
-    "name": "國際中橡"
+    "name": "國際中橡",
+    "market": "上市",
+    "industry": "橡膠工業"
   },
   "2105": {
     "symbol": "2105.TW",
     "code": "2105",
-    "name": "正新"
+    "name": "正新",
+    "market": "上市",
+    "industry": "橡膠工業"
   },
   "2106": {
     "symbol": "2106.TW",
     "code": "2106",
-    "name": "建大"
+    "name": "建大",
+    "market": "上市",
+    "industry": "橡膠工業"
   },
   "2107": {
     "symbol": "2107.TW",
     "code": "2107",
-    "name": "厚生"
+    "name": "厚生",
+    "market": "上市",
+    "industry": "橡膠工業"
   },
   "2108": {
     "symbol": "2108.TW",
     "code": "2108",
-    "name": "南帝"
+    "name": "南帝",
+    "market": "上市",
+    "industry": "橡膠工業"
   },
   "2109": {
     "symbol": "2109.TW",
     "code": "2109",
-    "name": "華豐"
+    "name": "華豐",
+    "market": "上市",
+    "industry": "橡膠工業"
   },
   "2114": {
     "symbol": "2114.TW",
     "code": "2114",
-    "name": "鑫永銓"
+    "name": "鑫永銓",
+    "market": "上市",
+    "industry": "橡膠工業"
   },
   "2115": {
     "symbol": "2115.TW",
     "code": "2115",
-    "name": "六暉-KY"
+    "name": "六暉-KY",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2201": {
     "symbol": "2201.TW",
     "code": "2201",
-    "name": "裕隆"
+    "name": "裕隆",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2204": {
     "symbol": "2204.TW",
     "code": "2204",
-    "name": "中華"
+    "name": "中華",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2206": {
     "symbol": "2206.TW",
     "code": "2206",
-    "name": "三陽工業"
+    "name": "三陽工業",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2207": {
     "symbol": "2207.TW",
     "code": "2207",
-    "name": "和泰車"
+    "name": "和泰車",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2208": {
     "symbol": "2208.TW",
     "code": "2208",
-    "name": "台船"
+    "name": "台船",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2211": {
     "symbol": "2211.TW",
     "code": "2211",
-    "name": "長榮鋼"
+    "name": "長榮鋼",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "2227": {
     "symbol": "2227.TW",
     "code": "2227",
-    "name": "裕日車"
+    "name": "裕日車",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2228": {
     "symbol": "2228.TW",
     "code": "2228",
-    "name": "劍麟"
+    "name": "劍麟",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2231": {
     "symbol": "2231.TW",
     "code": "2231",
-    "name": "為升"
+    "name": "為升",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2233": {
     "symbol": "2233.TW",
     "code": "2233",
-    "name": "宇隆"
+    "name": "宇隆",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2236": {
     "symbol": "2236.TW",
     "code": "2236",
-    "name": "百達-KY"
+    "name": "百達-KY",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2239": {
     "symbol": "2239.TW",
     "code": "2239",
-    "name": "英利-KY"
+    "name": "英利-KY",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2241": {
     "symbol": "2241.TW",
     "code": "2241",
-    "name": "艾姆勒"
+    "name": "艾姆勒",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2243": {
     "symbol": "2243.TW",
     "code": "2243",
-    "name": "宏旭-KY"
+    "name": "宏旭-KY",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2247": {
     "symbol": "2247.TW",
     "code": "2247",
-    "name": "汎德永業"
+    "name": "汎德永業",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2248": {
     "symbol": "2248.TW",
     "code": "2248",
-    "name": "華勝-KY"
+    "name": "華勝-KY",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2250": {
     "symbol": "2250.TW",
     "code": "2250",
-    "name": "IKKA-KY"
+    "name": "IKKA-KY",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2254": {
     "symbol": "2254.TW",
     "code": "2254",
-    "name": "巨鎧精密-創"
+    "name": "巨鎧精密-創",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2258": {
     "symbol": "2258.TW",
     "code": "2258",
-    "name": "鴻華先進-創"
+    "name": "鴻華先進-創",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2301": {
     "symbol": "2301.TW",
     "code": "2301",
-    "name": "光寶科"
+    "name": "光寶科",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2302": {
     "symbol": "2302.TW",
     "code": "2302",
-    "name": "麗正"
+    "name": "麗正",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2303": {
     "symbol": "2303.TW",
     "code": "2303",
-    "name": "聯電"
+    "name": "聯電",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2305": {
     "symbol": "2305.TW",
     "code": "2305",
-    "name": "全友"
+    "name": "全友",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2308": {
     "symbol": "2308.TW",
     "code": "2308",
-    "name": "台達電"
+    "name": "台達電",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2312": {
     "symbol": "2312.TW",
     "code": "2312",
-    "name": "金寶"
+    "name": "金寶",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2313": {
     "symbol": "2313.TW",
     "code": "2313",
-    "name": "華通"
+    "name": "華通",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2314": {
     "symbol": "2314.TW",
     "code": "2314",
-    "name": "台揚"
+    "name": "台揚",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "2316": {
     "symbol": "2316.TW",
     "code": "2316",
-    "name": "楠梓電"
+    "name": "楠梓電",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2317": {
     "symbol": "2317.TW",
     "code": "2317",
-    "name": "鴻海"
+    "name": "鴻海",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2321": {
     "symbol": "2321.TW",
     "code": "2321",
-    "name": "東訊"
+    "name": "東訊",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "2323": {
     "symbol": "2323.TW",
     "code": "2323",
-    "name": "中環"
+    "name": "中環",
+    "market": "上市",
+    "industry": "光電業"
   },
   "2324": {
     "symbol": "2324.TW",
     "code": "2324",
-    "name": "仁寶"
+    "name": "仁寶",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2327": {
     "symbol": "2327.TW",
     "code": "2327",
-    "name": "國巨*"
+    "name": "國巨*",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2328": {
     "symbol": "2328.TW",
     "code": "2328",
-    "name": "廣宇"
+    "name": "廣宇",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2329": {
     "symbol": "2329.TW",
     "code": "2329",
-    "name": "華泰"
+    "name": "華泰",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2330": {
     "symbol": "2330.TW",
     "code": "2330",
-    "name": "台積電"
+    "name": "台積電",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2331": {
     "symbol": "2331.TW",
     "code": "2331",
-    "name": "精英"
+    "name": "精英",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2332": {
     "symbol": "2332.TW",
     "code": "2332",
-    "name": "友訊"
+    "name": "友訊",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "2337": {
     "symbol": "2337.TW",
     "code": "2337",
-    "name": "旺宏"
+    "name": "旺宏",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2338": {
     "symbol": "2338.TW",
     "code": "2338",
-    "name": "光罩"
+    "name": "光罩",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2340": {
     "symbol": "2340.TW",
     "code": "2340",
-    "name": "台亞"
+    "name": "台亞",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2342": {
     "symbol": "2342.TW",
     "code": "2342",
-    "name": "茂矽"
+    "name": "茂矽",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2344": {
     "symbol": "2344.TW",
     "code": "2344",
-    "name": "華邦電"
+    "name": "華邦電",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2345": {
     "symbol": "2345.TW",
     "code": "2345",
-    "name": "智邦"
+    "name": "智邦",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "2347": {
     "symbol": "2347.TW",
     "code": "2347",
-    "name": "聯強"
+    "name": "聯強",
+    "market": "上市",
+    "industry": "電子通路業"
   },
   "2348": {
     "symbol": "2348.TW",
     "code": "2348",
-    "name": "海悅"
+    "name": "海悅",
+    "market": "上市",
+    "industry": "其他業"
   },
   "2349": {
     "symbol": "2349.TW",
     "code": "2349",
-    "name": "錸德"
+    "name": "錸德",
+    "market": "上市",
+    "industry": "光電業"
   },
   "2351": {
     "symbol": "2351.TW",
     "code": "2351",
-    "name": "順德"
+    "name": "順德",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2352": {
     "symbol": "2352.TW",
     "code": "2352",
-    "name": "佳世達"
+    "name": "佳世達",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2353": {
     "symbol": "2353.TW",
     "code": "2353",
-    "name": "宏碁"
+    "name": "宏碁",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2354": {
     "symbol": "2354.TW",
     "code": "2354",
-    "name": "鴻準"
+    "name": "鴻準",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2355": {
     "symbol": "2355.TW",
     "code": "2355",
-    "name": "敬鵬"
+    "name": "敬鵬",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2356": {
     "symbol": "2356.TW",
     "code": "2356",
-    "name": "英業達"
+    "name": "英業達",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2357": {
     "symbol": "2357.TW",
     "code": "2357",
-    "name": "華碩"
+    "name": "華碩",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2359": {
     "symbol": "2359.TW",
     "code": "2359",
-    "name": "所羅門"
+    "name": "所羅門",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2360": {
     "symbol": "2360.TW",
     "code": "2360",
-    "name": "致茂"
+    "name": "致茂",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2362": {
     "symbol": "2362.TW",
     "code": "2362",
-    "name": "藍天"
+    "name": "藍天",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2363": {
     "symbol": "2363.TW",
     "code": "2363",
-    "name": "矽統"
+    "name": "矽統",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2364": {
     "symbol": "2364.TW",
     "code": "2364",
-    "name": "倫飛"
+    "name": "倫飛",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2365": {
     "symbol": "2365.TW",
     "code": "2365",
-    "name": "昆盈"
+    "name": "昆盈",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2367": {
     "symbol": "2367.TW",
     "code": "2367",
-    "name": "燿華"
+    "name": "燿華",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2368": {
     "symbol": "2368.TW",
     "code": "2368",
-    "name": "金像電"
+    "name": "金像電",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2369": {
     "symbol": "2369.TW",
     "code": "2369",
-    "name": "菱生"
+    "name": "菱生",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2371": {
     "symbol": "2371.TW",
     "code": "2371",
-    "name": "大同"
+    "name": "大同",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "2373": {
     "symbol": "2373.TW",
     "code": "2373",
-    "name": "震旦行"
+    "name": "震旦行",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2374": {
     "symbol": "2374.TW",
     "code": "2374",
-    "name": "佳能"
+    "name": "佳能",
+    "market": "上市",
+    "industry": "光電業"
   },
   "2375": {
     "symbol": "2375.TW",
     "code": "2375",
-    "name": "凱美"
+    "name": "凱美",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2376": {
     "symbol": "2376.TW",
     "code": "2376",
-    "name": "技嘉"
+    "name": "技嘉",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2377": {
     "symbol": "2377.TW",
     "code": "2377",
-    "name": "微星"
+    "name": "微星",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2379": {
     "symbol": "2379.TW",
     "code": "2379",
-    "name": "瑞昱"
+    "name": "瑞昱",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2380": {
     "symbol": "2380.TW",
     "code": "2380",
-    "name": "虹光"
+    "name": "虹光",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2382": {
     "symbol": "2382.TW",
     "code": "2382",
-    "name": "廣達"
+    "name": "廣達",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2383": {
     "symbol": "2383.TW",
     "code": "2383",
-    "name": "台光電"
+    "name": "台光電",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2385": {
     "symbol": "2385.TW",
     "code": "2385",
-    "name": "群光"
+    "name": "群光",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2387": {
     "symbol": "2387.TW",
     "code": "2387",
-    "name": "精元"
+    "name": "精元",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2388": {
     "symbol": "2388.TW",
     "code": "2388",
-    "name": "威盛"
+    "name": "威盛",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2390": {
     "symbol": "2390.TW",
     "code": "2390",
-    "name": "云辰"
+    "name": "云辰",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2392": {
     "symbol": "2392.TW",
     "code": "2392",
-    "name": "正崴"
+    "name": "正崴",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2393": {
     "symbol": "2393.TW",
     "code": "2393",
-    "name": "億光"
+    "name": "億光",
+    "market": "上市",
+    "industry": "光電業"
   },
   "2395": {
     "symbol": "2395.TW",
     "code": "2395",
-    "name": "研華"
+    "name": "研華",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2397": {
     "symbol": "2397.TW",
     "code": "2397",
-    "name": "友通"
+    "name": "友通",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2399": {
     "symbol": "2399.TW",
     "code": "2399",
-    "name": "映泰"
+    "name": "映泰",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2401": {
     "symbol": "2401.TW",
     "code": "2401",
-    "name": "凌陽"
+    "name": "凌陽",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2402": {
     "symbol": "2402.TW",
     "code": "2402",
-    "name": "毅嘉"
+    "name": "毅嘉",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2404": {
     "symbol": "2404.TW",
     "code": "2404",
-    "name": "漢唐"
+    "name": "漢唐",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2405": {
     "symbol": "2405.TW",
     "code": "2405",
-    "name": "輔信"
+    "name": "輔信",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2406": {
     "symbol": "2406.TW",
     "code": "2406",
-    "name": "國碩"
+    "name": "國碩",
+    "market": "上市",
+    "industry": "光電業"
   },
   "2408": {
     "symbol": "2408.TW",
     "code": "2408",
-    "name": "南亞科"
+    "name": "南亞科",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2409": {
     "symbol": "2409.TW",
     "code": "2409",
-    "name": "友達"
+    "name": "友達",
+    "market": "上市",
+    "industry": "光電業"
   },
   "2412": {
     "symbol": "2412.TW",
     "code": "2412",
-    "name": "中華電"
+    "name": "中華電",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "2413": {
     "symbol": "2413.TW",
     "code": "2413",
-    "name": "環科"
+    "name": "環科",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2414": {
     "symbol": "2414.TW",
     "code": "2414",
-    "name": "精技"
+    "name": "精技",
+    "market": "上市",
+    "industry": "電子通路業"
   },
   "2415": {
     "symbol": "2415.TW",
     "code": "2415",
-    "name": "錩新"
+    "name": "錩新",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2417": {
     "symbol": "2417.TW",
     "code": "2417",
-    "name": "圓剛"
+    "name": "圓剛",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2419": {
     "symbol": "2419.TW",
     "code": "2419",
-    "name": "仲琦"
+    "name": "仲琦",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "2420": {
     "symbol": "2420.TW",
     "code": "2420",
-    "name": "新巨"
+    "name": "新巨",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2421": {
     "symbol": "2421.TW",
     "code": "2421",
-    "name": "建準"
+    "name": "建準",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2423": {
     "symbol": "2423.TW",
     "code": "2423",
-    "name": "固緯"
+    "name": "固緯",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2424": {
     "symbol": "2424.TW",
     "code": "2424",
-    "name": "隴華"
+    "name": "隴華",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "2425": {
     "symbol": "2425.TW",
     "code": "2425",
-    "name": "承啟"
+    "name": "承啟",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2426": {
     "symbol": "2426.TW",
     "code": "2426",
-    "name": "鼎元"
+    "name": "鼎元",
+    "market": "上市",
+    "industry": "光電業"
   },
   "2427": {
     "symbol": "2427.TW",
     "code": "2427",
-    "name": "三商電"
+    "name": "三商電",
+    "market": "上市",
+    "industry": "資訊服務業"
   },
   "2428": {
     "symbol": "2428.TW",
     "code": "2428",
-    "name": "興勤"
+    "name": "興勤",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2429": {
     "symbol": "2429.TW",
     "code": "2429",
-    "name": "銘旺科"
+    "name": "銘旺科",
+    "market": "上市",
+    "industry": "光電業"
   },
   "2430": {
     "symbol": "2430.TW",
     "code": "2430",
-    "name": "燦坤"
+    "name": "燦坤",
+    "market": "上市",
+    "industry": "電子通路業"
   },
   "2431": {
     "symbol": "2431.TW",
     "code": "2431",
-    "name": "聯昌"
+    "name": "聯昌",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2432": {
     "symbol": "2432.TW",
     "code": "2432",
-    "name": "倚天酷碁-創"
+    "name": "倚天酷碁-創",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2433": {
     "symbol": "2433.TW",
     "code": "2433",
-    "name": "互盛電"
+    "name": "互盛電",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2434": {
     "symbol": "2434.TW",
     "code": "2434",
-    "name": "統懋"
+    "name": "統懋",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2436": {
     "symbol": "2436.TW",
     "code": "2436",
-    "name": "偉詮電"
+    "name": "偉詮電",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2438": {
     "symbol": "2438.TW",
     "code": "2438",
-    "name": "翔耀"
+    "name": "翔耀",
+    "market": "上市",
+    "industry": "光電業"
   },
   "2439": {
     "symbol": "2439.TW",
     "code": "2439",
-    "name": "美律"
+    "name": "美律",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "2440": {
     "symbol": "2440.TW",
     "code": "2440",
-    "name": "太空梭"
+    "name": "太空梭",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2441": {
     "symbol": "2441.TW",
     "code": "2441",
-    "name": "超豐"
+    "name": "超豐",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2442": {
     "symbol": "2442.TW",
     "code": "2442",
-    "name": "新美齊"
+    "name": "新美齊",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2444": {
     "symbol": "2444.TW",
     "code": "2444",
-    "name": "兆勁"
+    "name": "兆勁",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "2449": {
     "symbol": "2449.TW",
     "code": "2449",
-    "name": "京元電子"
+    "name": "京元電子",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2450": {
     "symbol": "2450.TW",
     "code": "2450",
-    "name": "神腦"
+    "name": "神腦",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "2451": {
     "symbol": "2451.TW",
     "code": "2451",
-    "name": "創見"
+    "name": "創見",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2453": {
     "symbol": "2453.TW",
     "code": "2453",
-    "name": "凌群"
+    "name": "凌群",
+    "market": "上市",
+    "industry": "資訊服務業"
   },
   "2454": {
     "symbol": "2454.TW",
     "code": "2454",
-    "name": "聯發科"
+    "name": "聯發科",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2455": {
     "symbol": "2455.TW",
     "code": "2455",
-    "name": "全新"
+    "name": "全新",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "2457": {
     "symbol": "2457.TW",
     "code": "2457",
-    "name": "飛宏"
+    "name": "飛宏",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2458": {
     "symbol": "2458.TW",
     "code": "2458",
-    "name": "義隆"
+    "name": "義隆",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2459": {
     "symbol": "2459.TW",
     "code": "2459",
-    "name": "敦吉"
+    "name": "敦吉",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2460": {
     "symbol": "2460.TW",
     "code": "2460",
-    "name": "建通"
+    "name": "建通",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2461": {
     "symbol": "2461.TW",
     "code": "2461",
-    "name": "光群雷"
+    "name": "光群雷",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2462": {
     "symbol": "2462.TW",
     "code": "2462",
-    "name": "良得電"
+    "name": "良得電",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2464": {
     "symbol": "2464.TW",
     "code": "2464",
-    "name": "盟立"
+    "name": "盟立",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2465": {
     "symbol": "2465.TW",
     "code": "2465",
-    "name": "麗臺"
+    "name": "麗臺",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2466": {
     "symbol": "2466.TW",
     "code": "2466",
-    "name": "冠西電"
+    "name": "冠西電",
+    "market": "上市",
+    "industry": "光電業"
   },
   "2467": {
     "symbol": "2467.TW",
     "code": "2467",
-    "name": "志聖"
+    "name": "志聖",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2468": {
     "symbol": "2468.TW",
     "code": "2468",
-    "name": "華經"
+    "name": "華經",
+    "market": "上市",
+    "industry": "資訊服務業"
   },
   "2471": {
     "symbol": "2471.TW",
     "code": "2471",
-    "name": "資通"
+    "name": "資通",
+    "market": "上市",
+    "industry": "資訊服務業"
   },
   "2472": {
     "symbol": "2472.TW",
     "code": "2472",
-    "name": "立隆電"
+    "name": "立隆電",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2474": {
     "symbol": "2474.TW",
     "code": "2474",
-    "name": "可成"
+    "name": "可成",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2476": {
     "symbol": "2476.TW",
     "code": "2476",
-    "name": "鉅祥"
+    "name": "鉅祥",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2477": {
     "symbol": "2477.TW",
     "code": "2477",
-    "name": "美隆電"
+    "name": "美隆電",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2478": {
     "symbol": "2478.TW",
     "code": "2478",
-    "name": "大毅"
+    "name": "大毅",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2480": {
     "symbol": "2480.TW",
     "code": "2480",
-    "name": "敦陽科"
+    "name": "敦陽科",
+    "market": "上市",
+    "industry": "資訊服務業"
   },
   "2481": {
     "symbol": "2481.TW",
     "code": "2481",
-    "name": "強茂"
+    "name": "強茂",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "2482": {
     "symbol": "2482.TW",
     "code": "2482",
-    "name": "連宇"
+    "name": "連宇",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2483": {
     "symbol": "2483.TW",
     "code": "2483",
-    "name": "百容"
+    "name": "百容",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2484": {
     "symbol": "2484.TW",
     "code": "2484",
-    "name": "希華"
+    "name": "希華",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2485": {
     "symbol": "2485.TW",
     "code": "2485",
-    "name": "兆赫"
+    "name": "兆赫",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "2486": {
     "symbol": "2486.TW",
     "code": "2486",
-    "name": "一詮"
+    "name": "一詮",
+    "market": "上市",
+    "industry": "光電業"
   },
   "2488": {
     "symbol": "2488.TW",
     "code": "2488",
-    "name": "漢平"
+    "name": "漢平",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "2489": {
     "symbol": "2489.TW",
     "code": "2489",
-    "name": "瑞軒"
+    "name": "瑞軒",
+    "market": "上市",
+    "industry": "光電業"
   },
   "2491": {
     "symbol": "2491.TW",
     "code": "2491",
-    "name": "吉祥全"
+    "name": "吉祥全",
+    "market": "上市",
+    "industry": "光電業"
   },
   "2492": {
     "symbol": "2492.TW",
     "code": "2492",
-    "name": "華新科"
+    "name": "華新科",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2493": {
     "symbol": "2493.TW",
     "code": "2493",
-    "name": "揚博"
+    "name": "揚博",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "2495": {
     "symbol": "2495.TW",
     "code": "2495",
-    "name": "普安"
+    "name": "普安",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "2496": {
     "symbol": "2496.TW",
     "code": "2496",
-    "name": "卓越"
+    "name": "卓越",
+    "market": "上市",
+    "industry": "其他業"
   },
   "2497": {
     "symbol": "2497.TW",
     "code": "2497",
-    "name": "怡利電"
+    "name": "怡利電",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "2498": {
     "symbol": "2498.TW",
     "code": "2498",
-    "name": "宏達電"
+    "name": "宏達電",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "2501": {
     "symbol": "2501.TW",
     "code": "2501",
-    "name": "國建"
+    "name": "國建",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2504": {
     "symbol": "2504.TW",
     "code": "2504",
-    "name": "國產"
+    "name": "國產",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2505": {
     "symbol": "2505.TW",
     "code": "2505",
-    "name": "國揚"
+    "name": "國揚",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2506": {
     "symbol": "2506.TW",
     "code": "2506",
-    "name": "太設"
+    "name": "太設",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2509": {
     "symbol": "2509.TW",
     "code": "2509",
-    "name": "全坤建"
+    "name": "全坤建",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2511": {
     "symbol": "2511.TW",
     "code": "2511",
-    "name": "太子"
+    "name": "太子",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2514": {
     "symbol": "2514.TW",
     "code": "2514",
-    "name": "龍邦"
+    "name": "龍邦",
+    "market": "上市",
+    "industry": "其他業"
   },
   "2515": {
     "symbol": "2515.TW",
     "code": "2515",
-    "name": "中工"
+    "name": "中工",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2516": {
     "symbol": "2516.TW",
     "code": "2516",
-    "name": "新建"
+    "name": "新建",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2520": {
     "symbol": "2520.TW",
     "code": "2520",
-    "name": "冠德"
+    "name": "冠德",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2524": {
     "symbol": "2524.TW",
     "code": "2524",
-    "name": "京城"
+    "name": "京城",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2527": {
     "symbol": "2527.TW",
     "code": "2527",
-    "name": "宏璟"
+    "name": "宏璟",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2528": {
     "symbol": "2528.TW",
     "code": "2528",
-    "name": "皇普"
+    "name": "皇普",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2530": {
     "symbol": "2530.TW",
     "code": "2530",
-    "name": "華建"
+    "name": "華建",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2534": {
     "symbol": "2534.TW",
     "code": "2534",
-    "name": "宏盛"
+    "name": "宏盛",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2535": {
     "symbol": "2535.TW",
     "code": "2535",
-    "name": "達欣工"
+    "name": "達欣工",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2536": {
     "symbol": "2536.TW",
     "code": "2536",
-    "name": "宏普"
+    "name": "宏普",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2537": {
     "symbol": "2537.TW",
     "code": "2537",
-    "name": "聯上發"
+    "name": "聯上發",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2538": {
     "symbol": "2538.TW",
     "code": "2538",
-    "name": "基泰"
+    "name": "基泰",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2539": {
     "symbol": "2539.TW",
     "code": "2539",
-    "name": "櫻花建"
+    "name": "櫻花建",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2540": {
     "symbol": "2540.TW",
     "code": "2540",
-    "name": "愛山林"
+    "name": "愛山林",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2542": {
     "symbol": "2542.TW",
     "code": "2542",
-    "name": "興富發"
+    "name": "興富發",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2543": {
     "symbol": "2543.TW",
     "code": "2543",
-    "name": "皇昌"
+    "name": "皇昌",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2545": {
     "symbol": "2545.TW",
     "code": "2545",
-    "name": "皇翔"
+    "name": "皇翔",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2546": {
     "symbol": "2546.TW",
     "code": "2546",
-    "name": "根基"
+    "name": "根基",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2547": {
     "symbol": "2547.TW",
     "code": "2547",
-    "name": "日勝生"
+    "name": "日勝生",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2548": {
     "symbol": "2548.TW",
     "code": "2548",
-    "name": "華固"
+    "name": "華固",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2597": {
     "symbol": "2597.TW",
     "code": "2597",
-    "name": "潤弘"
+    "name": "潤弘",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2601": {
     "symbol": "2601.TW",
     "code": "2601",
-    "name": "益航"
+    "name": "益航",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "2603": {
     "symbol": "2603.TW",
     "code": "2603",
-    "name": "長榮"
+    "name": "長榮",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2605": {
     "symbol": "2605.TW",
     "code": "2605",
-    "name": "新興"
+    "name": "新興",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2606": {
     "symbol": "2606.TW",
     "code": "2606",
-    "name": "裕民"
+    "name": "裕民",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2607": {
     "symbol": "2607.TW",
     "code": "2607",
-    "name": "榮運"
+    "name": "榮運",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2608": {
     "symbol": "2608.TW",
     "code": "2608",
-    "name": "嘉里大榮"
+    "name": "嘉里大榮",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2609": {
     "symbol": "2609.TW",
     "code": "2609",
-    "name": "陽明"
+    "name": "陽明",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2610": {
     "symbol": "2610.TW",
     "code": "2610",
-    "name": "華航"
+    "name": "華航",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2611": {
     "symbol": "2611.TW",
     "code": "2611",
-    "name": "志信"
+    "name": "志信",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2612": {
     "symbol": "2612.TW",
     "code": "2612",
-    "name": "中航"
+    "name": "中航",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2613": {
     "symbol": "2613.TW",
     "code": "2613",
-    "name": "中櫃"
+    "name": "中櫃",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2614": {
     "symbol": "2614.TW",
     "code": "2614",
-    "name": "東森"
+    "name": "東森",
+    "market": "上市",
+    "industry": "其他業"
   },
   "2615": {
     "symbol": "2615.TW",
     "code": "2615",
-    "name": "萬海"
+    "name": "萬海",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2616": {
     "symbol": "2616.TW",
     "code": "2616",
-    "name": "山隆"
+    "name": "山隆",
+    "market": "上市",
+    "industry": "油電燃氣業"
   },
   "2617": {
     "symbol": "2617.TW",
     "code": "2617",
-    "name": "台航"
+    "name": "台航",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2618": {
     "symbol": "2618.TW",
     "code": "2618",
-    "name": "長榮航"
+    "name": "長榮航",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2630": {
     "symbol": "2630.TW",
     "code": "2630",
-    "name": "亞航"
+    "name": "亞航",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2633": {
     "symbol": "2633.TW",
     "code": "2633",
-    "name": "台灣高鐵"
+    "name": "台灣高鐵",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2634": {
     "symbol": "2634.TW",
     "code": "2634",
-    "name": "漢翔"
+    "name": "漢翔",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2636": {
     "symbol": "2636.TW",
     "code": "2636",
-    "name": "台驊控股"
+    "name": "台驊控股",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2637": {
     "symbol": "2637.TW",
     "code": "2637",
-    "name": "慧洋-KY"
+    "name": "慧洋-KY",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2642": {
     "symbol": "2642.TW",
     "code": "2642",
-    "name": "宅配通"
+    "name": "宅配通",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2645": {
     "symbol": "2645.TW",
     "code": "2645",
-    "name": "長榮航太"
+    "name": "長榮航太",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2646": {
     "symbol": "2646.TW",
     "code": "2646",
-    "name": "星宇航空"
+    "name": "星宇航空",
+    "market": "上市",
+    "industry": "航運業"
   },
   "2701": {
     "symbol": "2701.TW",
     "code": "2701",
-    "name": "萬企"
+    "name": "萬企",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "2702": {
     "symbol": "2702.TW",
     "code": "2702",
-    "name": "華園"
+    "name": "華園",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "2704": {
     "symbol": "2704.TW",
     "code": "2704",
-    "name": "國賓"
+    "name": "國賓",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "2705": {
     "symbol": "2705.TW",
     "code": "2705",
-    "name": "六福"
+    "name": "六福",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "2706": {
     "symbol": "2706.TW",
     "code": "2706",
-    "name": "第一店"
+    "name": "第一店",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "2707": {
     "symbol": "2707.TW",
     "code": "2707",
-    "name": "晶華"
+    "name": "晶華",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "2712": {
     "symbol": "2712.TW",
     "code": "2712",
-    "name": "遠雄來"
+    "name": "遠雄來",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "2722": {
     "symbol": "2722.TW",
     "code": "2722",
-    "name": "夏都"
+    "name": "夏都",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "2723": {
     "symbol": "2723.TW",
     "code": "2723",
-    "name": "美食-KY"
+    "name": "美食-KY",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "2727": {
     "symbol": "2727.TW",
     "code": "2727",
-    "name": "王品"
+    "name": "王品",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "2731": {
     "symbol": "2731.TW",
     "code": "2731",
-    "name": "雄獅"
+    "name": "雄獅",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "2739": {
     "symbol": "2739.TW",
     "code": "2739",
-    "name": "寒舍"
+    "name": "寒舍",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "2748": {
     "symbol": "2748.TW",
     "code": "2748",
-    "name": "雲品"
+    "name": "雲品",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "2753": {
     "symbol": "2753.TW",
     "code": "2753",
-    "name": "八方雲集"
+    "name": "八方雲集",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "2762": {
     "symbol": "2762.TW",
     "code": "2762",
-    "name": "世界健身-KY"
+    "name": "世界健身-KY",
+    "market": "上市",
+    "industry": "運動休閒"
   },
   "2801": {
     "symbol": "2801.TW",
     "code": "2801",
-    "name": "彰銀"
+    "name": "彰銀",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2812": {
     "symbol": "2812.TW",
     "code": "2812",
-    "name": "台中銀"
+    "name": "台中銀",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2816": {
     "symbol": "2816.TW",
     "code": "2816",
-    "name": "旺旺保"
+    "name": "旺旺保",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2820": {
     "symbol": "2820.TW",
     "code": "2820",
-    "name": "華票"
+    "name": "華票",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2832": {
     "symbol": "2832.TW",
     "code": "2832",
-    "name": "台產"
+    "name": "台產",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2834": {
     "symbol": "2834.TW",
     "code": "2834",
-    "name": "臺企銀"
+    "name": "臺企銀",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2836": {
     "symbol": "2836.TW",
     "code": "2836",
-    "name": "高雄銀"
+    "name": "高雄銀",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2838": {
     "symbol": "2838.TW",
     "code": "2838",
-    "name": "聯邦銀"
+    "name": "聯邦銀",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2845": {
     "symbol": "2845.TW",
     "code": "2845",
-    "name": "遠東銀"
+    "name": "遠東銀",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2849": {
     "symbol": "2849.TW",
     "code": "2849",
-    "name": "安泰銀"
+    "name": "安泰銀",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2850": {
     "symbol": "2850.TW",
     "code": "2850",
-    "name": "新產"
+    "name": "新產",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2851": {
     "symbol": "2851.TW",
     "code": "2851",
-    "name": "中再保"
+    "name": "中再保",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2852": {
     "symbol": "2852.TW",
     "code": "2852",
-    "name": "第一保"
+    "name": "第一保",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2855": {
     "symbol": "2855.TW",
     "code": "2855",
-    "name": "統一證"
+    "name": "統一證",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2867": {
     "symbol": "2867.TW",
     "code": "2867",
-    "name": "三商壽"
+    "name": "三商壽",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2880": {
     "symbol": "2880.TW",
     "code": "2880",
-    "name": "華南金"
+    "name": "華南金",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2881": {
     "symbol": "2881.TW",
     "code": "2881",
-    "name": "富邦金"
+    "name": "富邦金",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2882": {
     "symbol": "2882.TW",
     "code": "2882",
-    "name": "國泰金"
+    "name": "國泰金",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2883": {
     "symbol": "2883.TW",
     "code": "2883",
-    "name": "凱基金"
+    "name": "凱基金",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2884": {
     "symbol": "2884.TW",
     "code": "2884",
-    "name": "玉山金"
+    "name": "玉山金",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2885": {
     "symbol": "2885.TW",
     "code": "2885",
-    "name": "元大金"
+    "name": "元大金",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2886": {
     "symbol": "2886.TW",
     "code": "2886",
-    "name": "兆豐金"
+    "name": "兆豐金",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2887": {
     "symbol": "2887.TW",
     "code": "2887",
-    "name": "台新新光金"
+    "name": "台新新光金",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2889": {
     "symbol": "2889.TW",
     "code": "2889",
-    "name": "國票金"
+    "name": "國票金",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2890": {
     "symbol": "2890.TW",
     "code": "2890",
-    "name": "永豐金"
+    "name": "永豐金",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2891": {
     "symbol": "2891.TW",
     "code": "2891",
-    "name": "中信金"
+    "name": "中信金",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2892": {
     "symbol": "2892.TW",
     "code": "2892",
-    "name": "第一金"
+    "name": "第一金",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2897": {
     "symbol": "2897.TW",
     "code": "2897",
-    "name": "王道銀行"
+    "name": "王道銀行",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "2901": {
     "symbol": "2901.TW",
     "code": "2901",
-    "name": "欣欣"
+    "name": "欣欣",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "2903": {
     "symbol": "2903.TW",
     "code": "2903",
-    "name": "遠百"
+    "name": "遠百",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "2904": {
     "symbol": "2904.TW",
     "code": "2904",
-    "name": "匯僑"
+    "name": "匯僑",
+    "market": "上市",
+    "industry": "其他業"
   },
   "2905": {
     "symbol": "2905.TW",
     "code": "2905",
-    "name": "三商"
+    "name": "三商",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "2906": {
     "symbol": "2906.TW",
     "code": "2906",
-    "name": "高林"
+    "name": "高林",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "2908": {
     "symbol": "2908.TW",
     "code": "2908",
-    "name": "特力"
+    "name": "特力",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "2910": {
     "symbol": "2910.TW",
     "code": "2910",
-    "name": "統領"
+    "name": "統領",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "2911": {
     "symbol": "2911.TW",
     "code": "2911",
-    "name": "麗嬰房"
+    "name": "麗嬰房",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "2912": {
     "symbol": "2912.TW",
     "code": "2912",
-    "name": "統一超"
+    "name": "統一超",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "2913": {
     "symbol": "2913.TW",
     "code": "2913",
-    "name": "農林"
+    "name": "農林",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "2915": {
     "symbol": "2915.TW",
     "code": "2915",
-    "name": "潤泰全"
+    "name": "潤泰全",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "2923": {
     "symbol": "2923.TW",
     "code": "2923",
-    "name": "鼎固-KY"
+    "name": "鼎固-KY",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "2929": {
     "symbol": "2929.TW",
     "code": "2929",
-    "name": "淘帝-KY"
+    "name": "淘帝-KY",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "2939": {
     "symbol": "2939.TW",
     "code": "2939",
-    "name": "永邑-KY"
+    "name": "永邑-KY",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "2945": {
     "symbol": "2945.TW",
     "code": "2945",
-    "name": "三商家購"
+    "name": "三商家購",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "3002": {
     "symbol": "3002.TW",
     "code": "3002",
-    "name": "歐格"
+    "name": "歐格",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3003": {
     "symbol": "3003.TW",
     "code": "3003",
-    "name": "健和興"
+    "name": "健和興",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3004": {
     "symbol": "3004.TW",
     "code": "3004",
-    "name": "豐達科"
+    "name": "豐達科",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "3005": {
     "symbol": "3005.TW",
     "code": "3005",
-    "name": "神基"
+    "name": "神基",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3006": {
     "symbol": "3006.TW",
     "code": "3006",
-    "name": "晶豪科"
+    "name": "晶豪科",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3008": {
     "symbol": "3008.TW",
     "code": "3008",
-    "name": "大立光"
+    "name": "大立光",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3010": {
     "symbol": "3010.TW",
     "code": "3010",
-    "name": "華立"
+    "name": "華立",
+    "market": "上市",
+    "industry": "電子通路業"
   },
   "3011": {
     "symbol": "3011.TW",
     "code": "3011",
-    "name": "今皓"
+    "name": "今皓",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3013": {
     "symbol": "3013.TW",
     "code": "3013",
-    "name": "晟銘電"
+    "name": "晟銘電",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3014": {
     "symbol": "3014.TW",
     "code": "3014",
-    "name": "聯陽"
+    "name": "聯陽",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3015": {
     "symbol": "3015.TW",
     "code": "3015",
-    "name": "全漢"
+    "name": "全漢",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3016": {
     "symbol": "3016.TW",
     "code": "3016",
-    "name": "嘉晶"
+    "name": "嘉晶",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3017": {
     "symbol": "3017.TW",
     "code": "3017",
-    "name": "奇鋐"
+    "name": "奇鋐",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3018": {
     "symbol": "3018.TW",
     "code": "3018",
-    "name": "隆銘綠能"
+    "name": "隆銘綠能",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "3019": {
     "symbol": "3019.TW",
     "code": "3019",
-    "name": "亞光"
+    "name": "亞光",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3021": {
     "symbol": "3021.TW",
     "code": "3021",
-    "name": "鴻名"
+    "name": "鴻名",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3022": {
     "symbol": "3022.TW",
     "code": "3022",
-    "name": "威強電"
+    "name": "威強電",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3023": {
     "symbol": "3023.TW",
     "code": "3023",
-    "name": "信邦"
+    "name": "信邦",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3024": {
     "symbol": "3024.TW",
     "code": "3024",
-    "name": "憶聲"
+    "name": "憶聲",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3025": {
     "symbol": "3025.TW",
     "code": "3025",
-    "name": "星通"
+    "name": "星通",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "3026": {
     "symbol": "3026.TW",
     "code": "3026",
-    "name": "禾伸堂"
+    "name": "禾伸堂",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3027": {
     "symbol": "3027.TW",
     "code": "3027",
-    "name": "盛達"
+    "name": "盛達",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "3028": {
     "symbol": "3028.TW",
     "code": "3028",
-    "name": "增你強"
+    "name": "增你強",
+    "market": "上市",
+    "industry": "電子通路業"
   },
   "3029": {
     "symbol": "3029.TW",
     "code": "3029",
-    "name": "零壹"
+    "name": "零壹",
+    "market": "上市",
+    "industry": "資訊服務業"
   },
   "3030": {
     "symbol": "3030.TW",
     "code": "3030",
-    "name": "德律"
+    "name": "德律",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "3031": {
     "symbol": "3031.TW",
     "code": "3031",
-    "name": "佰鴻"
+    "name": "佰鴻",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3032": {
     "symbol": "3032.TW",
     "code": "3032",
-    "name": "偉訓"
+    "name": "偉訓",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3033": {
     "symbol": "3033.TW",
     "code": "3033",
-    "name": "威健"
+    "name": "威健",
+    "market": "上市",
+    "industry": "電子通路業"
   },
   "3034": {
     "symbol": "3034.TW",
     "code": "3034",
-    "name": "聯詠"
+    "name": "聯詠",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3035": {
     "symbol": "3035.TW",
     "code": "3035",
-    "name": "智原"
+    "name": "智原",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3036": {
     "symbol": "3036.TW",
     "code": "3036",
-    "name": "文曄"
+    "name": "文曄",
+    "market": "上市",
+    "industry": "電子通路業"
   },
   "3037": {
     "symbol": "3037.TW",
     "code": "3037",
-    "name": "欣興"
+    "name": "欣興",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3038": {
     "symbol": "3038.TW",
     "code": "3038",
-    "name": "全台"
+    "name": "全台",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3040": {
     "symbol": "3040.TW",
     "code": "3040",
-    "name": "遠見"
+    "name": "遠見",
+    "market": "上市",
+    "industry": "其他業"
   },
   "3041": {
     "symbol": "3041.TW",
     "code": "3041",
-    "name": "揚智"
+    "name": "揚智",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3042": {
     "symbol": "3042.TW",
     "code": "3042",
-    "name": "晶技"
+    "name": "晶技",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3043": {
     "symbol": "3043.TW",
     "code": "3043",
-    "name": "科風"
+    "name": "科風",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "3044": {
     "symbol": "3044.TW",
     "code": "3044",
-    "name": "健鼎"
+    "name": "健鼎",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3045": {
     "symbol": "3045.TW",
     "code": "3045",
-    "name": "台灣大"
+    "name": "台灣大",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "3046": {
     "symbol": "3046.TW",
     "code": "3046",
-    "name": "建碁"
+    "name": "建碁",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3047": {
     "symbol": "3047.TW",
     "code": "3047",
-    "name": "訊舟"
+    "name": "訊舟",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "3048": {
     "symbol": "3048.TW",
     "code": "3048",
-    "name": "益登"
+    "name": "益登",
+    "market": "上市",
+    "industry": "電子通路業"
   },
   "3049": {
     "symbol": "3049.TW",
     "code": "3049",
-    "name": "精金"
+    "name": "精金",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3050": {
     "symbol": "3050.TW",
     "code": "3050",
-    "name": "鈺德"
+    "name": "鈺德",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3051": {
     "symbol": "3051.TW",
     "code": "3051",
-    "name": "力特"
+    "name": "力特",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3052": {
     "symbol": "3052.TW",
     "code": "3052",
-    "name": "夆典"
+    "name": "夆典",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "3054": {
     "symbol": "3054.TW",
     "code": "3054",
-    "name": "立萬利"
+    "name": "立萬利",
+    "market": "上市",
+    "industry": "食品工業"
   },
   "3055": {
     "symbol": "3055.TW",
     "code": "3055",
-    "name": "蔚華科"
+    "name": "蔚華科",
+    "market": "上市",
+    "industry": "電子通路業"
   },
   "3056": {
     "symbol": "3056.TW",
     "code": "3056",
-    "name": "富華新"
+    "name": "富華新",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "3057": {
     "symbol": "3057.TW",
     "code": "3057",
-    "name": "喬鼎"
+    "name": "喬鼎",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3058": {
     "symbol": "3058.TW",
     "code": "3058",
-    "name": "立德"
+    "name": "立德",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3059": {
     "symbol": "3059.TW",
     "code": "3059",
-    "name": "華晶科"
+    "name": "華晶科",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3060": {
     "symbol": "3060.TW",
     "code": "3060",
-    "name": "銘異"
+    "name": "銘異",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3062": {
     "symbol": "3062.TW",
     "code": "3062",
-    "name": "建漢"
+    "name": "建漢",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "3090": {
     "symbol": "3090.TW",
     "code": "3090",
-    "name": "日電貿"
+    "name": "日電貿",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3092": {
     "symbol": "3092.TW",
     "code": "3092",
-    "name": "鴻碩"
+    "name": "鴻碩",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3094": {
     "symbol": "3094.TW",
     "code": "3094",
-    "name": "聯傑"
+    "name": "聯傑",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3130": {
     "symbol": "3130.TW",
     "code": "3130",
-    "name": "一零四"
+    "name": "一零四",
+    "market": "上市",
+    "industry": "數位雲端"
   },
   "3135": {
     "symbol": "3135.TW",
     "code": "3135",
-    "name": "凌航"
+    "name": "凌航",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3138": {
     "symbol": "3138.TW",
     "code": "3138",
-    "name": "耀登"
+    "name": "耀登",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "3149": {
     "symbol": "3149.TW",
     "code": "3149",
-    "name": "正達"
+    "name": "正達",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3150": {
     "symbol": "3150.TW",
     "code": "3150",
-    "name": "鈺寶-創"
+    "name": "鈺寶-創",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3164": {
     "symbol": "3164.TW",
     "code": "3164",
-    "name": "景岳"
+    "name": "景岳",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "3167": {
     "symbol": "3167.TW",
     "code": "3167",
-    "name": "大量"
+    "name": "大量",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "3168": {
     "symbol": "3168.TW",
     "code": "3168",
-    "name": "眾福科"
+    "name": "眾福科",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3189": {
     "symbol": "3189.TW",
     "code": "3189",
-    "name": "景碩"
+    "name": "景碩",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3209": {
     "symbol": "3209.TW",
     "code": "3209",
-    "name": "全科"
+    "name": "全科",
+    "market": "上市",
+    "industry": "電子通路業"
   },
   "3229": {
     "symbol": "3229.TW",
     "code": "3229",
-    "name": "晟鈦"
+    "name": "晟鈦",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3231": {
     "symbol": "3231.TW",
     "code": "3231",
-    "name": "緯創"
+    "name": "緯創",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3257": {
     "symbol": "3257.TW",
     "code": "3257",
-    "name": "虹冠電"
+    "name": "虹冠電",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3266": {
     "symbol": "3266.TW",
     "code": "3266",
-    "name": "昇陽"
+    "name": "昇陽",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "3296": {
     "symbol": "3296.TW",
     "code": "3296",
-    "name": "勝德"
+    "name": "勝德",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3305": {
     "symbol": "3305.TW",
     "code": "3305",
-    "name": "昇貿"
+    "name": "昇貿",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "3308": {
     "symbol": "3308.TW",
     "code": "3308",
-    "name": "聯德"
+    "name": "聯德",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3311": {
     "symbol": "3311.TW",
     "code": "3311",
-    "name": "閎暉"
+    "name": "閎暉",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "3312": {
     "symbol": "3312.TW",
     "code": "3312",
-    "name": "弘憶股"
+    "name": "弘憶股",
+    "market": "上市",
+    "industry": "電子通路業"
   },
   "3321": {
     "symbol": "3321.TW",
     "code": "3321",
-    "name": "同泰"
+    "name": "同泰",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3338": {
     "symbol": "3338.TW",
     "code": "3338",
-    "name": "泰碩"
+    "name": "泰碩",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3346": {
     "symbol": "3346.TW",
     "code": "3346",
-    "name": "麗清"
+    "name": "麗清",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "3356": {
     "symbol": "3356.TW",
     "code": "3356",
-    "name": "奇偶"
+    "name": "奇偶",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3376": {
     "symbol": "3376.TW",
     "code": "3376",
-    "name": "新日興"
+    "name": "新日興",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3380": {
     "symbol": "3380.TW",
     "code": "3380",
-    "name": "明泰"
+    "name": "明泰",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "3406": {
     "symbol": "3406.TW",
     "code": "3406",
-    "name": "玉晶光"
+    "name": "玉晶光",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3413": {
     "symbol": "3413.TW",
     "code": "3413",
-    "name": "京鼎"
+    "name": "京鼎",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3416": {
     "symbol": "3416.TW",
     "code": "3416",
-    "name": "融程電"
+    "name": "融程電",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3419": {
     "symbol": "3419.TW",
     "code": "3419",
-    "name": "譁裕"
+    "name": "譁裕",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "3432": {
     "symbol": "3432.TW",
     "code": "3432",
-    "name": "台端"
+    "name": "台端",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3437": {
     "symbol": "3437.TW",
     "code": "3437",
-    "name": "榮創"
+    "name": "榮創",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3443": {
     "symbol": "3443.TW",
     "code": "3443",
-    "name": "創意"
+    "name": "創意",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3447": {
     "symbol": "3447.TW",
     "code": "3447",
-    "name": "展達"
+    "name": "展達",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "3450": {
     "symbol": "3450.TW",
     "code": "3450",
-    "name": "聯鈞"
+    "name": "聯鈞",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3454": {
     "symbol": "3454.TW",
     "code": "3454",
-    "name": "晶睿"
+    "name": "晶睿",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3481": {
     "symbol": "3481.TW",
     "code": "3481",
-    "name": "群創"
+    "name": "群創",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3494": {
     "symbol": "3494.TW",
     "code": "3494",
-    "name": "誠研"
+    "name": "誠研",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3501": {
     "symbol": "3501.TW",
     "code": "3501",
-    "name": "維熹"
+    "name": "維熹",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3504": {
     "symbol": "3504.TW",
     "code": "3504",
-    "name": "揚明光"
+    "name": "揚明光",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3515": {
     "symbol": "3515.TW",
     "code": "3515",
-    "name": "華擎"
+    "name": "華擎",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3518": {
     "symbol": "3518.TW",
     "code": "3518",
-    "name": "柏騰"
+    "name": "柏騰",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "3528": {
     "symbol": "3528.TW",
     "code": "3528",
-    "name": "安馳"
+    "name": "安馳",
+    "market": "上市",
+    "industry": "電子通路業"
   },
   "3530": {
     "symbol": "3530.TW",
     "code": "3530",
-    "name": "晶相光"
+    "name": "晶相光",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3532": {
     "symbol": "3532.TW",
     "code": "3532",
-    "name": "台勝科"
+    "name": "台勝科",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3533": {
     "symbol": "3533.TW",
     "code": "3533",
-    "name": "嘉澤"
+    "name": "嘉澤",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3535": {
     "symbol": "3535.TW",
     "code": "3535",
-    "name": "晶彩科"
+    "name": "晶彩科",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3543": {
     "symbol": "3543.TW",
     "code": "3543",
-    "name": "州巧"
+    "name": "州巧",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3545": {
     "symbol": "3545.TW",
     "code": "3545",
-    "name": "敦泰"
+    "name": "敦泰",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3550": {
     "symbol": "3550.TW",
     "code": "3550",
-    "name": "聯穎"
+    "name": "聯穎",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3557": {
     "symbol": "3557.TW",
     "code": "3557",
-    "name": "嘉威"
+    "name": "嘉威",
+    "market": "上市",
+    "industry": "居家生活"
   },
   "3563": {
     "symbol": "3563.TW",
     "code": "3563",
-    "name": "牧德"
+    "name": "牧德",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3576": {
     "symbol": "3576.TW",
     "code": "3576",
-    "name": "聯合再生"
+    "name": "聯合再生",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3583": {
     "symbol": "3583.TW",
     "code": "3583",
-    "name": "辛耘"
+    "name": "辛耘",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3588": {
     "symbol": "3588.TW",
     "code": "3588",
-    "name": "通嘉"
+    "name": "通嘉",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3591": {
     "symbol": "3591.TW",
     "code": "3591",
-    "name": "艾笛森"
+    "name": "艾笛森",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3592": {
     "symbol": "3592.TW",
     "code": "3592",
-    "name": "瑞鼎"
+    "name": "瑞鼎",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3593": {
     "symbol": "3593.TW",
     "code": "3593",
-    "name": "力銘"
+    "name": "力銘",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3596": {
     "symbol": "3596.TW",
     "code": "3596",
-    "name": "智易"
+    "name": "智易",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "3605": {
     "symbol": "3605.TW",
     "code": "3605",
-    "name": "宏致"
+    "name": "宏致",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3607": {
     "symbol": "3607.TW",
     "code": "3607",
-    "name": "谷崧"
+    "name": "谷崧",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3617": {
     "symbol": "3617.TW",
     "code": "3617",
-    "name": "碩天"
+    "name": "碩天",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "3622": {
     "symbol": "3622.TW",
     "code": "3622",
-    "name": "洋華"
+    "name": "洋華",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3645": {
     "symbol": "3645.TW",
     "code": "3645",
-    "name": "達邁"
+    "name": "達邁",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3652": {
     "symbol": "3652.TW",
     "code": "3652",
-    "name": "精聯"
+    "name": "精聯",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3653": {
     "symbol": "3653.TW",
     "code": "3653",
-    "name": "健策"
+    "name": "健策",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3661": {
     "symbol": "3661.TW",
     "code": "3661",
-    "name": "世芯-KY"
+    "name": "世芯-KY",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3665": {
     "symbol": "3665.TW",
     "code": "3665",
-    "name": "貿聯-KY"
+    "name": "貿聯-KY",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "3669": {
     "symbol": "3669.TW",
     "code": "3669",
-    "name": "圓展"
+    "name": "圓展",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "3673": {
     "symbol": "3673.TW",
     "code": "3673",
-    "name": "TPK-KY"
+    "name": "TPK-KY",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3679": {
     "symbol": "3679.TW",
     "code": "3679",
-    "name": "新至陞"
+    "name": "新至陞",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3686": {
     "symbol": "3686.TW",
     "code": "3686",
-    "name": "達能"
+    "name": "達能",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3694": {
     "symbol": "3694.TW",
     "code": "3694",
-    "name": "海華"
+    "name": "海華",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "3701": {
     "symbol": "3701.TW",
     "code": "3701",
-    "name": "大眾控"
+    "name": "大眾控",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3702": {
     "symbol": "3702.TW",
     "code": "3702",
-    "name": "大聯大"
+    "name": "大聯大",
+    "market": "上市",
+    "industry": "電子通路業"
   },
   "3703": {
     "symbol": "3703.TW",
     "code": "3703",
-    "name": "欣陸"
+    "name": "欣陸",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "3704": {
     "symbol": "3704.TW",
     "code": "3704",
-    "name": "合勤控"
+    "name": "合勤控",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "3705": {
     "symbol": "3705.TW",
     "code": "3705",
-    "name": "永信"
+    "name": "永信",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "3706": {
     "symbol": "3706.TW",
     "code": "3706",
-    "name": "神達"
+    "name": "神達",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3708": {
     "symbol": "3708.TW",
     "code": "3708",
-    "name": "上緯投控"
+    "name": "上緯投控",
+    "market": "上市",
+    "industry": "綠能環保"
   },
   "3711": {
     "symbol": "3711.TW",
     "code": "3711",
-    "name": "日月光投控"
+    "name": "日月光投控",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "3712": {
     "symbol": "3712.TW",
     "code": "3712",
-    "name": "永崴投控"
+    "name": "永崴投控",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "3714": {
     "symbol": "3714.TW",
     "code": "3714",
-    "name": "富采"
+    "name": "富采",
+    "market": "上市",
+    "industry": "光電業"
   },
   "3715": {
     "symbol": "3715.TW",
     "code": "3715",
-    "name": "定穎投控"
+    "name": "定穎投控",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "3716": {
     "symbol": "3716.TW",
     "code": "3716",
-    "name": "中化控股"
+    "name": "中化控股",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "3717": {
     "symbol": "3717.TW",
     "code": "3717",
-    "name": "聯嘉投控"
+    "name": "聯嘉投控",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "4104": {
     "symbol": "4104.TW",
     "code": "4104",
-    "name": "佳醫"
+    "name": "佳醫",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4106": {
     "symbol": "4106.TW",
     "code": "4106",
-    "name": "雃博"
+    "name": "雃博",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4108": {
     "symbol": "4108.TW",
     "code": "4108",
-    "name": "懷特"
+    "name": "懷特",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4119": {
     "symbol": "4119.TW",
     "code": "4119",
-    "name": "旭富"
+    "name": "旭富",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4133": {
     "symbol": "4133.TW",
     "code": "4133",
-    "name": "亞諾法"
+    "name": "亞諾法",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4137": {
     "symbol": "4137.TW",
     "code": "4137",
-    "name": "麗豐-KY"
+    "name": "麗豐-KY",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4142": {
     "symbol": "4142.TW",
     "code": "4142",
-    "name": "國光生"
+    "name": "國光生",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4148": {
     "symbol": "4148.TW",
     "code": "4148",
-    "name": "全宇生技-KY"
+    "name": "全宇生技-KY",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4155": {
     "symbol": "4155.TW",
     "code": "4155",
-    "name": "訊映"
+    "name": "訊映",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4164": {
     "symbol": "4164.TW",
     "code": "4164",
-    "name": "承業醫"
+    "name": "承業醫",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4190": {
     "symbol": "4190.TW",
     "code": "4190",
-    "name": "佐登-KY"
+    "name": "佐登-KY",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4306": {
     "symbol": "4306.TW",
     "code": "4306",
-    "name": "炎洲"
+    "name": "炎洲",
+    "market": "上市",
+    "industry": "塑膠工業"
   },
   "4414": {
     "symbol": "4414.TW",
     "code": "4414",
-    "name": "如興"
+    "name": "如興",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "4426": {
     "symbol": "4426.TW",
     "code": "4426",
-    "name": "利勤"
+    "name": "利勤",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "4438": {
     "symbol": "4438.TW",
     "code": "4438",
-    "name": "廣越"
+    "name": "廣越",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "4439": {
     "symbol": "4439.TW",
     "code": "4439",
-    "name": "冠星-KY"
+    "name": "冠星-KY",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "4440": {
     "symbol": "4440.TW",
     "code": "4440",
-    "name": "宜新實業"
+    "name": "宜新實業",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "4441": {
     "symbol": "4441.TW",
     "code": "4441",
-    "name": "振大環球"
+    "name": "振大環球",
+    "market": "上市",
+    "industry": "紡織纖維"
   },
   "4526": {
     "symbol": "4526.TW",
     "code": "4526",
-    "name": "東台"
+    "name": "東台",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "4532": {
     "symbol": "4532.TW",
     "code": "4532",
-    "name": "瑞智"
+    "name": "瑞智",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "4536": {
     "symbol": "4536.TW",
     "code": "4536",
-    "name": "拓凱"
+    "name": "拓凱",
+    "market": "上市",
+    "industry": "運動休閒"
   },
   "4540": {
     "symbol": "4540.TW",
     "code": "4540",
-    "name": "全球傳動"
+    "name": "全球傳動",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "4545": {
     "symbol": "4545.TW",
     "code": "4545",
-    "name": "銘鈺"
+    "name": "銘鈺",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "4551": {
     "symbol": "4551.TW",
     "code": "4551",
-    "name": "智伸科"
+    "name": "智伸科",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "4552": {
     "symbol": "4552.TW",
     "code": "4552",
-    "name": "力達-KY"
+    "name": "力達-KY",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "4555": {
     "symbol": "4555.TW",
     "code": "4555",
-    "name": "氣立"
+    "name": "氣立",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "4557": {
     "symbol": "4557.TW",
     "code": "4557",
-    "name": "永新-KY"
+    "name": "永新-KY",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "4560": {
     "symbol": "4560.TW",
     "code": "4560",
-    "name": "強信-KY"
+    "name": "強信-KY",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "4562": {
     "symbol": "4562.TW",
     "code": "4562",
-    "name": "穎漢"
+    "name": "穎漢",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "4564": {
     "symbol": "4564.TW",
     "code": "4564",
-    "name": "元翎"
+    "name": "元翎",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "4566": {
     "symbol": "4566.TW",
     "code": "4566",
-    "name": "時碩工業"
+    "name": "時碩工業",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "4569": {
     "symbol": "4569.TW",
     "code": "4569",
-    "name": "六方科-KY"
+    "name": "六方科-KY",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "4571": {
     "symbol": "4571.TW",
     "code": "4571",
-    "name": "鈞興-KY"
+    "name": "鈞興-KY",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "4572": {
     "symbol": "4572.TW",
     "code": "4572",
-    "name": "駐龍"
+    "name": "駐龍",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "4576": {
     "symbol": "4576.TW",
     "code": "4576",
-    "name": "大銀微系統"
+    "name": "大銀微系統",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "4581": {
     "symbol": "4581.TW",
     "code": "4581",
-    "name": "光隆精密-KY"
+    "name": "光隆精密-KY",
+    "market": "上市",
+    "industry": "汽車工業"
   },
   "4583": {
     "symbol": "4583.TW",
     "code": "4583",
-    "name": "台灣精銳"
+    "name": "台灣精銳",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "4585": {
     "symbol": "4585.TW",
     "code": "4585",
-    "name": "達明"
+    "name": "達明",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "4588": {
     "symbol": "4588.TW",
     "code": "4588",
-    "name": "玖鼎電力"
+    "name": "玖鼎電力",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "4720": {
     "symbol": "4720.TW",
     "code": "4720",
-    "name": "德淵"
+    "name": "德淵",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "4722": {
     "symbol": "4722.TW",
     "code": "4722",
-    "name": "國精化"
+    "name": "國精化",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "4736": {
     "symbol": "4736.TW",
     "code": "4736",
-    "name": "泰博"
+    "name": "泰博",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4737": {
     "symbol": "4737.TW",
     "code": "4737",
-    "name": "華廣"
+    "name": "華廣",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4739": {
     "symbol": "4739.TW",
     "code": "4739",
-    "name": "康普"
+    "name": "康普",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "4746": {
     "symbol": "4746.TW",
     "code": "4746",
-    "name": "台耀"
+    "name": "台耀",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4755": {
     "symbol": "4755.TW",
     "code": "4755",
-    "name": "三福化"
+    "name": "三福化",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "4763": {
     "symbol": "4763.TW",
     "code": "4763",
-    "name": "材料*-KY"
+    "name": "材料*-KY",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "4764": {
     "symbol": "4764.TW",
     "code": "4764",
-    "name": "雙鍵"
+    "name": "雙鍵",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "4766": {
     "symbol": "4766.TW",
     "code": "4766",
-    "name": "南寶"
+    "name": "南寶",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "4770": {
     "symbol": "4770.TW",
     "code": "4770",
-    "name": "上品"
+    "name": "上品",
+    "market": "上市",
+    "industry": "化學工業"
   },
   "4771": {
     "symbol": "4771.TW",
     "code": "4771",
-    "name": "望隼"
+    "name": "望隼",
+    "market": "上市",
+    "industry": "生技醫療業"
   },
   "4807": {
     "symbol": "4807.TW",
     "code": "4807",
-    "name": "日成-KY"
+    "name": "日成-KY",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "4904": {
     "symbol": "4904.TW",
     "code": "4904",
-    "name": "遠傳"
+    "name": "遠傳",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "4906": {
     "symbol": "4906.TW",
     "code": "4906",
-    "name": "正文"
+    "name": "正文",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "4912": {
     "symbol": "4912.TW",
     "code": "4912",
-    "name": "聯德控股-KY"
+    "name": "聯德控股-KY",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "4915": {
     "symbol": "4915.TW",
     "code": "4915",
-    "name": "致伸"
+    "name": "致伸",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "4916": {
     "symbol": "4916.TW",
     "code": "4916",
-    "name": "事欣科"
+    "name": "事欣科",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "4919": {
     "symbol": "4919.TW",
     "code": "4919",
-    "name": "新唐"
+    "name": "新唐",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "4927": {
     "symbol": "4927.TW",
     "code": "4927",
-    "name": "泰鼎-KY"
+    "name": "泰鼎-KY",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "4930": {
     "symbol": "4930.TW",
     "code": "4930",
-    "name": "燦星網"
+    "name": "燦星網",
+    "market": "上市",
+    "industry": "電器電纜"
   },
   "4934": {
     "symbol": "4934.TW",
     "code": "4934",
-    "name": "太極"
+    "name": "太極",
+    "market": "上市",
+    "industry": "光電業"
   },
   "4935": {
     "symbol": "4935.TW",
     "code": "4935",
-    "name": "茂林-KY"
+    "name": "茂林-KY",
+    "market": "上市",
+    "industry": "光電業"
   },
   "4938": {
     "symbol": "4938.TW",
     "code": "4938",
-    "name": "和碩"
+    "name": "和碩",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "4942": {
     "symbol": "4942.TW",
     "code": "4942",
-    "name": "嘉彰"
+    "name": "嘉彰",
+    "market": "上市",
+    "industry": "光電業"
   },
   "4943": {
     "symbol": "4943.TW",
     "code": "4943",
-    "name": "康控-KY"
+    "name": "康控-KY",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "4949": {
     "symbol": "4949.TW",
     "code": "4949",
-    "name": "有成精密"
+    "name": "有成精密",
+    "market": "上市",
+    "industry": "光電業"
   },
   "4952": {
     "symbol": "4952.TW",
     "code": "4952",
-    "name": "凌通"
+    "name": "凌通",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "4956": {
     "symbol": "4956.TW",
     "code": "4956",
-    "name": "光鋐"
+    "name": "光鋐",
+    "market": "上市",
+    "industry": "光電業"
   },
   "4958": {
     "symbol": "4958.TW",
     "code": "4958",
-    "name": "臻鼎-KY"
+    "name": "臻鼎-KY",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "4960": {
     "symbol": "4960.TW",
     "code": "4960",
-    "name": "誠美材"
+    "name": "誠美材",
+    "market": "上市",
+    "industry": "光電業"
   },
   "4961": {
     "symbol": "4961.TW",
     "code": "4961",
-    "name": "天鈺"
+    "name": "天鈺",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "4967": {
     "symbol": "4967.TW",
     "code": "4967",
-    "name": "十銓"
+    "name": "十銓",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "4968": {
     "symbol": "4968.TW",
     "code": "4968",
-    "name": "立積"
+    "name": "立積",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "4976": {
     "symbol": "4976.TW",
     "code": "4976",
-    "name": "佳凌"
+    "name": "佳凌",
+    "market": "上市",
+    "industry": "光電業"
   },
   "4977": {
     "symbol": "4977.TW",
     "code": "4977",
-    "name": "眾達-KY"
+    "name": "眾達-KY",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "4989": {
     "symbol": "4989.TW",
     "code": "4989",
-    "name": "榮科"
+    "name": "榮科",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "4994": {
     "symbol": "4994.TW",
     "code": "4994",
-    "name": "傳奇"
+    "name": "傳奇",
+    "market": "上市",
+    "industry": "資訊服務業"
   },
   "4999": {
     "symbol": "4999.TW",
     "code": "4999",
-    "name": "鑫禾"
+    "name": "鑫禾",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "5007": {
     "symbol": "5007.TW",
     "code": "5007",
-    "name": "三星"
+    "name": "三星",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "5203": {
     "symbol": "5203.TW",
     "code": "5203",
-    "name": "訊連"
+    "name": "訊連",
+    "market": "上市",
+    "industry": "資訊服務業"
   },
   "5215": {
     "symbol": "5215.TW",
     "code": "5215",
-    "name": "科嘉-KY"
+    "name": "科嘉-KY",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "5222": {
     "symbol": "5222.TW",
     "code": "5222",
-    "name": "全訊"
+    "name": "全訊",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "5225": {
     "symbol": "5225.TW",
     "code": "5225",
-    "name": "東科-KY"
+    "name": "東科-KY",
+    "market": "上市",
+    "industry": "其他電子業"
   },
   "5234": {
     "symbol": "5234.TW",
     "code": "5234",
-    "name": "達興材料"
+    "name": "達興材料",
+    "market": "上市",
+    "industry": "光電業"
   },
   "5243": {
     "symbol": "5243.TW",
     "code": "5243",
-    "name": "乙盛-KY"
+    "name": "乙盛-KY",
+    "market": "上市",
+    "industry": "光電業"
   },
   "5244": {
     "symbol": "5244.TW",
     "code": "5244",
-    "name": "弘凱"
+    "name": "弘凱",
+    "market": "上市",
+    "industry": "光電業"
   },
   "5258": {
     "symbol": "5258.TW",
     "code": "5258",
-    "name": "虹堡"
+    "name": "虹堡",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "5269": {
     "symbol": "5269.TW",
     "code": "5269",
-    "name": "祥碩"
+    "name": "祥碩",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "5283": {
     "symbol": "5283.TW",
     "code": "5283",
-    "name": "禾聯碩"
+    "name": "禾聯碩",
+    "market": "上市",
+    "industry": "電器電纜"
   },
   "5284": {
     "symbol": "5284.TW",
     "code": "5284",
-    "name": "jpp-KY"
+    "name": "jpp-KY",
+    "market": "上市",
+    "industry": "其他業"
   },
   "5285": {
     "symbol": "5285.TW",
     "code": "5285",
-    "name": "界霖"
+    "name": "界霖",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "5288": {
     "symbol": "5288.TW",
     "code": "5288",
-    "name": "豐祥-KY"
+    "name": "豐祥-KY",
+    "market": "上市",
+    "industry": "電機機械"
   },
   "5292": {
     "symbol": "5292.TW",
     "code": "5292",
-    "name": "華懋"
+    "name": "華懋",
+    "market": "上市",
+    "industry": "綠能環保"
   },
   "5306": {
     "symbol": "5306.TW",
     "code": "5306",
-    "name": "桂盟"
+    "name": "桂盟",
+    "market": "上市",
+    "industry": "運動休閒"
   },
   "5388": {
     "symbol": "5388.TW",
     "code": "5388",
-    "name": "中磊"
+    "name": "中磊",
+    "market": "上市",
+    "industry": "通信網路業"
   },
   "5434": {
     "symbol": "5434.TW",
     "code": "5434",
-    "name": "崇越"
+    "name": "崇越",
+    "market": "上市",
+    "industry": "電子通路業"
   },
   "5469": {
     "symbol": "5469.TW",
     "code": "5469",
-    "name": "瀚宇博"
+    "name": "瀚宇博",
+    "market": "上市",
+    "industry": "電子零組件業"
   },
   "5471": {
     "symbol": "5471.TW",
     "code": "5471",
-    "name": "松翰"
+    "name": "松翰",
+    "market": "上市",
+    "industry": "半導體業"
   },
   "5484": {
     "symbol": "5484.TW",
     "code": "5484",
-    "name": "慧友"
+    "name": "慧友",
+    "market": "上市",
+    "industry": "光電業"
   },
   "5515": {
     "symbol": "5515.TW",
     "code": "5515",
-    "name": "建國"
+    "name": "建國",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "5519": {
     "symbol": "5519.TW",
     "code": "5519",
-    "name": "隆大"
+    "name": "隆大",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "5521": {
     "symbol": "5521.TW",
     "code": "5521",
-    "name": "工信"
+    "name": "工信",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "5522": {
     "symbol": "5522.TW",
     "code": "5522",
-    "name": "遠雄"
+    "name": "遠雄",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "5525": {
     "symbol": "5525.TW",
     "code": "5525",
-    "name": "順天"
+    "name": "順天",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "5531": {
     "symbol": "5531.TW",
     "code": "5531",
-    "name": "鄉林"
+    "name": "鄉林",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "5533": {
     "symbol": "5533.TW",
     "code": "5533",
-    "name": "皇鼎"
+    "name": "皇鼎",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "5534": {
     "symbol": "5534.TW",
     "code": "5534",
-    "name": "長虹"
+    "name": "長虹",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "5538": {
     "symbol": "5538.TW",
     "code": "5538",
-    "name": "東明-KY"
+    "name": "東明-KY",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   },
   "5546": {
     "symbol": "5546.TW",
     "code": "5546",
-    "name": "永固-KY"
+    "name": "永固-KY",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "5607": {
     "symbol": "5607.TW",
     "code": "5607",
-    "name": "遠雄港"
+    "name": "遠雄港",
+    "market": "上市",
+    "industry": "航運業"
   },
   "5608": {
     "symbol": "5608.TW",
     "code": "5608",
-    "name": "四維航"
+    "name": "四維航",
+    "market": "上市",
+    "industry": "航運業"
   },
   "5706": {
     "symbol": "5706.TW",
     "code": "5706",
-    "name": "鳳凰"
+    "name": "鳳凰",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "5871": {
     "symbol": "5871.TW",
     "code": "5871",
-    "name": "中租-KY"
+    "name": "中租-KY",
+    "market": "上市",
+    "industry": "其他業"
   },
   "5876": {
     "symbol": "5876.TW",
     "code": "5876",
-    "name": "上海商銀"
+    "name": "上海商銀",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "5880": {
     "symbol": "5880.TW",
     "code": "5880",
-    "name": "合庫金"
+    "name": "合庫金",
+    "market": "上市",
+    "industry": "金融保險業"
   },
   "5906": {
     "symbol": "5906.TW",
     "code": "5906",
-    "name": "台南-KY"
+    "name": "台南-KY",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "5907": {
     "symbol": "5907.TW",
     "code": "5907",
-    "name": "大洋-KY"
+    "name": "大洋-KY",
+    "market": "上市",
+    "industry": "貿易百貨業"
   },
   "6005": {
     "symbol": "6005.TW",
     "code": "6005",
-    "name": "群益證"
+    "name": "群益證",
+    "market": "上櫃",
+    "industry": "金融保險業"
   },
   "6024": {
     "symbol": "6024.TW",
     "code": "6024",
-    "name": "群益期"
+    "name": "群益期",
+    "market": "上櫃",
+    "industry": "金融保險業"
   },
   "6108": {
     "symbol": "6108.TW",
     "code": "6108",
-    "name": "競國"
+    "name": "競國",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6112": {
     "symbol": "6112.TW",
     "code": "6112",
-    "name": "邁達特"
+    "name": "邁達特",
+    "market": "上櫃",
+    "industry": "資訊服務業"
   },
   "6115": {
     "symbol": "6115.TW",
     "code": "6115",
-    "name": "鎰勝"
+    "name": "鎰勝",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6116": {
     "symbol": "6116.TW",
     "code": "6116",
-    "name": "彩晶"
+    "name": "彩晶",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6117": {
     "symbol": "6117.TW",
     "code": "6117",
-    "name": "迎廣"
+    "name": "迎廣",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "6120": {
     "symbol": "6120.TW",
     "code": "6120",
-    "name": "達運"
+    "name": "達運",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6128": {
     "symbol": "6128.TW",
     "code": "6128",
-    "name": "上福"
+    "name": "上福",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "6133": {
     "symbol": "6133.TW",
     "code": "6133",
-    "name": "金橋"
+    "name": "金橋",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6136": {
     "symbol": "6136.TW",
     "code": "6136",
-    "name": "富爾特"
+    "name": "富爾特",
+    "market": "上櫃",
+    "industry": "通信網路業"
   },
   "6139": {
     "symbol": "6139.TW",
     "code": "6139",
-    "name": "亞翔"
+    "name": "亞翔",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "6141": {
     "symbol": "6141.TW",
     "code": "6141",
-    "name": "柏承"
+    "name": "柏承",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6142": {
     "symbol": "6142.TW",
     "code": "6142",
-    "name": "友勁"
+    "name": "友勁",
+    "market": "上櫃",
+    "industry": "通信網路業"
   },
   "6152": {
     "symbol": "6152.TW",
     "code": "6152",
-    "name": "百一"
+    "name": "百一",
+    "market": "上櫃",
+    "industry": "通信網路業"
   },
   "6153": {
     "symbol": "6153.TW",
     "code": "6153",
-    "name": "嘉聯益"
+    "name": "嘉聯益",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6155": {
     "symbol": "6155.TW",
     "code": "6155",
-    "name": "鈞寶"
+    "name": "鈞寶",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6164": {
     "symbol": "6164.TW",
     "code": "6164",
-    "name": "華興"
+    "name": "華興",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6165": {
     "symbol": "6165.TW",
     "code": "6165",
-    "name": "浪凡"
+    "name": "浪凡",
+    "market": "上櫃",
+    "industry": "數位雲端"
   },
   "6166": {
     "symbol": "6166.TW",
     "code": "6166",
-    "name": "凌華"
+    "name": "凌華",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "6168": {
     "symbol": "6168.TW",
     "code": "6168",
-    "name": "宏齊"
+    "name": "宏齊",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6176": {
     "symbol": "6176.TW",
     "code": "6176",
-    "name": "瑞儀"
+    "name": "瑞儀",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6177": {
     "symbol": "6177.TW",
     "code": "6177",
-    "name": "達麗"
+    "name": "達麗",
+    "market": "上櫃",
+    "industry": "建材營造業"
   },
   "6183": {
     "symbol": "6183.TW",
     "code": "6183",
-    "name": "關貿"
+    "name": "關貿",
+    "market": "上櫃",
+    "industry": "資訊服務業"
   },
   "6184": {
     "symbol": "6184.TW",
     "code": "6184",
-    "name": "大豐電"
+    "name": "大豐電",
+    "market": "上櫃",
+    "industry": "其他業"
   },
   "6189": {
     "symbol": "6189.TW",
     "code": "6189",
-    "name": "豐藝"
+    "name": "豐藝",
+    "market": "上櫃",
+    "industry": "電子通路業"
   },
   "6191": {
     "symbol": "6191.TW",
     "code": "6191",
-    "name": "精成科"
+    "name": "精成科",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6192": {
     "symbol": "6192.TW",
     "code": "6192",
-    "name": "巨路"
+    "name": "巨路",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "6196": {
     "symbol": "6196.TW",
     "code": "6196",
-    "name": "帆宣"
+    "name": "帆宣",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "6197": {
     "symbol": "6197.TW",
     "code": "6197",
-    "name": "佳必琪"
+    "name": "佳必琪",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6201": {
     "symbol": "6201.TW",
     "code": "6201",
-    "name": "亞弘電"
+    "name": "亞弘電",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "6202": {
     "symbol": "6202.TW",
     "code": "6202",
-    "name": "盛群"
+    "name": "盛群",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6205": {
     "symbol": "6205.TW",
     "code": "6205",
-    "name": "詮欣"
+    "name": "詮欣",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6206": {
     "symbol": "6206.TW",
     "code": "6206",
-    "name": "飛捷"
+    "name": "飛捷",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "6209": {
     "symbol": "6209.TW",
     "code": "6209",
-    "name": "今國光"
+    "name": "今國光",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6213": {
     "symbol": "6213.TW",
     "code": "6213",
-    "name": "聯茂"
+    "name": "聯茂",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6214": {
     "symbol": "6214.TW",
     "code": "6214",
-    "name": "精誠"
+    "name": "精誠",
+    "market": "上櫃",
+    "industry": "資訊服務業"
   },
   "6215": {
     "symbol": "6215.TW",
     "code": "6215",
-    "name": "和椿"
+    "name": "和椿",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "6216": {
     "symbol": "6216.TW",
     "code": "6216",
-    "name": "居易"
+    "name": "居易",
+    "market": "上櫃",
+    "industry": "通信網路業"
   },
   "6224": {
     "symbol": "6224.TW",
     "code": "6224",
-    "name": "聚鼎"
+    "name": "聚鼎",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6225": {
     "symbol": "6225.TW",
     "code": "6225",
-    "name": "天瀚"
+    "name": "天瀚",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6226": {
     "symbol": "6226.TW",
     "code": "6226",
-    "name": "光鼎"
+    "name": "光鼎",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6230": {
     "symbol": "6230.TW",
     "code": "6230",
-    "name": "尼得科超眾"
+    "name": "尼得科超眾",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "6235": {
     "symbol": "6235.TW",
     "code": "6235",
-    "name": "華孚"
+    "name": "華孚",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "6239": {
     "symbol": "6239.TW",
     "code": "6239",
-    "name": "力成"
+    "name": "力成",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6243": {
     "symbol": "6243.TW",
     "code": "6243",
-    "name": "迅杰"
+    "name": "迅杰",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6257": {
     "symbol": "6257.TW",
     "code": "6257",
-    "name": "矽格"
+    "name": "矽格",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6269": {
     "symbol": "6269.TW",
     "code": "6269",
-    "name": "台郡"
+    "name": "台郡",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6271": {
     "symbol": "6271.TW",
     "code": "6271",
-    "name": "同欣電"
+    "name": "同欣電",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6277": {
     "symbol": "6277.TW",
     "code": "6277",
-    "name": "宏正"
+    "name": "宏正",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "6278": {
     "symbol": "6278.TW",
     "code": "6278",
-    "name": "台表科"
+    "name": "台表科",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6281": {
     "symbol": "6281.TW",
     "code": "6281",
-    "name": "全國電"
+    "name": "全國電",
+    "market": "上櫃",
+    "industry": "電子通路業"
   },
   "6282": {
     "symbol": "6282.TW",
     "code": "6282",
-    "name": "康舒"
+    "name": "康舒",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6283": {
     "symbol": "6283.TW",
     "code": "6283",
-    "name": "淳安"
+    "name": "淳安",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "6285": {
     "symbol": "6285.TW",
     "code": "6285",
-    "name": "啟碁"
+    "name": "啟碁",
+    "market": "上櫃",
+    "industry": "通信網路業"
   },
   "6405": {
     "symbol": "6405.TW",
     "code": "6405",
-    "name": "悅城"
+    "name": "悅城",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6409": {
     "symbol": "6409.TW",
     "code": "6409",
-    "name": "旭隼"
+    "name": "旭隼",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "6412": {
     "symbol": "6412.TW",
     "code": "6412",
-    "name": "群電"
+    "name": "群電",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6414": {
     "symbol": "6414.TW",
     "code": "6414",
-    "name": "樺漢"
+    "name": "樺漢",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "6415": {
     "symbol": "6415.TW",
     "code": "6415",
-    "name": "矽力*-KY"
+    "name": "矽力*-KY",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6416": {
     "symbol": "6416.TW",
     "code": "6416",
-    "name": "瑞祺電通"
+    "name": "瑞祺電通",
+    "market": "上櫃",
+    "industry": "通信網路業"
   },
   "6423": {
     "symbol": "6423.TW",
     "code": "6423",
-    "name": "億而得-創"
+    "name": "億而得-創",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6426": {
     "symbol": "6426.TW",
     "code": "6426",
-    "name": "統新"
+    "name": "統新",
+    "market": "上櫃",
+    "industry": "通信網路業"
   },
   "6431": {
     "symbol": "6431.TW",
     "code": "6431",
-    "name": "光麗-KY"
+    "name": "光麗-KY",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6438": {
     "symbol": "6438.TW",
     "code": "6438",
-    "name": "迅得"
+    "name": "迅得",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "6442": {
     "symbol": "6442.TW",
     "code": "6442",
-    "name": "光聖"
+    "name": "光聖",
+    "market": "上櫃",
+    "industry": "通信網路業"
   },
   "6443": {
     "symbol": "6443.TW",
     "code": "6443",
-    "name": "元晶"
+    "name": "元晶",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6446": {
     "symbol": "6446.TW",
     "code": "6446",
-    "name": "藥華藥"
+    "name": "藥華藥",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6449": {
     "symbol": "6449.TW",
     "code": "6449",
-    "name": "鈺邦"
+    "name": "鈺邦",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6451": {
     "symbol": "6451.TW",
     "code": "6451",
-    "name": "訊芯-KY"
+    "name": "訊芯-KY",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6456": {
     "symbol": "6456.TW",
     "code": "6456",
-    "name": "GIS-KY"
+    "name": "GIS-KY",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6464": {
     "symbol": "6464.TW",
     "code": "6464",
-    "name": "台數科"
+    "name": "台數科",
+    "market": "上櫃",
+    "industry": "其他業"
   },
   "6472": {
     "symbol": "6472.TW",
     "code": "6472",
-    "name": "保瑞"
+    "name": "保瑞",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6477": {
     "symbol": "6477.TW",
     "code": "6477",
-    "name": "安集"
+    "name": "安集",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6491": {
     "symbol": "6491.TW",
     "code": "6491",
-    "name": "晶碩"
+    "name": "晶碩",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6504": {
     "symbol": "6504.TW",
     "code": "6504",
-    "name": "南六"
+    "name": "南六",
+    "market": "上櫃",
+    "industry": "其他業"
   },
   "6505": {
     "symbol": "6505.TW",
     "code": "6505",
-    "name": "台塑化"
+    "name": "台塑化",
+    "market": "上櫃",
+    "industry": "油電燃氣業"
   },
   "6515": {
     "symbol": "6515.TW",
     "code": "6515",
-    "name": "穎崴"
+    "name": "穎崴",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6525": {
     "symbol": "6525.TW",
     "code": "6525",
-    "name": "捷敏-KY"
+    "name": "捷敏-KY",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6526": {
     "symbol": "6526.TW",
     "code": "6526",
-    "name": "達發"
+    "name": "達發",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6531": {
     "symbol": "6531.TW",
     "code": "6531",
-    "name": "愛普*"
+    "name": "愛普*",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6533": {
     "symbol": "6533.TW",
     "code": "6533",
-    "name": "晶心科"
+    "name": "晶心科",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6534": {
     "symbol": "6534.TW",
     "code": "6534",
-    "name": "正瀚-創"
+    "name": "正瀚-創",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6541": {
     "symbol": "6541.TW",
     "code": "6541",
-    "name": "泰福-KY"
+    "name": "泰福-KY",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6550": {
     "symbol": "6550.TW",
     "code": "6550",
-    "name": "北極星藥業-KY"
+    "name": "北極星藥業-KY",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6552": {
     "symbol": "6552.TW",
     "code": "6552",
-    "name": "易華電"
+    "name": "易華電",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6558": {
     "symbol": "6558.TW",
     "code": "6558",
-    "name": "興能高"
+    "name": "興能高",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "6573": {
     "symbol": "6573.TW",
     "code": "6573",
-    "name": "虹揚-KY"
+    "name": "虹揚-KY",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6579": {
     "symbol": "6579.TW",
     "code": "6579",
-    "name": "研揚"
+    "name": "研揚",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "6581": {
     "symbol": "6581.TW",
     "code": "6581",
-    "name": "鋼聯"
+    "name": "鋼聯",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "6582": {
     "symbol": "6582.TW",
     "code": "6582",
-    "name": "申豐"
+    "name": "申豐",
+    "market": "上櫃",
+    "industry": "橡膠工業"
   },
   "6585": {
     "symbol": "6585.TW",
     "code": "6585",
-    "name": "鼎基"
+    "name": "鼎基",
+    "market": "上櫃",
+    "industry": "其他業"
   },
   "6589": {
     "symbol": "6589.TW",
     "code": "6589",
-    "name": "台康生技"
+    "name": "台康生技",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6591": {
     "symbol": "6591.TW",
     "code": "6591",
-    "name": "動力-KY"
+    "name": "動力-KY",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "6592": {
     "symbol": "6592.TW",
     "code": "6592",
-    "name": "和潤企業"
+    "name": "和潤企業",
+    "market": "上櫃",
+    "industry": "其他業"
   },
   "6598": {
     "symbol": "6598.TW",
     "code": "6598",
-    "name": "ABC-KY"
+    "name": "ABC-KY",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6605": {
     "symbol": "6605.TW",
     "code": "6605",
-    "name": "帝寶"
+    "name": "帝寶",
+    "market": "上櫃",
+    "industry": "汽車工業"
   },
   "6606": {
     "symbol": "6606.TW",
     "code": "6606",
-    "name": "建德工業"
+    "name": "建德工業",
+    "market": "上櫃",
+    "industry": "電機機械"
   },
   "6614": {
     "symbol": "6614.TW",
     "code": "6614",
-    "name": "資拓宏宇"
+    "name": "資拓宏宇",
+    "market": "上櫃",
+    "industry": "數位雲端"
   },
   "6625": {
     "symbol": "6625.TW",
     "code": "6625",
-    "name": "必應"
+    "name": "必應",
+    "market": "上櫃",
+    "industry": "其他業"
   },
   "6641": {
     "symbol": "6641.TW",
     "code": "6641",
-    "name": "基士德-KY"
+    "name": "基士德-KY",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "6645": {
     "symbol": "6645.TW",
     "code": "6645",
-    "name": "金萬林-創"
+    "name": "金萬林-創",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6655": {
     "symbol": "6655.TW",
     "code": "6655",
-    "name": "科定"
+    "name": "科定",
+    "market": "上櫃",
+    "industry": "其他業"
   },
   "6657": {
     "symbol": "6657.TW",
     "code": "6657",
-    "name": "華安"
+    "name": "華安",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6658": {
     "symbol": "6658.TW",
     "code": "6658",
-    "name": "聯策"
+    "name": "聯策",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "6666": {
     "symbol": "6666.TW",
     "code": "6666",
-    "name": "羅麗芬-KY"
+    "name": "羅麗芬-KY",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6668": {
     "symbol": "6668.TW",
     "code": "6668",
-    "name": "中揚光"
+    "name": "中揚光",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6669": {
     "symbol": "6669.TW",
     "code": "6669",
-    "name": "緯穎"
+    "name": "緯穎",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "6670": {
     "symbol": "6670.TW",
     "code": "6670",
-    "name": "復盛應用"
+    "name": "復盛應用",
+    "market": "上櫃",
+    "industry": "運動休閒"
   },
   "6671": {
     "symbol": "6671.TW",
     "code": "6671",
-    "name": "三能-KY"
+    "name": "三能-KY",
+    "market": "上櫃",
+    "industry": "居家生活"
   },
   "6672": {
     "symbol": "6672.TW",
     "code": "6672",
-    "name": "騰輝電子-KY"
+    "name": "騰輝電子-KY",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6674": {
     "symbol": "6674.TW",
     "code": "6674",
-    "name": "鋐寶科技"
+    "name": "鋐寶科技",
+    "market": "上櫃",
+    "industry": "通信網路業"
   },
   "6689": {
     "symbol": "6689.TW",
     "code": "6689",
-    "name": "伊雲谷"
+    "name": "伊雲谷",
+    "market": "上櫃",
+    "industry": "數位雲端"
   },
   "6691": {
     "symbol": "6691.TW",
     "code": "6691",
-    "name": "洋基工程"
+    "name": "洋基工程",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "6695": {
     "symbol": "6695.TW",
     "code": "6695",
-    "name": "芯鼎"
+    "name": "芯鼎",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6698": {
     "symbol": "6698.TW",
     "code": "6698",
-    "name": "旭暉應材"
+    "name": "旭暉應材",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "6706": {
     "symbol": "6706.TW",
     "code": "6706",
-    "name": "惠特"
+    "name": "惠特",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6715": {
     "symbol": "6715.TW",
     "code": "6715",
-    "name": "嘉基"
+    "name": "嘉基",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6719": {
     "symbol": "6719.TW",
     "code": "6719",
-    "name": "力智"
+    "name": "力智",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6742": {
     "symbol": "6742.TW",
     "code": "6742",
-    "name": "澤米"
+    "name": "澤米",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6743": {
     "symbol": "6743.TW",
     "code": "6743",
-    "name": "安普新"
+    "name": "安普新",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "6753": {
     "symbol": "6753.TW",
     "code": "6753",
-    "name": "龍德造船"
+    "name": "龍德造船",
+    "market": "上櫃",
+    "industry": "航運業"
   },
   "6754": {
     "symbol": "6754.TW",
     "code": "6754",
-    "name": "匯僑設計"
+    "name": "匯僑設計",
+    "market": "上櫃",
+    "industry": "居家生活"
   },
   "6756": {
     "symbol": "6756.TW",
     "code": "6756",
-    "name": "威鋒電子"
+    "name": "威鋒電子",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6757": {
     "symbol": "6757.TW",
     "code": "6757",
-    "name": "台灣虎航"
+    "name": "台灣虎航",
+    "market": "上櫃",
+    "industry": "航運業"
   },
   "6768": {
     "symbol": "6768.TW",
     "code": "6768",
-    "name": "志強-KY"
+    "name": "志強-KY",
+    "market": "上櫃",
+    "industry": "運動休閒"
   },
   "6770": {
     "symbol": "6770.TW",
     "code": "6770",
-    "name": "力積電"
+    "name": "力積電",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6771": {
     "symbol": "6771.TW",
     "code": "6771",
-    "name": "平和環保-創"
+    "name": "平和環保-創",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "6776": {
     "symbol": "6776.TW",
     "code": "6776",
-    "name": "展碁國際"
+    "name": "展碁國際",
+    "market": "上櫃",
+    "industry": "電子通路業"
   },
   "6781": {
     "symbol": "6781.TW",
     "code": "6781",
-    "name": "AES-KY"
+    "name": "AES-KY",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6782": {
     "symbol": "6782.TW",
     "code": "6782",
-    "name": "視陽"
+    "name": "視陽",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6789": {
     "symbol": "6789.TW",
     "code": "6789",
-    "name": "采鈺"
+    "name": "采鈺",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6790": {
     "symbol": "6790.TW",
     "code": "6790",
-    "name": "永豐實"
+    "name": "永豐實",
+    "market": "上櫃",
+    "industry": "造紙工業"
   },
   "6792": {
     "symbol": "6792.TW",
     "code": "6792",
-    "name": "詠業"
+    "name": "詠業",
+    "market": "上櫃",
+    "industry": "通信網路業"
   },
   "6794": {
     "symbol": "6794.TW",
     "code": "6794",
-    "name": "向榮生技"
+    "name": "向榮生技",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6796": {
     "symbol": "6796.TW",
     "code": "6796",
-    "name": "晉弘"
+    "name": "晉弘",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6799": {
     "symbol": "6799.TW",
     "code": "6799",
-    "name": "來頡"
+    "name": "來頡",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6805": {
     "symbol": "6805.TW",
     "code": "6805",
-    "name": "富世達"
+    "name": "富世達",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6806": {
     "symbol": "6806.TW",
     "code": "6806",
-    "name": "森崴能源"
+    "name": "森崴能源",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "6807": {
     "symbol": "6807.TW",
     "code": "6807",
-    "name": "峰源-KY"
+    "name": "峰源-KY",
+    "market": "上櫃",
+    "industry": "居家生活"
   },
   "6830": {
     "symbol": "6830.TW",
     "code": "6830",
-    "name": "汎銓"
+    "name": "汎銓",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "6831": {
     "symbol": "6831.TW",
     "code": "6831",
-    "name": "邁科"
+    "name": "邁科",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "6834": {
     "symbol": "6834.TW",
     "code": "6834",
-    "name": "天二科技"
+    "name": "天二科技",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6835": {
     "symbol": "6835.TW",
     "code": "6835",
-    "name": "圓裕"
+    "name": "圓裕",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6838": {
     "symbol": "6838.TW",
     "code": "6838",
-    "name": "台新藥"
+    "name": "台新藥",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6854": {
     "symbol": "6854.TW",
     "code": "6854",
-    "name": "錼創科技-KY創"
+    "name": "錼創科技-KY創",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6861": {
     "symbol": "6861.TW",
     "code": "6861",
-    "name": "睿生光電"
+    "name": "睿生光電",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6862": {
     "symbol": "6862.TW",
     "code": "6862",
-    "name": "三集瑞-KY"
+    "name": "三集瑞-KY",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6863": {
     "symbol": "6863.TW",
     "code": "6863",
-    "name": "永道-KY"
+    "name": "永道-KY",
+    "market": "上櫃",
+    "industry": "通信網路業"
   },
   "6869": {
     "symbol": "6869.TW",
     "code": "6869",
-    "name": "雲豹能源"
+    "name": "雲豹能源",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "6873": {
     "symbol": "6873.TW",
     "code": "6873",
-    "name": "泓德能源"
+    "name": "泓德能源",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "6885": {
     "symbol": "6885.TW",
     "code": "6885",
-    "name": "全福生技"
+    "name": "全福生技",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6887": {
     "symbol": "6887.TW",
     "code": "6887",
-    "name": "寶綠特-KY"
+    "name": "寶綠特-KY",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "6890": {
     "symbol": "6890.TW",
     "code": "6890",
-    "name": "來億-KY"
+    "name": "來億-KY",
+    "market": "上櫃",
+    "industry": "運動休閒"
   },
   "6901": {
     "symbol": "6901.TW",
     "code": "6901",
-    "name": "鑽石投資"
+    "name": "鑽石投資",
+    "market": "上櫃",
+    "industry": "其他業"
   },
   "6902": {
     "symbol": "6902.TW",
     "code": "6902",
-    "name": "GOGOLOOK"
+    "name": "GOGOLOOK",
+    "market": "上櫃",
+    "industry": "數位雲端"
   },
   "6906": {
     "symbol": "6906.TW",
     "code": "6906",
-    "name": "現觀科"
+    "name": "現觀科",
+    "market": "上櫃",
+    "industry": "數位雲端"
   },
   "6909": {
     "symbol": "6909.TW",
     "code": "6909",
-    "name": "創控"
+    "name": "創控",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6914": {
     "symbol": "6914.TW",
     "code": "6914",
-    "name": "阜爾運通"
+    "name": "阜爾運通",
+    "market": "上櫃",
+    "industry": "其他業"
   },
   "6916": {
     "symbol": "6916.TW",
     "code": "6916",
-    "name": "華凌"
+    "name": "華凌",
+    "market": "上櫃",
+    "industry": "光電業"
   },
   "6918": {
     "symbol": "6918.TW",
     "code": "6918",
-    "name": "愛派司"
+    "name": "愛派司",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6919": {
     "symbol": "6919.TW",
     "code": "6919",
-    "name": "康霈*"
+    "name": "康霈*",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6923": {
     "symbol": "6923.TW",
     "code": "6923",
-    "name": "中台"
+    "name": "中台",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "6924": {
     "symbol": "6924.TW",
     "code": "6924",
-    "name": "榮惠-KY創"
+    "name": "榮惠-KY創",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "6928": {
     "symbol": "6928.TW",
     "code": "6928",
-    "name": "攸泰科技"
+    "name": "攸泰科技",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "6931": {
     "symbol": "6931.TW",
     "code": "6931",
-    "name": "青松健康"
+    "name": "青松健康",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6933": {
     "symbol": "6933.TW",
     "code": "6933",
-    "name": "AMAX-KY"
+    "name": "AMAX-KY",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "6936": {
     "symbol": "6936.TW",
     "code": "6936",
-    "name": "永鴻生技"
+    "name": "永鴻生技",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6937": {
     "symbol": "6937.TW",
     "code": "6937",
-    "name": "天虹"
+    "name": "天虹",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6944": {
     "symbol": "6944.TW",
     "code": "6944",
-    "name": "兆聯實業"
+    "name": "兆聯實業",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "6949": {
     "symbol": "6949.TW",
     "code": "6949",
-    "name": "沛爾生醫-創"
+    "name": "沛爾生醫-創",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6951": {
     "symbol": "6951.TW",
     "code": "6951",
-    "name": "青新-創"
+    "name": "青新-創",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "6952": {
     "symbol": "6952.TW",
     "code": "6952",
-    "name": "大武山"
+    "name": "大武山",
+    "market": "上櫃",
+    "industry": "其他業"
   },
   "6955": {
     "symbol": "6955.TW",
     "code": "6955",
-    "name": "邦睿生技-創"
+    "name": "邦睿生技-創",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "6957": {
     "symbol": "6957.TW",
     "code": "6957",
-    "name": "裕慶-KY"
+    "name": "裕慶-KY",
+    "market": "上櫃",
+    "industry": "其他業"
   },
   "6958": {
     "symbol": "6958.TW",
     "code": "6958",
-    "name": "日盛台駿"
+    "name": "日盛台駿",
+    "market": "上櫃",
+    "industry": "其他業"
   },
   "6962": {
     "symbol": "6962.TW",
     "code": "6962",
-    "name": "奕力-KY"
+    "name": "奕力-KY",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "6965": {
     "symbol": "6965.TW",
     "code": "6965",
-    "name": "中傑-KY"
+    "name": "中傑-KY",
+    "market": "上櫃",
+    "industry": "運動休閒"
   },
   "6969": {
     "symbol": "6969.TW",
     "code": "6969",
-    "name": "成信實業*-創"
+    "name": "成信實業*-創",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "6988": {
     "symbol": "6988.TW",
     "code": "6988",
-    "name": "威力暘-創"
+    "name": "威力暘-創",
+    "market": "上櫃",
+    "industry": "汽車工業"
   },
   "6994": {
     "symbol": "6994.TW",
     "code": "6994",
-    "name": "富威電力"
+    "name": "富威電力",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "7610": {
     "symbol": "7610.TW",
     "code": "7610",
-    "name": "聯友金屬-創"
+    "name": "聯友金屬-創",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "7631": {
     "symbol": "7631.TW",
     "code": "7631",
-    "name": "聚賢研發-創"
+    "name": "聚賢研發-創",
+    "market": "上櫃",
+    "industry": "其他電子業"
   },
   "7705": {
     "symbol": "7705.TW",
     "code": "7705",
-    "name": "三商餐飲"
+    "name": "三商餐飲",
+    "market": "上櫃",
+    "industry": "觀光餐旅"
   },
   "7711": {
     "symbol": "7711.TW",
     "code": "7711",
-    "name": "永擎"
+    "name": "永擎",
+    "market": "上櫃",
+    "industry": "電腦及週邊設備業"
   },
   "7721": {
     "symbol": "7721.TW",
     "code": "7721",
-    "name": "微程式"
+    "name": "微程式",
+    "market": "上櫃",
+    "industry": "數位雲端"
   },
   "7722": {
     "symbol": "7722.TW",
     "code": "7722",
-    "name": "LINEPAY"
+    "name": "LINEPAY",
+    "market": "上櫃",
+    "industry": "數位雲端"
   },
   "7730": {
     "symbol": "7730.TW",
     "code": "7730",
-    "name": "暉盛-創"
+    "name": "暉盛-創",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "7732": {
     "symbol": "7732.TW",
     "code": "7732",
-    "name": "金興精密"
+    "name": "金興精密",
+    "market": "上櫃",
+    "industry": "汽車工業"
   },
   "7736": {
     "symbol": "7736.TW",
     "code": "7736",
-    "name": "虎山"
+    "name": "虎山",
+    "market": "上櫃",
+    "industry": "汽車工業"
   },
   "7740": {
     "symbol": "7740.TW",
     "code": "7740",
-    "name": "熙特爾-創"
+    "name": "熙特爾-創",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "7749": {
     "symbol": "7749.TW",
     "code": "7749",
-    "name": "意騰-KY"
+    "name": "意騰-KY",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "7750": {
     "symbol": "7750.TW",
     "code": "7750",
-    "name": "新代"
+    "name": "新代",
+    "market": "上櫃",
+    "industry": "電機機械"
   },
   "7765": {
     "symbol": "7765.TW",
     "code": "7765",
-    "name": "中華資安"
+    "name": "中華資安",
+    "market": "上櫃",
+    "industry": "數位雲端"
   },
   "7769": {
     "symbol": "7769.TW",
     "code": "7769",
-    "name": "鴻勁"
+    "name": "鴻勁",
+    "market": "上櫃",
+    "industry": "半導體業"
   },
   "7780": {
     "symbol": "7780.TW",
     "code": "7780",
-    "name": "大研生醫"
+    "name": "大研生醫",
+    "market": "上櫃",
+    "industry": "食品工業"
   },
   "7786": {
     "symbol": "7786.TW",
     "code": "7786",
-    "name": "東方風能"
+    "name": "東方風能",
+    "market": "上櫃",
+    "industry": "綠能環保"
   },
   "7788": {
     "symbol": "7788.TW",
     "code": "7788",
-    "name": "松川精密"
+    "name": "松川精密",
+    "market": "上櫃",
+    "industry": "電子零組件業"
   },
   "7791": {
     "symbol": "7791.TW",
     "code": "7791",
-    "name": "皇家可口"
+    "name": "皇家可口",
+    "market": "上櫃",
+    "industry": "食品工業"
   },
   "7799": {
     "symbol": "7799.TW",
     "code": "7799",
-    "name": "禾榮科"
+    "name": "禾榮科",
+    "market": "上櫃",
+    "industry": "生技醫療業"
   },
   "8011": {
     "symbol": "8011.TW",
     "code": "8011",
-    "name": "台通"
+    "name": "台通",
+    "market": "興櫃",
+    "industry": "通信網路業"
   },
   "8016": {
     "symbol": "8016.TW",
     "code": "8016",
-    "name": "矽創"
+    "name": "矽創",
+    "market": "興櫃",
+    "industry": "半導體業"
   },
   "8021": {
     "symbol": "8021.TW",
     "code": "8021",
-    "name": "尖點"
+    "name": "尖點",
+    "market": "興櫃",
+    "industry": "其他電子業"
   },
   "8028": {
     "symbol": "8028.TW",
     "code": "8028",
-    "name": "昇陽半導體"
+    "name": "昇陽半導體",
+    "market": "興櫃",
+    "industry": "半導體業"
   },
   "8033": {
     "symbol": "8033.TW",
     "code": "8033",
-    "name": "雷虎"
+    "name": "雷虎",
+    "market": "興櫃",
+    "industry": "其他業"
   },
   "8039": {
     "symbol": "8039.TW",
     "code": "8039",
-    "name": "台虹"
+    "name": "台虹",
+    "market": "興櫃",
+    "industry": "電子零組件業"
   },
   "8045": {
     "symbol": "8045.TW",
     "code": "8045",
-    "name": "達運光電"
+    "name": "達運光電",
+    "market": "興櫃",
+    "industry": "通信網路業"
   },
   "8046": {
     "symbol": "8046.TW",
     "code": "8046",
-    "name": "南電"
+    "name": "南電",
+    "market": "興櫃",
+    "industry": "電子零組件業"
   },
   "8070": {
     "symbol": "8070.TW",
     "code": "8070",
-    "name": "長華*"
+    "name": "長華*",
+    "market": "興櫃",
+    "industry": "電子通路業"
   },
   "8072": {
     "symbol": "8072.TW",
     "code": "8072",
-    "name": "陞泰"
+    "name": "陞泰",
+    "market": "興櫃",
+    "industry": "電子通路業"
   },
   "8081": {
     "symbol": "8081.TW",
     "code": "8081",
-    "name": "致新"
+    "name": "致新",
+    "market": "興櫃",
+    "industry": "半導體業"
   },
   "8101": {
     "symbol": "8101.TW",
     "code": "8101",
-    "name": "華冠"
+    "name": "華冠",
+    "market": "興櫃",
+    "industry": "通信網路業"
   },
   "8103": {
     "symbol": "8103.TW",
     "code": "8103",
-    "name": "瀚荃"
+    "name": "瀚荃",
+    "market": "興櫃",
+    "industry": "電子零組件業"
   },
   "8104": {
     "symbol": "8104.TW",
     "code": "8104",
-    "name": "錸寶"
+    "name": "錸寶",
+    "market": "興櫃",
+    "industry": "光電業"
   },
   "8105": {
     "symbol": "8105.TW",
     "code": "8105",
-    "name": "凌巨"
+    "name": "凌巨",
+    "market": "興櫃",
+    "industry": "光電業"
   },
   "8110": {
     "symbol": "8110.TW",
     "code": "8110",
-    "name": "華東"
+    "name": "華東",
+    "market": "興櫃",
+    "industry": "半導體業"
   },
   "8112": {
     "symbol": "8112.TW",
     "code": "8112",
-    "name": "至上"
+    "name": "至上",
+    "market": "興櫃",
+    "industry": "電子通路業"
   },
   "8114": {
     "symbol": "8114.TW",
     "code": "8114",
-    "name": "振樺電"
+    "name": "振樺電",
+    "market": "興櫃",
+    "industry": "電腦及週邊設備業"
   },
   "8131": {
     "symbol": "8131.TW",
     "code": "8131",
-    "name": "福懋科"
+    "name": "福懋科",
+    "market": "興櫃",
+    "industry": "半導體業"
   },
   "8150": {
     "symbol": "8150.TW",
     "code": "8150",
-    "name": "南茂"
+    "name": "南茂",
+    "market": "興櫃",
+    "industry": "半導體業"
   },
   "8162": {
     "symbol": "8162.TW",
     "code": "8162",
-    "name": "微矽電子-創"
+    "name": "微矽電子-創",
+    "market": "興櫃",
+    "industry": "半導體業"
   },
   "8163": {
     "symbol": "8163.TW",
     "code": "8163",
-    "name": "達方"
+    "name": "達方",
+    "market": "興櫃",
+    "industry": "電腦及週邊設備業"
   },
   "8201": {
     "symbol": "8201.TW",
     "code": "8201",
-    "name": "無敵"
+    "name": "無敵",
+    "market": "興櫃",
+    "industry": "其他電子業"
   },
   "8210": {
     "symbol": "8210.TW",
     "code": "8210",
-    "name": "勤誠"
+    "name": "勤誠",
+    "market": "興櫃",
+    "industry": "電腦及週邊設備業"
   },
   "8213": {
     "symbol": "8213.TW",
     "code": "8213",
-    "name": "志超"
+    "name": "志超",
+    "market": "興櫃",
+    "industry": "電子零組件業"
   },
   "8215": {
     "symbol": "8215.TW",
     "code": "8215",
-    "name": "明基材"
+    "name": "明基材",
+    "market": "興櫃",
+    "industry": "光電業"
   },
   "8222": {
     "symbol": "8222.TW",
     "code": "8222",
-    "name": "寶一"
+    "name": "寶一",
+    "market": "興櫃",
+    "industry": "電機機械"
   },
   "8249": {
     "symbol": "8249.TW",
     "code": "8249",
-    "name": "菱光"
+    "name": "菱光",
+    "market": "興櫃",
+    "industry": "電子零組件業"
   },
   "8261": {
     "symbol": "8261.TW",
     "code": "8261",
-    "name": "富鼎"
+    "name": "富鼎",
+    "market": "興櫃",
+    "industry": "半導體業"
   },
   "8271": {
     "symbol": "8271.TW",
     "code": "8271",
-    "name": "宇瞻"
+    "name": "宇瞻",
+    "market": "興櫃",
+    "industry": "半導體業"
   },
   "8341": {
     "symbol": "8341.TW",
     "code": "8341",
-    "name": "日友"
+    "name": "日友",
+    "market": "興櫃",
+    "industry": "綠能環保"
   },
   "8367": {
     "symbol": "8367.TW",
     "code": "8367",
-    "name": "建新國際"
+    "name": "建新國際",
+    "market": "興櫃",
+    "industry": "航運業"
   },
   "8374": {
     "symbol": "8374.TW",
     "code": "8374",
-    "name": "羅昇"
+    "name": "羅昇",
+    "market": "興櫃",
+    "industry": "電機機械"
   },
   "8404": {
     "symbol": "8404.TW",
     "code": "8404",
-    "name": "百和興業-KY"
+    "name": "百和興業-KY",
+    "market": "興櫃",
+    "industry": "其他業"
   },
   "8411": {
     "symbol": "8411.TW",
     "code": "8411",
-    "name": "福貞-KY"
+    "name": "福貞-KY",
+    "market": "興櫃",
+    "industry": "其他業"
   },
   "8422": {
     "symbol": "8422.TW",
     "code": "8422",
-    "name": "可寧衛*"
+    "name": "可寧衛*",
+    "market": "興櫃",
+    "industry": "綠能環保"
   },
   "8429": {
     "symbol": "8429.TW",
     "code": "8429",
-    "name": "金麗-KY"
+    "name": "金麗-KY",
+    "market": "興櫃",
+    "industry": "貿易百貨業"
   },
   "8438": {
     "symbol": "8438.TW",
     "code": "8438",
-    "name": "昶昕"
+    "name": "昶昕",
+    "market": "興櫃",
+    "industry": "綠能環保"
   },
   "8442": {
     "symbol": "8442.TW",
     "code": "8442",
-    "name": "威宏-KY"
+    "name": "威宏-KY",
+    "market": "興櫃",
+    "industry": "其他業"
   },
   "8443": {
     "symbol": "8443.TW",
     "code": "8443",
-    "name": "阿瘦"
+    "name": "阿瘦",
+    "market": "興櫃",
+    "industry": "貿易百貨業"
   },
   "8454": {
     "symbol": "8454.TW",
     "code": "8454",
-    "name": "富邦媒"
+    "name": "富邦媒",
+    "market": "興櫃",
+    "industry": "數位雲端"
   },
   "8462": {
     "symbol": "8462.TW",
     "code": "8462",
-    "name": "柏文"
+    "name": "柏文",
+    "market": "興櫃",
+    "industry": "運動休閒"
   },
   "8463": {
     "symbol": "8463.TW",
     "code": "8463",
-    "name": "潤泰材"
+    "name": "潤泰材",
+    "market": "興櫃",
+    "industry": "其他業"
   },
   "8464": {
     "symbol": "8464.TW",
     "code": "8464",
-    "name": "億豐"
+    "name": "億豐",
+    "market": "興櫃",
+    "industry": "居家生活"
   },
   "8466": {
     "symbol": "8466.TW",
     "code": "8466",
-    "name": "美吉吉-KY"
+    "name": "美吉吉-KY",
+    "market": "興櫃",
+    "industry": "其他業"
   },
   "8467": {
     "symbol": "8467.TW",
     "code": "8467",
-    "name": "波力-KY"
+    "name": "波力-KY",
+    "market": "興櫃",
+    "industry": "運動休閒"
   },
   "8473": {
     "symbol": "8473.TW",
     "code": "8473",
-    "name": "山林水"
+    "name": "山林水",
+    "market": "興櫃",
+    "industry": "綠能環保"
   },
   "8476": {
     "symbol": "8476.TW",
     "code": "8476",
-    "name": "台境*"
+    "name": "台境*",
+    "market": "興櫃",
+    "industry": "綠能環保"
   },
   "8478": {
     "symbol": "8478.TW",
     "code": "8478",
-    "name": "東哥遊艇"
+    "name": "東哥遊艇",
+    "market": "興櫃",
+    "industry": "運動休閒"
   },
   "8481": {
     "symbol": "8481.TW",
     "code": "8481",
-    "name": "政伸"
+    "name": "政伸",
+    "market": "興櫃",
+    "industry": "其他業"
   },
   "8482": {
     "symbol": "8482.TW",
     "code": "8482",
-    "name": "商億-KY"
+    "name": "商億-KY",
+    "market": "興櫃",
+    "industry": "居家生活"
   },
   "8487": {
     "symbol": "8487.TW",
     "code": "8487",
-    "name": "愛爾達-創"
+    "name": "愛爾達-創",
+    "market": "興櫃",
+    "industry": "數位雲端"
   },
   "8488": {
     "symbol": "8488.TW",
     "code": "8488",
-    "name": "吉源-KY"
+    "name": "吉源-KY",
+    "market": "興櫃",
+    "industry": "其他業"
   },
   "8499": {
     "symbol": "8499.TW",
     "code": "8499",
-    "name": "鼎炫-KY"
+    "name": "鼎炫-KY",
+    "market": "興櫃",
+    "industry": "其他電子業"
   },
   "8926": {
     "symbol": "8926.TW",
     "code": "8926",
-    "name": "台汽電"
+    "name": "台汽電",
+    "market": "興櫃",
+    "industry": "油電燃氣業"
   },
   "8940": {
     "symbol": "8940.TW",
     "code": "8940",
-    "name": "新天地"
+    "name": "新天地",
+    "market": "興櫃",
+    "industry": "觀光餐旅"
   },
   "8996": {
     "symbol": "8996.TW",
     "code": "8996",
-    "name": "高力"
+    "name": "高力",
+    "market": "興櫃",
+    "industry": "電機機械"
   },
   "9103": {
     "symbol": "9103.TW",
     "code": "9103",
-    "name": "美德醫療-DR"
+    "name": "美德醫療-DR",
+    "market": "上市",
+    "industry": "未分類"
   },
   "9105": {
     "symbol": "9105.TW",
     "code": "9105",
-    "name": "泰金寶-DR"
+    "name": "泰金寶-DR",
+    "market": "上市",
+    "industry": "未分類"
   },
   "9110": {
     "symbol": "9110.TW",
     "code": "9110",
-    "name": "越南控-DR"
+    "name": "越南控-DR",
+    "market": "上市",
+    "industry": "未分類"
   },
   "9136": {
     "symbol": "9136.TW",
     "code": "9136",
-    "name": "巨騰-DR"
+    "name": "巨騰-DR",
+    "market": "上市",
+    "industry": "未分類"
   },
   "9802": {
     "symbol": "9802.TW",
     "code": "9802",
-    "name": "鈺齊-KY"
+    "name": "鈺齊-KY",
+    "market": "上市",
+    "industry": "運動休閒"
   },
   "9902": {
     "symbol": "9902.TW",
     "code": "9902",
-    "name": "台火"
+    "name": "台火",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9904": {
     "symbol": "9904.TW",
     "code": "9904",
-    "name": "寶成"
+    "name": "寶成",
+    "market": "上市",
+    "industry": "運動休閒"
   },
   "9905": {
     "symbol": "9905.TW",
     "code": "9905",
-    "name": "大華"
+    "name": "大華",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9906": {
     "symbol": "9906.TW",
     "code": "9906",
-    "name": "欣巴巴"
+    "name": "欣巴巴",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "9907": {
     "symbol": "9907.TW",
     "code": "9907",
-    "name": "統一實"
+    "name": "統一實",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9908": {
     "symbol": "9908.TW",
     "code": "9908",
-    "name": "大台北"
+    "name": "大台北",
+    "market": "上市",
+    "industry": "油電燃氣業"
   },
   "9910": {
     "symbol": "9910.TW",
     "code": "9910",
-    "name": "豐泰"
+    "name": "豐泰",
+    "market": "上市",
+    "industry": "運動休閒"
   },
   "9911": {
     "symbol": "9911.TW",
     "code": "9911",
-    "name": "櫻花"
+    "name": "櫻花",
+    "market": "上市",
+    "industry": "居家生活"
   },
   "9912": {
     "symbol": "9912.TW",
     "code": "9912",
-    "name": "偉聯"
+    "name": "偉聯",
+    "market": "上市",
+    "industry": "電腦及週邊設備業"
   },
   "9914": {
     "symbol": "9914.TW",
     "code": "9914",
-    "name": "美利達"
+    "name": "美利達",
+    "market": "上市",
+    "industry": "運動休閒"
   },
   "9917": {
     "symbol": "9917.TW",
     "code": "9917",
-    "name": "中保科"
+    "name": "中保科",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9918": {
     "symbol": "9918.TW",
     "code": "9918",
-    "name": "欣天然"
+    "name": "欣天然",
+    "market": "上市",
+    "industry": "油電燃氣業"
   },
   "9919": {
     "symbol": "9919.TW",
     "code": "9919",
-    "name": "康那香"
+    "name": "康那香",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9921": {
     "symbol": "9921.TW",
     "code": "9921",
-    "name": "巨大"
+    "name": "巨大",
+    "market": "上市",
+    "industry": "運動休閒"
   },
   "9924": {
     "symbol": "9924.TW",
     "code": "9924",
-    "name": "福興"
+    "name": "福興",
+    "market": "上市",
+    "industry": "居家生活"
   },
   "9925": {
     "symbol": "9925.TW",
     "code": "9925",
-    "name": "新保"
+    "name": "新保",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9926": {
     "symbol": "9926.TW",
     "code": "9926",
-    "name": "新海"
+    "name": "新海",
+    "market": "上市",
+    "industry": "油電燃氣業"
   },
   "9927": {
     "symbol": "9927.TW",
     "code": "9927",
-    "name": "泰銘"
+    "name": "泰銘",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9928": {
     "symbol": "9928.TW",
     "code": "9928",
-    "name": "中視"
+    "name": "中視",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9929": {
     "symbol": "9929.TW",
     "code": "9929",
-    "name": "秋雨"
+    "name": "秋雨",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9930": {
     "symbol": "9930.TW",
     "code": "9930",
-    "name": "中聯資源"
+    "name": "中聯資源",
+    "market": "上市",
+    "industry": "綠能環保"
   },
   "9931": {
     "symbol": "9931.TW",
     "code": "9931",
-    "name": "欣高"
+    "name": "欣高",
+    "market": "上市",
+    "industry": "油電燃氣業"
   },
   "9933": {
     "symbol": "9933.TW",
     "code": "9933",
-    "name": "中鼎"
+    "name": "中鼎",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9934": {
     "symbol": "9934.TW",
     "code": "9934",
-    "name": "成霖"
+    "name": "成霖",
+    "market": "上市",
+    "industry": "居家生活"
   },
   "9935": {
     "symbol": "9935.TW",
     "code": "9935",
-    "name": "慶豐富"
+    "name": "慶豐富",
+    "market": "上市",
+    "industry": "居家生活"
   },
   "9937": {
     "symbol": "9937.TW",
     "code": "9937",
-    "name": "全國"
+    "name": "全國",
+    "market": "上市",
+    "industry": "油電燃氣業"
   },
   "9938": {
     "symbol": "9938.TW",
     "code": "9938",
-    "name": "百和"
+    "name": "百和",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9939": {
     "symbol": "9939.TW",
     "code": "9939",
-    "name": "宏全"
+    "name": "宏全",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9940": {
     "symbol": "9940.TW",
     "code": "9940",
-    "name": "信義"
+    "name": "信義",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9941": {
     "symbol": "9941.TW",
     "code": "9941",
-    "name": "裕融"
+    "name": "裕融",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9942": {
     "symbol": "9942.TW",
     "code": "9942",
-    "name": "茂順"
+    "name": "茂順",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9943": {
     "symbol": "9943.TW",
     "code": "9943",
-    "name": "好樂迪"
+    "name": "好樂迪",
+    "market": "上市",
+    "industry": "觀光餐旅"
   },
   "9944": {
     "symbol": "9944.TW",
     "code": "9944",
-    "name": "新麗"
+    "name": "新麗",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9945": {
     "symbol": "9945.TW",
     "code": "9945",
-    "name": "潤泰新"
+    "name": "潤泰新",
+    "market": "上市",
+    "industry": "其他業"
   },
   "9946": {
     "symbol": "9946.TW",
     "code": "9946",
-    "name": "三發地產"
+    "name": "三發地產",
+    "market": "上市",
+    "industry": "建材營造業"
   },
   "9955": {
     "symbol": "9955.TW",
     "code": "9955",
-    "name": "佳龍"
+    "name": "佳龍",
+    "market": "上市",
+    "industry": "綠能環保"
   },
   "9958": {
     "symbol": "9958.TW",
     "code": "9958",
-    "name": "世紀鋼"
+    "name": "世紀鋼",
+    "market": "上市",
+    "industry": "鋼鐵工業"
   }
 }

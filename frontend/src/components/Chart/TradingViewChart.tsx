@@ -103,14 +103,6 @@ function TradingViewChart({ symbol, period = '1mo', height = 400 }: TradingViewC
         hotlist: false,
         calendar: false,
         studies_overrides: {},
-        overrides: {
-          'mainSeriesProperties.candleStyle.upColor': '#F23645',
-          'mainSeriesProperties.candleStyle.downColor': '#089981',
-          'mainSeriesProperties.candleStyle.borderUpColor': '#F23645',
-          'mainSeriesProperties.candleStyle.borderDownColor': '#089981',
-          'mainSeriesProperties.candleStyle.wickUpColor': '#F23645',
-          'mainSeriesProperties.candleStyle.wickDownColor': '#089981',
-        },
       })
     }
 

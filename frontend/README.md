@@ -79,6 +79,9 @@ frontend/
 └── tsconfig.json
 ```
 
+[![NPM](https://nodei.co/npm/lightweight-charts.png?downloads=true&stars=true)](https://www.npmjs.com/package/lightweight-charts) 
+
+
 ## 🎮 使用說明
 
 1. **選擇股票代碼**: 輸入股票代碼（如 AAPL, 2330.TW）
