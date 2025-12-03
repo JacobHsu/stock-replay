@@ -28,8 +28,9 @@ DEBUG=false
 ENVIRONMENT=production
 LOG_LEVEL=INFO
 
-# CORS 設定（重要！讓本地前端可以連接）
-CORS_ORIGINS=["http://localhost:5173","http://localhost:3000"]
+# CORS 設定（重要！讓前端可以連接）
+# 本地開發 + Vercel 部署
+CORS_ORIGINS=["http://localhost:5173","http://localhost:3000","https://stock-replay.vercel.app"]
 ```
 
 **注意：**

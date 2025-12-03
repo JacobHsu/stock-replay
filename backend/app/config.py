@@ -21,7 +21,12 @@ class Settings(BaseSettings):
     port: int = 8888
 
     # CORS
-    cors_origins: List[str] = ["http://localhost:3000", "http://localhost:5173"]
+    cors_origins: List[str] = [
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "https://stock-replay.vercel.app",
+        "https://stock-replay-*.vercel.app",  # 支持 Vercel 預覽部署
+    ]
 
     # Logging
     log_level: str = "INFO"
