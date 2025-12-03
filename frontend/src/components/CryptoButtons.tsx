@@ -19,6 +19,8 @@ export const CryptoButtons: React.FC<CryptoButtonsProps> = ({
     { code: 'ETH', symbol: 'ETH-USD', name: 'Ethereum' },
     { code: 'SOL', symbol: 'SOL-USD', name: 'Solana' },
     { code: 'BNB', symbol: 'BNB-USD', name: 'Binance Coin' },
+    { code: 'XRP', symbol: 'XRP-USD', name: 'Ripple' },
+    { code: 'ADA', symbol: 'ADA-USD', name: 'Cardano' },
   ]
 
   return (

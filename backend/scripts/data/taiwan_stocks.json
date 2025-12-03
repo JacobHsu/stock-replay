@@ -1161,13 +1161,6 @@
     "market": "上市",
     "industry": "生技醫療業"
   },
-  "1802": {
-    "symbol": "1802.TW",
-    "code": "1802",
-    "name": "台玻",
-    "market": "上市",
-    "industry": "玻璃陶瓷"
-  },
   "1805": {
     "symbol": "1805.TW",
     "code": "1805",
@@ -1245,13 +1238,6 @@
     "market": "上市",
     "industry": "造紙工業"
   },
-  "1909": {
-    "symbol": "1909.TW",
-    "code": "1909",
-    "name": "榮成",
-    "market": "上市",
-    "industry": "造紙工業"
-  },
   "2002": {
     "symbol": "2002.TW",
     "code": "2002",
@@ -1263,13 +1249,6 @@
     "symbol": "2006.TW",
     "code": "2006",
     "name": "東和鋼鐵",
-    "market": "上市",
-    "industry": "鋼鐵工業"
-  },
-  "2007": {
-    "symbol": "2007.TW",
-    "code": "2007",
-    "name": "燁興",
     "market": "上市",
     "industry": "鋼鐵工業"
   },
@@ -1336,13 +1315,6 @@
     "market": "上市",
     "industry": "鋼鐵工業"
   },
-  "2022": {
-    "symbol": "2022.TW",
-    "code": "2022",
-    "name": "聚亨",
-    "market": "上市",
-    "industry": "鋼鐵工業"
-  },
   "2023": {
     "symbol": "2023.TW",
     "code": "2023",
@@ -1403,20 +1375,6 @@
     "symbol": "2032.TW",
     "code": "2032",
     "name": "新鋼",
-    "market": "上市",
-    "industry": "鋼鐵工業"
-  },
-  "2033": {
-    "symbol": "2033.TW",
-    "code": "2033",
-    "name": "佳大",
-    "market": "上市",
-    "industry": "鋼鐵工業"
-  },
-  "2034": {
-    "symbol": "2034.TW",
-    "code": "2034",
-    "name": "允強",
     "market": "上市",
     "industry": "鋼鐵工業"
   },
@@ -1686,13 +1644,6 @@
     "market": "上市",
     "industry": "半導體業"
   },
-  "2305": {
-    "symbol": "2305.TW",
-    "code": "2305",
-    "name": "全友",
-    "market": "上市",
-    "industry": "電腦及週邊設備業"
-  },
   "2308": {
     "symbol": "2308.TW",
     "code": "2308",
@@ -1714,13 +1665,6 @@
     "market": "上市",
     "industry": "電子零組件業"
   },
-  "2314": {
-    "symbol": "2314.TW",
-    "code": "2314",
-    "name": "台揚",
-    "market": "上市",
-    "industry": "通信網路業"
-  },
   "2316": {
     "symbol": "2316.TW",
     "code": "2316",
@@ -1734,20 +1678,6 @@
     "name": "鴻海",
     "market": "上市",
     "industry": "其他電子業"
-  },
-  "2321": {
-    "symbol": "2321.TW",
-    "code": "2321",
-    "name": "東訊",
-    "market": "上市",
-    "industry": "通信網路業"
-  },
-  "2323": {
-    "symbol": "2323.TW",
-    "code": "2323",
-    "name": "中環",
-    "market": "上市",
-    "industry": "光電業"
   },
   "2324": {
     "symbol": "2324.TW",
@@ -1770,13 +1700,6 @@
     "market": "上市",
     "industry": "電子零組件業"
   },
-  "2329": {
-    "symbol": "2329.TW",
-    "code": "2329",
-    "name": "華泰",
-    "market": "上市",
-    "industry": "半導體業"
-  },
   "2330": {
     "symbol": "2330.TW",
     "code": "2330",
@@ -1797,20 +1720,6 @@
     "name": "友訊",
     "market": "上市",
     "industry": "通信網路業"
-  },
-  "2337": {
-    "symbol": "2337.TW",
-    "code": "2337",
-    "name": "旺宏",
-    "market": "上市",
-    "industry": "半導體業"
-  },
-  "2338": {
-    "symbol": "2338.TW",
-    "code": "2338",
-    "name": "光罩",
-    "market": "上市",
-    "industry": "半導體業"
   },
   "2340": {
     "symbol": "2340.TW",
@@ -1973,13 +1882,6 @@
     "market": "上市",
     "industry": "半導體業"
   },
-  "2371": {
-    "symbol": "2371.TW",
-    "code": "2371",
-    "name": "大同",
-    "market": "上市",
-    "industry": "電機機械"
-  },
   "2373": {
     "symbol": "2373.TW",
     "code": "2373",
@@ -2141,13 +2043,6 @@
     "market": "上市",
     "industry": "光電業"
   },
-  "2408": {
-    "symbol": "2408.TW",
-    "code": "2408",
-    "name": "南亞科",
-    "market": "上市",
-    "industry": "半導體業"
-  },
   "2409": {
     "symbol": "2409.TW",
     "code": "2409",
@@ -2267,13 +2162,6 @@
     "market": "上市",
     "industry": "電子通路業"
   },
-  "2431": {
-    "symbol": "2431.TW",
-    "code": "2431",
-    "name": "聯昌",
-    "market": "上市",
-    "industry": "電子零組件業"
-  },
   "2432": {
     "symbol": "2432.TW",
     "code": "2432",
@@ -2302,26 +2190,12 @@
     "market": "上市",
     "industry": "半導體業"
   },
-  "2438": {
-    "symbol": "2438.TW",
-    "code": "2438",
-    "name": "翔耀",
-    "market": "上市",
-    "industry": "光電業"
-  },
   "2439": {
     "symbol": "2439.TW",
     "code": "2439",
     "name": "美律",
     "market": "上市",
     "industry": "通信網路業"
-  },
-  "2440": {
-    "symbol": "2440.TW",
-    "code": "2440",
-    "name": "太空梭",
-    "market": "上市",
-    "industry": "電子零組件業"
   },
   "2441": {
     "symbol": "2441.TW",
@@ -2526,26 +2400,12 @@
     "market": "上市",
     "industry": "其他電子業"
   },
-  "2483": {
-    "symbol": "2483.TW",
-    "code": "2483",
-    "name": "百容",
-    "market": "上市",
-    "industry": "電子零組件業"
-  },
   "2484": {
     "symbol": "2484.TW",
     "code": "2484",
     "name": "希華",
     "market": "上市",
     "industry": "電子零組件業"
-  },
-  "2485": {
-    "symbol": "2485.TW",
-    "code": "2485",
-    "name": "兆赫",
-    "market": "上市",
-    "industry": "通信網路業"
   },
   "2486": {
     "symbol": "2486.TW",
@@ -2565,13 +2425,6 @@
     "symbol": "2489.TW",
     "code": "2489",
     "name": "瑞軒",
-    "market": "上市",
-    "industry": "光電業"
-  },
-  "2491": {
-    "symbol": "2491.TW",
-    "code": "2491",
-    "name": "吉祥全",
     "market": "上市",
     "industry": "光電業"
   },
@@ -2616,13 +2469,6 @@
     "name": "宏達電",
     "market": "上市",
     "industry": "通信網路業"
-  },
-  "2501": {
-    "symbol": "2501.TW",
-    "code": "2501",
-    "name": "國建",
-    "market": "上市",
-    "industry": "建材營造業"
   },
   "2504": {
     "symbol": "2504.TW",
@@ -2670,13 +2516,6 @@
     "symbol": "2515.TW",
     "code": "2515",
     "name": "中工",
-    "market": "上市",
-    "industry": "建材營造業"
-  },
-  "2516": {
-    "symbol": "2516.TW",
-    "code": "2516",
-    "name": "新建",
     "market": "上市",
     "industry": "建材營造業"
   },
@@ -2729,13 +2568,6 @@
     "market": "上市",
     "industry": "建材營造業"
   },
-  "2536": {
-    "symbol": "2536.TW",
-    "code": "2536",
-    "name": "宏普",
-    "market": "上市",
-    "industry": "建材營造業"
-  },
   "2537": {
     "symbol": "2537.TW",
     "code": "2537",
@@ -2754,20 +2586,6 @@
     "symbol": "2539.TW",
     "code": "2539",
     "name": "櫻花建",
-    "market": "上市",
-    "industry": "建材營造業"
-  },
-  "2540": {
-    "symbol": "2540.TW",
-    "code": "2540",
-    "name": "愛山林",
-    "market": "上市",
-    "industry": "建材營造業"
-  },
-  "2542": {
-    "symbol": "2542.TW",
-    "code": "2542",
-    "name": "興富發",
     "market": "上市",
     "industry": "建材營造業"
   },
@@ -3342,13 +3160,6 @@
     "symbol": "2912.TW",
     "code": "2912",
     "name": "統一超",
-    "market": "上市",
-    "industry": "貿易百貨業"
-  },
-  "2913": {
-    "symbol": "2913.TW",
-    "code": "2913",
-    "name": "農林",
     "market": "上市",
     "industry": "貿易百貨業"
   },
