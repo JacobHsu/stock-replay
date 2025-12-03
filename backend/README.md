@@ -1,334 +1,431 @@
-# StockReplay - Backend
+# StockReplay Backend
 
-FastAPI backend for stock trading simulator with playback functionality.
+FastAPI 後端服務，提供股票回放、模擬交易、新聞查詢等功能。
 
-## Quick Start
+## 🚀 快速開始
 
 ```bash
-# Install dependencies
+# 安裝依賴
 uv sync
 
-# Copy environment file
+# 複製環境變數檔案
 cp .env.example .env
 
-# Run development server
+# 啟動開發伺服器
 uv run uvicorn app.main:app --reload
 ```
 
-API: http://localhost:8888  
-Docs: http://localhost:8888/docs
+- **API 服務**：http://localhost:8888
+- **API 文檔**：http://localhost:8888/docs
+- **健康檢查**：http://localhost:8888/health
 
 ---
 
-## Architecture
+## 📚 技術架構
 
-### Layered Design
+### 核心技術棧
+
+- **FastAPI** - 現代、高效能的 Python Web 框架
+- **Uvicorn** - ASGI 伺服器
+- **Pandas** - 資料分析和處理
+- **yfinance** - 獲取股票歷史數據
+- **SQLAlchemy** - ORM 資料庫操作
+- **LangChain** - AI/LLM 整合（可選）
+
+### 分層架構
 
 ```
-API Layer (FastAPI)
-    ↓
-Service Layer (Business Logic)
-    ↓
-Data Layer (yfinance, SQLite)
+┌─────────────────────────────────────┐
+│   API Layer (FastAPI Routes)       │  ← HTTP 端點
+├─────────────────────────────────────┤
+│   Service Layer (Business Logic)   │  ← 業務邏輯
+├─────────────────────────────────────┤
+│   Model Layer (Data Models)        │  ← 資料模型
+├─────────────────────────────────────┤
+│   Utils/Helpers (Tools)             │  ← 工具函數
+├─────────────────────────────────────┤
+│   External Services                 │  ← 外部 API
+│   (yfinance, News API, Database)   │
+└─────────────────────────────────────┘
 ```
 
-### Project Structure
+### 專案結構
 
 ```
 backend/
 ├── app/
-│   ├── api/              # HTTP endpoints
-│   │   ├── playback.py   # Playback control
-│   │   ├── trading.py    # Trading operations
-│   │   ├── news.py       # News management
-│   │   └── data.py       # Stock data
-│   ├── services/         # Core business logic
-│   │   ├── playback_service.py   # Session management
-│   │   ├── trading_service.py    # Trading logic
-│   │   └── news_service.py       # News caching
-│   ├── models/           # Data models
-│   ├── database/         # SQLite (news cache)
-│   ├── helpers/          # External APIs (yfinance, newsapi)
-│   └── utils/            # Utilities
-└── data/
-    └── news_cache.db     # SQLite database
+│   ├── api/                    # API 路由
+│   │   ├── data.py            # 股票數據
+│   │   ├── playback.py        # 回放控制
+│   │   ├── trading.py         # 交易操作
+│   │   ├── news.py            # 新聞管理
+│   │   └── stock_search.py    # 股票搜尋
+│   ├── services/              # 業務邏輯
+│   │   ├── playback_service.py
+│   │   ├── trading_service.py
+│   │   └── news_service.py
+│   ├── models/                # 資料模型
+│   │   ├── playback.py
+│   │   └── trading.py
+│   ├── database/              # 資料庫
+│   │   ├── connection.py
+│   │   └── models.py
+│   ├── helpers/               # 外部 API 整合
+│   │   ├── yfinance/
+│   │   └── newsapi/
+│   ├── utils/                 # 工具函數
+│   ├── config.py              # 配置管理
+│   └── main.py                # 應用入口
+├── data/                      # 資料存儲
+│   └── news_cache.db         # SQLite 資料庫
+├── tests/                     # 測試
+├── .env.example              # 環境變數範例
+├── requirements.txt          # 依賴清單
+└── pyproject.toml           # 專案配置
 ```
 
 ---
 
-## Core Concepts
+## 🎯 核心功能
 
-### 1. Playback Session
+### 1. Playback Session（回放會話）
 
-**Purpose:** Enable step-by-step K-line playback without loading all data to frontend.
+**目的**：逐步回放股票 K 線，不需一次載入所有數據到前端。
 
-**How it works:**
+**工作原理**：
 ```python
-# User selects AAPL, 3mo
-1. Fetch 90 days of data from yfinance
-2. Create PlaybackSession with unique ID
-3. Store in memory (sessions dict)
-4. Return playback_id to frontend
+# 1. 用戶選擇 AAPL, 3個月
+POST /api/playback/start {symbol: "AAPL", period: "3mo"}
 
-# User clicks "Next"
-1. Frontend sends: GET /api/playback/{id}/next
-2. Backend: session.next() → returns 1 K-line
-3. current_index += 1
+# 2. 後端從 yfinance 獲取 90 天數據
+# 3. 創建 PlaybackSession 並存在記憶體
+# 4. 返回 playback_id
+
+# 5. 用戶點擊「下一根」
+GET /api/playback/{id}/next
+
+# 6. 返回一根 K 線，current_index += 1
 ```
 
-**Key Class:**
+**核心類別**：
 ```python
 class PlaybackSession:
-    playback_id: str        # Unique ID
-    symbol: str             # Stock symbol
-    data: DataFrame         # All K-lines
-    current_index: int      # Current position
+    playback_id: str        # 唯一 ID
+    symbol: str             # 股票代碼
+    data: DataFrame         # 所有 K 線數據
+    current_index: int      # 當前位置
     
-    def next(count=1)       # Get next N K-lines
-    def seek(index)         # Jump to position
-    def get_current()       # Get current K-line
+    def next(count=1)       # 獲取下 N 根 K 線
+    def seek(index)         # 跳轉到指定位置
+    def get_current()       # 獲取當前 K 線
 ```
 
-**Storage:** Memory only (not in database)
+**存儲方式**：記憶體（重啟後消失）
 
-### 2. Trading Account
+### 2. Trading Account（交易帳戶）
 
-**Purpose:** Simulate stock trading with P/L tracking.
+**目的**：模擬股票交易，追蹤損益。
 
-**Account Structure:**
+**帳戶結構**：
 ```python
 {
     "account_id": "xyz-789",
-    "current_cash": 10000,
+    "current_cash": 10000,      # 當前現金
     "position": {
-        "shares": 10,
-        "entry_price": 150.5,
-        "unrealized_pl": 45.0
+        "shares": 10,           # 持股數量
+        "entry_price": 150.5,   # 進場價格
+        "unrealized_pl": 45.0   # 未實現損益
     },
-    "realized_pl": 100.0,
-    "total_pl": 145.0
+    "realized_pl": 100.0,       # 已實現損益
+    "total_pl": 145.0           # 總損益
 }
 ```
 
-**Operations:**
-- `execute_buy()` - Buy 1 share at current price
-- `execute_sell()` - Sell 1 share at current price
-- Auto-calculate P/L and update position
+**操作**：
+- `buy()` - 全倉買入（用所有現金）
+- `sell()` - 全倉賣出（賣出所有持股）
+- 自動計算損益和更新持倉
 
-**Storage:** Memory only
+**存儲方式**：記憶體（重啟後消失）
 
-### 3. News Cache
+### 3. News Cache（新聞快取）
 
-**Purpose:** Cache news articles to avoid repeated API calls.
+**目的**：快取新聞文章，避免重複呼叫 API。
 
-**Flow:**
+**流程**：
 ```
-Query news for AAPL 2024-01-01
+查詢 AAPL 2024-01-01 的新聞
     ↓
-Check SQLite database
+檢查 SQLite 資料庫
     ↓
-Found? → Return cached data (fast!)
-Not found? → Fetch from API → Save to DB → Return
+找到？ → 返回快取數據（快！）
+沒有？ → 呼叫 API → 存入資料庫 → 返回
 ```
 
-**Database Tables:**
-- `news_articles` - Individual articles
-- `daily_news_summary` - Daily grouped summaries
+**資料庫表**：
+- `news_articles` - 個別文章
+- `daily_news_summary` - 每日摘要
 
-**Storage:** SQLite database (`data/news_cache.db`)
+**存儲方式**：SQLite (`data/news_cache.db`)
 
 ---
 
-## API Endpoints
+## 🔌 API 端點
 
-### Playback Control
-- `POST /api/playback/start` - Create session
-- `GET /api/playback/{id}/next` - Get next K-line
-- `POST /api/playback/{id}/seek` - Jump to position
-- `GET /api/playback/{id}/status` - Get status
-
-### Trading
-- `POST /api/trading/accounts` - Create account
-- `GET /api/trading/accounts/{id}` - Get status
-- `POST /api/trading/accounts/{id}/buy` - Buy 1 share
-- `POST /api/trading/accounts/{id}/sell` - Sell 1 share
-
-### News
-- `POST /api/news/fetch` - Fetch and cache news
-- `GET /api/news/dates` - Get dates with news
-- `GET /api/news/by-date` - Get news by date
-
----
-
-## Data Flow Example
-
-### Complete Playback Flow
-
+### Playback（回放控制）
 ```
-1. User selects stock
-   Frontend → POST /api/playback/start {symbol: "AAPL", period: "3mo"}
-   Backend → yfinance.download() → Create PlaybackSession
-   Response → {playback_id: "abc-123", total_count: 63}
+POST   /api/playback/start          # 創建回放會話
+GET    /api/playback/{id}/status    # 獲取狀態
+GET    /api/playback/{id}/next      # 下一根 K 線
+POST   /api/playback/{id}/seek      # 跳轉位置
+DELETE /api/playback/{id}           # 刪除會話
+```
 
-2. Auto-create trading account
-   Frontend → POST /api/trading/accounts {playback_id: "abc-123"}
-   Backend → Create TradingAccount
-   Response → {account_id: "xyz-789", current_cash: 10000}
+### Trading（交易操作）
+```
+POST   /api/trading/account/create           # 創建交易帳戶
+GET    /api/trading/account/{id}/status      # 帳戶狀態
+POST   /api/trading/account/{id}/buy         # 買入
+POST   /api/trading/account/{id}/sell        # 賣出
+GET    /api/trading/account/{id}/history     # 交易歷史
+DELETE /api/trading/account/{id}             # 刪除帳戶
+```
 
-3. User clicks "Next"
-   Frontend → GET /api/playback/abc-123/next
-   Backend → session.next(1) → current_index += 1
-   Response → {current_data: {K-line data}}
+### Data（股票數據）
+```
+GET /api/data/historical/{symbol}   # 獲取歷史數據
+```
 
-4. User clicks "Buy"
-   Frontend → POST /api/trading/accounts/xyz-789/buy {current_price: 150.5}
-   Backend → execute_buy() → Update cash and position
-   Response → {trade: {...}, status: {updated account}}
+### News（新聞）
+```
+POST /api/news/fetch                    # 抓取新聞
+GET  /api/news/summaries/{symbol}       # 每日摘要
+GET  /api/news/by-date/{symbol}/{date}  # 特定日期新聞
+GET  /api/news/dates/{symbol}           # 有新聞的日期
+```
+
+### Stock Search（股票搜尋）
+```
+GET /api/stocks/info/{symbol}           # 股票資訊
+GET /api/stocks/search?q={query}        # 搜尋股票
+GET /api/stocks/day-trading/losers      # 當日跌幅榜
+GET /api/stocks/us-etf/losers           # 美股 ETF 跌幅榜
 ```
 
 ---
 
-## Key Design Decisions
+## 🚀 部署到 Railway
 
-### Why Session-based?
-- **Problem:** Loading all K-lines to frontend is slow and memory-intensive
-- **Solution:** Backend holds data, frontend requests one at a time
-- **Benefits:** Fast, scalable, supports seek/jump operations
+### 快速部署
 
-### Why Cache News?
-- **Problem:** News API has rate limits and costs money
-- **Solution:** Store in SQLite after first fetch
-- **Benefits:** Fast subsequent queries, no repeated API calls
+1. **推送到 GitHub**
+   ```bash
+   git push origin main
+   ```
 
-### Why Memory Storage for Sessions?
-- **Pros:** Fast access, simple implementation
-- **Cons:** Lost on restart (acceptable for MVP)
-- **Future:** Can migrate to Redis for persistence
+2. **在 Railway 創建專案**
+   - 前往 https://railway.app
+   - 選擇 "Deploy from GitHub repo"
+   - 選擇你的 repository
+
+3. **設定 Root Directory**
+   - 專案根目錄已有 `railway.toml`，會自動設定
+   - 或手動設定：Settings → Root Directory → `backend`
+
+4. **設定環境變數**
+   
+   在 Variables 標籤新增：
+   ```bash
+   PORT=8888
+   PYTHON_VERSION=3.12
+   DEBUG=false
+   ENVIRONMENT=production
+   CORS_ORIGINS=["https://your-frontend.vercel.app","http://localhost:5173"]
+   ```
+
+5. **產生公開 URL**
+   - Settings → Domains → Generate Domain
+   - 複製 URL（例如：`https://your-app.up.railway.app`）
+
+6. **驗證部署**
+   ```bash
+   curl https://your-app.up.railway.app/health
+   ```
+
+### CORS 設定
+
+如果前端無法連接，出現 CORS 錯誤：
+
+**解決方法 1：修改代碼（已完成）**
+
+`backend/app/config.py` 已包含：
+```python
+cors_origins: List[str] = [
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "https://stock-replay.vercel.app",
+    "https://stock-replay-*.vercel.app",  # 支持預覽部署
+]
+```
+
+推送代碼後 Railway 會自動重新部署。
+
+**解決方法 2：設定環境變數**
+
+在 Railway Variables 中設定：
+```json
+CORS_ORIGINS=["http://localhost:5173","https://your-frontend.vercel.app"]
+```
+
+### 持久化資料庫（可選）
+
+如果需要保留新聞快取：
+
+1. Service Settings → Volumes
+2. 新增 Volume：Mount Path = `/app/data`
+3. 這樣 `data/news_cache.db` 會在重啟後保留
+
+### 監控
+
+**查看日誌**：
+- Dashboard → Deployments → 最新部署 → View Logs
+
+**監控資源**：
+- Dashboard → Metrics（CPU、記憶體、網路）
 
 ---
 
-## Development
+## 🔧 開發
 
-### Run Tests
+### 執行測試
 ```bash
 uv run pytest
 uv run pytest --cov=app --cov-report=html
 ```
 
-### Code Quality
+### 程式碼品質
 ```bash
-uv run black .           # Format
 uv run ruff check .      # Lint
-uv run mypy app/         # Type check
+uv run ruff format .     # Format
 ```
 
-### Environment Variables
-See `.env.example` for required configuration:
-- `NEWS_API_KEY` - News API key
-- `DATABASE_URL` - SQLite database path
-- `CORS_ORIGINS` - Allowed frontend origins
+### 環境變數
+
+參考 `.env.example`：
+
+```bash
+# 應用設定
+APP_NAME="StockReplay"
+DEBUG=True
+PORT=8888
+
+# CORS
+CORS_ORIGINS=["http://localhost:3000","http://localhost:5173"]
+
+# API Keys（可選）
+TAVILY_API_KEY=your_tavily_api_key
+OPENAI_API_KEY=your_openai_key
+ANTHROPIC_API_KEY=your_anthropic_key
+
+# 資料庫
+DATABASE_URL="sqlite:///./data/news_cache.db"
+
+# 日誌
+LOG_LEVEL="INFO"
+```
 
 ---
 
-## Deployment
+## 📊 資料流程範例
 
-### Railway 部署（推薦）
+### 完整的回放流程
 
-完整部署指南請參考：**[DEPLOYMENT.md](./DEPLOYMENT.md)**
+```
+1. 用戶選擇股票
+   前端 → POST /api/playback/start {symbol: "AAPL", period: "3mo"}
+   後端 → yfinance.download() → 創建 PlaybackSession
+   響應 → {playback_id: "abc-123", total_count: 63}
 
-#### 快速部署步驟
+2. 自動創建交易帳戶
+   前端 → POST /api/trading/account/create {playback_id: "abc-123"}
+   後端 → 創建 TradingAccount
+   響應 → {account_id: "xyz-789", current_cash: 10000}
 
-**1. 推送到 GitHub**
-```bash
-git add .
-git commit -m "Add Railway deployment config"
-git push origin main
+3. 用戶點擊「下一根」
+   前端 → GET /api/playback/abc-123/next
+   後端 → session.next(1) → current_index += 1
+   響應 → {current_data: {K 線數據}}
+
+4. 用戶點擊「買入」
+   前端 → POST /api/trading/account/xyz-789/buy {current_price: 150.5}
+   後端 → execute_buy() → 更新現金和持倉
+   響應 → {trade: {...}, status: {更新後的帳戶}}
 ```
 
-**2. 在 Railway 創建專案**
-- 前往 https://railway.app
-- 用 GitHub 登入（需綁定信用卡，有 $5/月 免費額度）
-- 點擊 "New Project" → "Deploy from GitHub repo"
-- 選擇你的 repository
+---
 
-**3. 設定 Root Directory（重要！）**
+## 🎯 設計決策
 
-因為 backend 在子目錄中，有兩種方法：
+### 為什麼使用會話管理？
+- **問題**：一次載入所有 K 線到前端很慢且耗記憶體
+- **解決**：後端持有數據，前端逐根請求
+- **優點**：快速、可擴展、支援跳轉操作
 
-**方法 A：使用 railway.toml（推薦，最簡單）**
+### 為什麼快取新聞？
+- **問題**：新聞 API 有速率限制且收費
+- **解決**：首次查詢後存入 SQLite
+- **優點**：後續查詢快速、節省 API 呼叫
 
-專案根目錄已有 `railway.toml` 檔案，Railway 會自動讀取。
-無需手動設定，直接部署即可！
+### 為什麼用記憶體存儲會話？
+- **優點**：存取快速、實作簡單
+- **缺點**：重啟後消失（MVP 可接受）
+- **未來**：可遷移到 Redis 實現持久化
 
-**方法 B：手動設定**
+---
 
-如果方法 A 不行：
-1. 點擊 service → Settings（齒輪圖示）
-2. 找到 Source 區塊 → Configure
-3. Root Directory 輸入：`backend`
-4. Save
+## 🔍 疑難排解
 
-如果沒設定，Railway 會找不到 `requirements.txt` 而部署失敗！
+### 問題 1：CORS 錯誤
 
-**4. 設定環境變數**
-
-在 Variables 標籤中新增：
-```bash
-PORT=8888
-PYTHON_VERSION=3.12
-DEBUG=false
-ENVIRONMENT=production
-CORS_ORIGINS=["https://your-frontend.vercel.app","http://localhost:5173"]
+**錯誤訊息**：
+```
+Access to XMLHttpRequest has been blocked by CORS policy
 ```
 
-如果使用新聞功能，還需要：
-```bash
-NEWS_API_KEY=your_news_api_key
-```
+**解決方法**：
+1. 檢查 `backend/app/config.py` 的 `cors_origins`
+2. 確認包含前端域名
+3. 或在 Railway 設定 `CORS_ORIGINS` 環境變數
+4. 重新部署
 
-**5. 產生公開 URL**
-- 進入 Settings → Domains
-- 點擊 "Generate Domain"
-- 複製產生的 URL（例如：`https://your-app.up.railway.app`）
+### 問題 2：Railway 部署失敗
 
-**6. 驗證部署**
-```bash
-# 檢查健康狀態
-curl https://your-app.up.railway.app/health
+**常見原因**：
+- Root Directory 未設定為 `backend`
+- `requirements.txt` 不存在
+- Python 版本不符
 
-# 查看 API 文件
-# 瀏覽器開啟：https://your-app.up.railway.app/docs
-```
+**解決方法**：
+1. 確認 `railway.toml` 存在
+2. 或手動設定 Root Directory
+3. 設定 `PYTHON_VERSION=3.12`
 
-#### 持久化資料庫（可選）
+### 問題 3：資料庫檔案消失
 
-如果需要保留新聞快取：
+**原因**：Railway 檔案系統是暫時的
 
-1. 在 Service Settings 找到 "Volumes"
-2. 新增 Volume：
-   - Mount Path: `/app/data`
-3. 這樣 `data/news_cache.db` 會在重啟後保留
-
-
-### 部署注意事項
-
-**記憶體存儲：**
-- Playback Sessions 存在記憶體
-- Trading Accounts 存在記憶體
-- 重啟後會消失（正常行為）
-
-**資料庫存儲：**
-- 新聞快取存在 SQLite
-- 需要設定 Volume 才能持久化
+**解決方法**：
+- 設定 Volume（Mount Path: `/app/data`）
 - 或改用 Railway PostgreSQL
 
-**生產環境建議：**
-- 使用 Redis 存 Session（避免重啟消失）
-- 使用 PostgreSQL 存新聞（更穩定）
-- 設定適當的 CORS 白名單
-- 啟用日誌監控
+---
 
-**成本估算：**
-- 免費額度：$5/月（約 500 小時）
-- 小型應用：約 $5-10/月
-- 可設定 Sleep on Idle 節省成本
+## 📝 授權
+
+MIT License
+
+---
+
+## 🤝 貢獻
+
+歡迎提交 Issue 和 Pull Request！
