@@ -20,10 +20,10 @@ import type {
   DayTradingLosersResponse,
 } from '../types'
 
-// 切換後端 URL
+// 使用環境變數來切換後端 URL
 // 本地測試：'http://localhost:8888'
 // Railway 線上：'https://stock-replay-production.up.railway.app'
-const API_BASE_URL = "http://localhost:8888";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8888";
 
 const api = axios.create({
   baseURL: API_BASE_URL,
