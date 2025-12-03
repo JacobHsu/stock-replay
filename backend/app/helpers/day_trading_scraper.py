@@ -13,10 +13,10 @@ logger = logging.getLogger(__name__)
 
 def get_top3_day_trading_losers() -> List[Dict[str, Any]]:
     """
-    Get top 3 stocks that can be day-traded with biggest losses.
+    Get top 6 stocks that can be day-traded with biggest losses.
     
     Scrapes from HiStock and filters by stocks in our database (taiwan_stocks.json).
-    Returns list with: code, symbol, name, change_percent
+    Returns list with: code, symbol, name, change_percent, price, industry
     """
     try:
         # Import here to avoid circular dependency
@@ -75,31 +75,44 @@ def get_top3_day_trading_losers() -> List[Dict[str, Any]]:
                 
                 stock_info = db._cache[code]
                 
-                # Parse change percent
+                # Parse change percent (保留小數點第二位)
                 try:
                     change_percent_float = float(change_percent.replace("%", "").replace(",", ""))
+                    change_percent_float = round(change_percent_float, 2)
                 except ValueError:
                     logger.warning(f"Could not parse change_percent for {code}: {change_percent}")
                     continue
+                
+                # Parse price (股價)
+                try:
+                    price_float = float(price.replace(",", ""))
+                except ValueError:
+                    logger.warning(f"Could not parse price for {code}: {price}")
+                    price_float = 0.0
+                
+                # 取得產業別
+                industry = stock_info.get("industry", "未分類")
                 
                 results.append({
                     "code": code,
                     "symbol": stock_info["symbol"],
                     "name": stock_info["name"],
                     "change_percent": change_percent_float,
+                    "price": price_float,
+                    "industry": industry,
                 })
                 
-                logger.info(f"Found: {code} {stock_info['name']} {change_percent_float}%")
+                logger.info(f"Found: {code} {stock_info['name']} ${price_float} {change_percent_float}%")
                 
-                # Stop when we have 3 stocks
-                if len(results) >= 3:
+                # Stop when we have 6 stocks
+                if len(results) >= 6:
                     break
                     
             except Exception as e:
                 logger.error(f"Error parsing row: {e}")
                 continue
         
-        if len(results) >= 3:
+        if len(results) >= 6:
             logger.info(f"Successfully fetched {len(results)} day trading losers")
             return results
         else:
@@ -124,18 +137,48 @@ def _get_fallback_data() -> List[Dict[str, Any]]:
             "code": "2454",
             "symbol": "2454.TW",
             "name": "聯發科",
-            "change_percent": -3.2
+            "change_percent": -3.20,
+            "price": 1050.00,
+            "industry": "半導體業"
         },
         {
             "code": "2317",
             "symbol": "2317.TW",
             "name": "鴻海",
-            "change_percent": -2.8
+            "change_percent": -2.80,
+            "price": 185.50,
+            "industry": "電腦及週邊設備業"
         },
         {
             "code": "2303",
             "symbol": "2303.TW",
             "name": "聯電",
-            "change_percent": -2.5
+            "change_percent": -2.50,
+            "price": 48.20,
+            "industry": "半導體業"
+        },
+        {
+            "code": "2330",
+            "symbol": "2330.TW",
+            "name": "台積電",
+            "change_percent": -2.30,
+            "price": 980.00,
+            "industry": "半導體業"
+        },
+        {
+            "code": "2882",
+            "symbol": "2882.TW",
+            "name": "國泰金",
+            "change_percent": -2.10,
+            "price": 68.50,
+            "industry": "金融保險業"
+        },
+        {
+            "code": "2412",
+            "symbol": "2412.TW",
+            "name": "中華電",
+            "change_percent": -1.80,
+            "price": 125.00,
+            "industry": "通信網路業"
         }
     ]

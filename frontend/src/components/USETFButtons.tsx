@@ -50,9 +50,11 @@ export const USETFButtons: React.FC<USETFButtonsProps> = ({
         <span>ETF跌幅</span>
       </div>
       
-      <div className="flex gap-1.5">
+      <div className="flex gap-1.5 flex-wrap">
         {etfs.map((etf) => {
           const isActive = currentSymbol === etf.symbol
+          const priceText = etf.price ? ` $${etf.price.toFixed(2)}` : ''
+          const tooltipText = `${etf.name}${priceText}\n漲跌幅: ${etf.change_percent.toFixed(2)}%`
           
           return (
             <button
@@ -66,10 +68,10 @@ export const USETFButtons: React.FC<USETFButtonsProps> = ({
                   : 'bg-tv-surface text-tv-text hover:bg-tv-surfaceHover border border-tv-border hover:border-tv-primary'
                 }
               `}
-              title={`${etf.name} ${etf.change_percent.toFixed(2)}%`}
+              title={tooltipText}
             >
               <span className="font-semibold">{etf.symbol}</span>
-              <span className="ml-1 text-tv-danger">{etf.change_percent.toFixed(1)}%</span>
+              <span className="ml-1 text-tv-danger">{etf.change_percent.toFixed(2)}%</span>
             </button>
           )
         })}

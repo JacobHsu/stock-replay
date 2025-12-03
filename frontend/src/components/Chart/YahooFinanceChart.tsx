@@ -88,9 +88,13 @@ export default function YahooFinanceChart({ symbol, period = '1mo', height = 400
         console.log('[YahooFinanceChart] Processed data count:', data.length)
         console.log('[YahooFinanceChart] First 3 items:', data.slice(0, 3))
 
-        // 初始不顯示數據，設置空數組
-        candlestickSeries.setData([])
-        chart.timeScale().fitContent()
+        // 設置圖表數據
+        if (data.length > 0) {
+          candlestickSeries.setData(data)
+          chart.timeScale().fitContent()
+        } else {
+          console.warn('[YahooFinanceChart] No data to display')
+        }
       } catch (err: any) {
         console.error('[YahooFinanceChart] Failed to fetch historical data:', err)
         console.error('[YahooFinanceChart] Error details:', err.response?.data)

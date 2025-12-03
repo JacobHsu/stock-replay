@@ -9,7 +9,7 @@ interface DayTradingButtonsProps {
 }
 
 /**
- * 顯示前三大跌幅當沖股票的快捷按鈕
+ * 顯示前六大跌幅當沖股票的快捷按鈕
  * 只在台股交易時段 (09:00-13:30) 顯示
  */
 export const DayTradingButtons: React.FC<DayTradingButtonsProps> = ({
@@ -20,12 +20,14 @@ export const DayTradingButtons: React.FC<DayTradingButtonsProps> = ({
   const [loading, setLoading] = useState(false)
   const [isMarketHours, setIsMarketHours] = useState(false)
 
-  // 檢查是否在台股交易時段
+  // 檢查是否在台股交易時段（使用台灣時間）
   const checkMarketHours = () => {
     const now = new Date()
-    const hours = now.getHours()
-    const minutes = now.getMinutes()
-    const day = now.getDay()
+    // 轉換為台灣時間
+    const taiwanTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Taipei' }))
+    const hours = taiwanTime.getHours()
+    const minutes = taiwanTime.getMinutes()
+    const day = taiwanTime.getDay()
 
     // 週一到週五 (1-5)
     if (day === 0 || day === 6) {
@@ -80,12 +82,21 @@ export const DayTradingButtons: React.FC<DayTradingButtonsProps> = ({
     <div className="flex items-center gap-2">
       <div className="flex items-center gap-1.5 text-tv-textSecondary text-xs">
         <TrendingDown className="w-3.5 h-3.5 text-tv-danger" />
-        <span>當沖跌幅</span>
+        <a 
+          href="https://histock.tw/stock/rank.aspx?m=4&d=0&t=dt"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-tv-primary transition-colors"
+        >
+          當沖跌幅
+        </a>
       </div>
       
-      <div className="flex gap-1.5">
+      <div className="flex gap-1.5 flex-wrap">
         {stocks.map((stock) => {
           const isActive = currentSymbol === stock.symbol
+          const priceText = stock.price ? ` $${stock.price.toFixed(2)}` : ''
+          const tooltipText = `${stock.name}${priceText}\n漲跌幅: ${stock.change_percent.toFixed(2)}%${stock.industry ? `\n產業別: ${stock.industry}` : ''}`
           
           return (
             <button
@@ -99,10 +110,10 @@ export const DayTradingButtons: React.FC<DayTradingButtonsProps> = ({
                   : 'bg-tv-surface text-tv-text hover:bg-tv-surfaceHover border border-tv-border hover:border-tv-primary'
                 }
               `}
-              title={`${stock.name} ${stock.change_percent.toFixed(2)}%`}
+              title={tooltipText}
             >
               <span className="font-semibold">{stock.code}</span>
-              <span className="ml-1 text-tv-danger">{stock.change_percent.toFixed(1)}%</span>
+              <span className="ml-1 text-tv-danger">{stock.change_percent.toFixed(2)}%</span>
             </button>
           )
         })}

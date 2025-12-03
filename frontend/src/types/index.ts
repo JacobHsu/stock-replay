@@ -160,6 +160,8 @@ export interface DayTradingStock {
   symbol: string
   name: string
   change_percent: number
+  price?: number
+  industry?: string
 }
 
 export interface DayTradingLosersResponse {

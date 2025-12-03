@@ -141,6 +141,8 @@ class DayTradingStock(BaseModel):
     symbol: str
     name: str
     change_percent: float
+    price: float | None = None
+    industry: str | None = None
 
 
 class DayTradingLosersResponse(BaseModel):
