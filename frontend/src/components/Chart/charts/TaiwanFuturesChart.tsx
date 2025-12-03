@@ -2,9 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import { SimpleTradingViewChart } from './SimpleTradingViewChart';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Skeleton } from '@/components/ui/skeleton';
-import { TriggerEvent } from '@/types';
+// import { Alert, AlertDescription } from '@/components/ui/alert';
+// import { Skeleton } from '@/components/ui/skeleton';
+import type { TriggerEvent } from '@/types';
+
+// Temporary placeholder components
+const Alert = ({ children, ...props }: any) => <div className="alert" {...props}>{children}</div>;
+const AlertDescription = ({ children, ...props }: any) => <div {...props}>{children}</div>;
+const Skeleton = ({ className, ...props }: any) => <div className={`animate-pulse bg-gray-700 ${className}`} {...props} />;
 
 interface ChartData {
   time: number;

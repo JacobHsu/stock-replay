@@ -167,3 +167,45 @@ export interface DayTradingStock {
 export interface DayTradingLosersResponse {
   stocks: DayTradingStock[]
 }
+
+// Additional Chart Types
+export interface StockData {
+  timestamp: string
+  open: number
+  high: number
+  low: number
+  close: number
+  volume: number
+  ma10?: number
+  ma20?: number
+  ma60?: number
+  bb_upper?: number
+  bb_middle?: number
+  bb_lower?: number
+  rsi?: number
+  macd?: number
+  macd_signal?: number
+}
+
+export interface TradingSignal {
+  timestamp: string
+  type: 'buy' | 'sell'
+  signal_type: 'BUY' | 'SELL'
+  price: number
+  name?: string
+}
+
+export interface TriggerEvent {
+  timestamp: string
+  type: string
+  event_type: string
+  description: string
+  color?: string
+  severity?: 'high' | 'medium' | 'low'
+  technical_data?: {
+    bull_pct?: number
+    bear_pct?: number
+    oscillation_pct?: number
+    candle_type?: string
+  }
+}

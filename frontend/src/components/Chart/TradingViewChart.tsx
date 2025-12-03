@@ -38,20 +38,20 @@ function TradingViewChart({ symbol, period = '1mo', height = 400 }: TradingViewC
   }
 
   // Convert period to TradingView range format
-  const getTradingViewRange = (period: string) => {
-    switch (period) {
-      case '1mo':
-        return '1M'
-      case '3mo':
-        return '3M'
-      case '6mo':
-        return '6M'
-      case '1y':
-        return '12M'
-      default:
-        return '1M'
-    }
-  }
+  // const getTradingViewRange = (period: string) => {
+  //   switch (period) {
+  //     case '1mo':
+  //       return '1M'
+  //     case '3mo':
+  //       return '3M'
+  //     case '6mo':
+  //       return '6M'
+  //     case '1y':
+  //       return '12M'
+  //     default:
+  //       return '1M'
+  //   }
+  // }
 
   useEffect(() => {
     // Load TradingView script if not already loaded

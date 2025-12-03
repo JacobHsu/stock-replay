@@ -119,7 +119,7 @@ export function SimpleTradingViewChart({
     const unixTimestamp = Math.floor(date.getTime() / 1000)
     
     // 添加調試信息（只在開發環境）
-    if (process.env.NODE_ENV === 'development') {
+    if (import.meta.env.DEV) {
       console.log(`時間轉換: ${timestamp} -> ${date.toISOString()} -> ${unixTimestamp}`)
     }
     
@@ -620,7 +620,7 @@ export function SimpleTradingViewChart({
     }
 
     // 監聽主圖表的時間軸變化
-    let timeRangeChangeTimeout: NodeJS.Timeout
+    let timeRangeChangeTimeout: ReturnType<typeof setTimeout>
     chart.timeScale().subscribeVisibleTimeRangeChange((timeRange) => {
       syncTimeRange(timeRange, chart)
       
@@ -653,7 +653,7 @@ export function SimpleTradingViewChart({
         width: chartContainerRef.current.clientWidth,
         height: rsiChartHeight,
         layout: {
-          backgroundColor: '#131722',
+          background: { color: '#131722' },
           textColor: '#D1D4DC',
         },
         grid: {
@@ -759,7 +759,7 @@ export function SimpleTradingViewChart({
         width: chartContainerRef.current.clientWidth,
         height: macdChartHeight,
         layout: {
-          backgroundColor: '#131722',
+          background: { color: '#131722' },
           textColor: '#D1D4DC',
         },
         grid: {

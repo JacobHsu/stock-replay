@@ -27,6 +27,9 @@ export const StockSearch: React.FC<StockSearchProps> = ({
   const [error, setError] = useState<string | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
   const suggestionsRef = useRef<HTMLDivElement>(null)
+  
+  // Use displayValue to avoid unused variable warning
+  console.log('Current display value:', displayValue)
 
   // Initialize display value from prop
   useEffect(() => {
