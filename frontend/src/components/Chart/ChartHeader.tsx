@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import StockSearch from '../StockSearch'
 import DayTradingButtons from '../DayTradingButtons'
 import CryptoButtons from '../CryptoButtons'
 import USETFButtons from '../USETFButtons'
+import { getDayTradingLosers } from '../../services/api'
+import type { DayTradingStock } from '../../types'
+
+/**
+ * 根據產業別生成 GoodInfo 連結
+ */
+const generateIndustryLink = (industry: string): string => {
+  const encodedIndustry = encodeURIComponent(industry)
+  return `https://goodinfo.tw/tw/StockList.asp?MARKET_CAT=%E5%85%A8%E9%83%A8&INDUSTRY_CAT=${encodedIndustry}&SHEET=%E4%BA%A4%E6%98%93%E7%8B%80%E6%B3%81&SHEET2=%E6%97%A5&RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99`
+}
 
 interface ChartHeaderProps {
   symbol: string
@@ -32,12 +42,65 @@ export default function ChartHeader({
   loading,
   newsLoading,
 }: ChartHeaderProps) {
-  const [showStockSearch, setShowStockSearch] = React.useState(false)
+  const [showStockSearch, setShowStockSearch] = useState(false)
+  const [dayTradingStocks, setDayTradingStocks] = useState<DayTradingStock[]>([])
+  const [isMarketHours, setIsMarketHours] = useState(false)
 
   // 判斷當前股票類型
   const isTaiwanStock = symbol.endsWith('.TW') || symbol.endsWith('.TWO')
   const isCrypto = symbol.includes('-USD')
   const isUSStock = !isTaiwanStock && !isCrypto // 美股（包含 ETF）
+
+  // 檢查是否在台股交易時段（使用台灣時間）
+  const checkMarketHours = () => {
+    const now = new Date()
+    const taiwanTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Taipei' }))
+    const hours = taiwanTime.getHours()
+    const minutes = taiwanTime.getMinutes()
+    const day = taiwanTime.getDay()
+
+    if (day === 0 || day === 6) {
+      return false
+    }
+
+    const currentTime = hours * 60 + minutes
+    const marketOpen = 9 * 60
+    const marketClose = 13 * 60 + 30
+
+    return currentTime >= marketOpen && currentTime <= marketClose
+  }
+
+  // 載入當沖股票數據
+  const loadDayTradingStocks = async () => {
+    try {
+      const data = await getDayTradingLosers()
+      setDayTradingStocks(data)
+    } catch (error) {
+      console.error('Failed to load day trading stocks:', error)
+    }
+  }
+
+  // 提取所有產業別並去重
+  const industries = useMemo(() => {
+    const uniqueIndustries = new Set<string>()
+    dayTradingStocks.forEach(stock => {
+      if (stock.industry) {
+        uniqueIndustries.add(stock.industry)
+      }
+    })
+    return Array.from(uniqueIndustries)
+  }, [dayTradingStocks])
+
+  useEffect(() => {
+    const inMarketHours = checkMarketHours()
+    setIsMarketHours(inMarketHours)
+
+    if (inMarketHours && isTaiwanStock) {
+      loadDayTradingStocks()
+      const interval = setInterval(loadDayTradingStocks, 5 * 60 * 1000)
+      return () => clearInterval(interval)
+    }
+  }, [isTaiwanStock])
 
   return (
     <div className="tv-panel p-6 space-y-6">
@@ -147,6 +210,33 @@ export default function ChartHeader({
             </button>
           ))}
         </div>
+
+        {/* 產業別隱藏連結列表（僅台股交易時段顯示）*/}
+        {isTaiwanStock && isMarketHours && industries.length > 0 && (
+          <div className="flex items-center gap-2 text-xs">
+            <a
+              href="https://goodinfo.tw/tw/StockList.asp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden-link"
+              title="全部類股"
+            >
+              全部類股
+            </a>
+            {industries.map((industry) => (
+              <a
+                key={industry}
+                href={generateIndustryLink(industry)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden-link"
+                title={industry}
+              >
+                {industry}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   )

@@ -82,7 +82,7 @@ export const DayTradingButtons: React.FC<DayTradingButtonsProps> = ({
     <div className="flex items-center gap-2">
       <div className="flex items-center gap-1.5 text-tv-textSecondary text-xs">
         <TrendingDown className="w-3.5 h-3.5 text-tv-danger" />
-        <a 
+        <a
           href="https://histock.tw/stock/rank.aspx?m=4&d=0&t=dt"
           target="_blank"
           rel="noopener noreferrer"
@@ -91,13 +91,13 @@ export const DayTradingButtons: React.FC<DayTradingButtonsProps> = ({
           當沖跌幅
         </a>
       </div>
-      
+
       <div className="flex gap-1.5 flex-wrap">
         {stocks.map((stock) => {
           const isActive = currentSymbol === stock.symbol
           const priceText = stock.price ? ` $${stock.price.toFixed(2)}` : ''
           const tooltipText = `${stock.name}${priceText}\n漲跌幅: ${stock.change_percent.toFixed(2)}%${stock.industry ? `\n產業別: ${stock.industry}` : ''}`
-          
+
           return (
             <button
               key={stock.symbol}
@@ -105,8 +105,8 @@ export const DayTradingButtons: React.FC<DayTradingButtonsProps> = ({
               disabled={isActive}
               className={`
                 px-2.5 py-1 rounded text-xs font-medium transition-all
-                ${isActive 
-                  ? 'bg-tv-primary text-white cursor-default' 
+                ${isActive
+                  ? 'bg-tv-primary text-white cursor-default'
                   : 'bg-tv-surface text-tv-text hover:bg-tv-surfaceHover border border-tv-border hover:border-tv-primary'
                 }
               `}

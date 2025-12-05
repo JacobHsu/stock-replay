@@ -145,4 +145,15 @@
     outline: none;
     border-color: #2962FF;
   }
+
+  /* 隱藏文字連結 - 平時透明，滑鼠移過去顯示白色 */
+  .hidden-link {
+    color: #1E222D;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+
+  .hidden-link:hover {
+    color: #FFFFFF;
+  }
 }
