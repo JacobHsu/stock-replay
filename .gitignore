@@ -237,3 +237,6 @@ pnpm-debug.log*
 # OS
 .DS_Store
 Thumbs.db
+
+# Claude AI settings (local configuration)
+.claude/settings.local.json

@@ -20,37 +20,60 @@ import {
 } from '../services/api'
 import type { CandleData, TradingAccountStatus, Trade, DailyNews } from '../types'
 
-// Get initial symbol based on current time
+// Get initial symbol based on current time or forced mode
 const getInitialSymbol = (): string => {
+  // Check for forced market mode (for development)
+  const forceMode = import.meta.env.VITE_FORCE_MARKET_MODE?.toUpperCase()
+
+  if (forceMode) {
+    let selectedSymbol = 'BTC-USD'
+    switch (forceMode) {
+      case 'CRYPTO':
+        selectedSymbol = 'BTC-USD'
+        break
+      case 'TAIWAN':
+        selectedSymbol = '2330.TW'
+        break
+      case 'US':
+        selectedSymbol = 'SPY'
+        break
+      default:
+        console.warn('[getInitialSymbol] Invalid VITE_FORCE_MARKET_MODE:', forceMode)
+    }
+    console.log('[getInitialSymbol] 🔧 開發模式 - 強制市場:', forceMode, '| 選擇:', selectedSymbol)
+    return selectedSymbol
+  }
+
+  // Auto-detect based on current time
   const now = new Date()
-  
+
   // Get current time in different timezones
   const taiwanTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Taipei' }))
   const usTime = new Date(now.toLocaleString('en-US', { timeZone: 'America/New_York' }))
-  
+
   const taiwanHour = taiwanTime.getHours()
   const taiwanDay = taiwanTime.getDay()
   const usHour = usTime.getHours()
   const usDay = usTime.getDay()
-  
+
   // Taiwan stock market hours: 9:00 - 13:30 (Mon-Fri)
-  const isTaiwanMarketHours = 
-    taiwanDay >= 1 && taiwanDay <= 5 && 
+  const isTaiwanMarketHours =
+    taiwanDay >= 1 && taiwanDay <= 5 &&
     taiwanHour >= 9 && taiwanHour < 14
-  
+
   // US stock market hours: 9:30 - 16:00 EST (Mon-Fri)
-  const isUSMarketHours = 
-    usDay >= 1 && usDay <= 5 && 
-    (usHour > 9 || (usHour === 9 && usTime.getMinutes() >= 30)) && 
+  const isUSMarketHours =
+    usDay >= 1 && usDay <= 5 &&
+    (usHour > 9 || (usHour === 9 && usTime.getMinutes() >= 30)) &&
     usHour < 16
-  
+
   console.log('[getInitialSymbol] 本地時間:', now.toLocaleString())
   console.log('[getInitialSymbol] 台灣時間:', taiwanTime.toLocaleString(), '| 時:', taiwanHour, '| 星期:', taiwanDay, '| 開市:', isTaiwanMarketHours)
   console.log('[getInitialSymbol] 美東時間:', usTime.toLocaleString(), '| 時:', usHour, '| 星期:', usDay, '| 開市:', isUSMarketHours)
-  
+
   let selectedSymbol = 'BTC-USD'
   let reason = '非交易時段'
-  
+
   if (isTaiwanMarketHours) {
     selectedSymbol = '2330.TW'
     reason = '台股交易時段'
@@ -58,9 +81,9 @@ const getInitialSymbol = (): string => {
     selectedSymbol = 'SPY'
     reason = '美股交易時段'
   }
-  
+
   console.log('[getInitialSymbol] 選擇:', selectedSymbol, '原因:', reason)
-  
+
   return selectedSymbol
 }
 

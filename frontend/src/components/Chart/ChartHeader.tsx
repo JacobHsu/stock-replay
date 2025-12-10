@@ -3,6 +3,7 @@ import StockSearch from '../StockSearch'
 import DayTradingButtons from '../DayTradingButtons'
 import CryptoButtons from '../CryptoButtons'
 import USETFButtons from '../USETFButtons'
+import MorningStarButtons from '../MorningStarButtons'
 import { getDayTradingLosers } from '../../services/api'
 import type { DayTradingStock } from '../../types'
 
@@ -107,38 +108,50 @@ export default function ChartHeader({
       {/* Header with Stock Symbol and Action Buttons */}
       <div className="flex items-start justify-between">
         {/* Left: Stock Symbol (Large) with Change Button and Day Trading Buttons */}
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col gap-1.5">
           {!showStockSearch ? (
             <>
-              <h1 className="text-5xl font-bold text-tv-text tracking-tight">
-                {symbol}
-              </h1>
-              <button
-                onClick={() => setShowStockSearch(true)}
-                className="px-3 py-1.5 text-xs bg-tv-surface hover:bg-tv-surfaceHover text-tv-textSecondary border border-tv-border hover:border-tv-primary rounded transition-colors"
-                title="Change stock symbol"
-              >
-                Change
-              </button>
-              {/* 根據股票類型顯示對應的快速切換按鈕 */}
-              {isTaiwanStock && (
-                <DayTradingButtons
-                  currentSymbol={symbol}
-                  onSelectStock={onSymbolChange}
-                />
-              )}
-              {isCrypto && (
-                <CryptoButtons
-                  currentSymbol={symbol}
-                  onSelectCrypto={onSymbolChange}
-                />
-              )}
-              {isUSStock && (
-                <USETFButtons
-                  currentSymbol={symbol}
-                  onSelectETF={onSymbolChange}
-                />
-              )}
+              <div className="flex items-center gap-6">
+                <h1 
+                  className="text-5xl font-bold text-tv-text tracking-tight cursor-pointer hover:text-tv-primary transition-colors select-none leading-none"
+                  onDoubleClick={() => setShowStockSearch(true)}
+                  title="Double-click to change symbol"
+                >
+                  {symbol}
+                </h1>
+                <div className="flex flex-col justify-center gap-1.5 min-h-[3.75rem]">
+                  {/* 第一排按鈕 */}
+                  <div className="flex items-center h-7">
+                    {isTaiwanStock && (
+                      <DayTradingButtons
+                        currentSymbol={symbol}
+                        onSelectStock={onSymbolChange}
+                      />
+                    )}
+                    {isCrypto && (
+                      <CryptoButtons
+                        currentSymbol={symbol}
+                        onSelectCrypto={onSymbolChange}
+                      />
+                    )}
+                    {isUSStock && (
+                      <USETFButtons
+                        currentSymbol={symbol}
+                        onSelectETF={onSymbolChange}
+                      />
+                    )}
+                  </div>
+                  {/* 第二排按鈕（僅美股時顯示）*/}
+                  {isUSStock && (
+                    <div className="flex items-center h-7">
+                      <MorningStarButtons
+                        currentSymbol={symbol}
+                        onSelectStock={onSymbolChange}
+                      />
+                    </div>
+                  )}
+                </div>
+              </div>
             </>
           ) : (
             <div className="w-96">

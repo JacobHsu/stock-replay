@@ -199,4 +199,10 @@ export const getUSETFLosers = async (): Promise<DayTradingStock[]> => {
   return response.data.stocks
 }
 
+// Morning Star API
+export const getMorningStarLosers = async (): Promise<DayTradingStock[]> => {
+  const response = await api.get<DayTradingLosersResponse>('/api/stocks/morning-star/losers')
+  return response.data.stocks
+}
+
 export default api

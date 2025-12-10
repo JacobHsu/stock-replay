@@ -173,10 +173,10 @@ def get_day_trading_losers() -> DayTradingLosersResponse:
 @router.get("/us-etf/losers", response_model=DayTradingLosersResponse)
 def get_us_etf_losers() -> DayTradingLosersResponse:
     """
-    Get top 3 US ETFs with biggest losses.
+    Get top 10 US ETFs with biggest losses.
 
     Returns:
-        List of top 3 US ETFs with biggest losses
+        List of top 10 US ETFs with biggest losses
     """
     try:
         from app.helpers.us_etf_losers import get_top3_us_etf_losers
@@ -187,3 +187,34 @@ def get_us_etf_losers() -> DayTradingLosersResponse:
     except Exception as e:
         logger.error(f"Get US ETF losers error: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to get US ETF losers: {str(e)}")
+
+
+@router.get("/morning-star/losers", response_model=DayTradingLosersResponse)
+def get_morning_star_losers() -> DayTradingLosersResponse:
+    """
+    Get top 10 stocks with biggest losses from Morning Star API.
+
+    Returns:
+        List of top 10 stocks with biggest losses
+
+    Raises:
+        HTTPException: 當 API 調用失敗或 RAPIDAPI_KEY 未設定時
+    """
+    try:
+        from app.helpers.morning_star_losers import get_top10_morning_star_losers
+
+        logger.info("Fetching Morning Star market losers...")
+        stocks = get_top10_morning_star_losers()
+        logger.info(f"Successfully fetched {len(stocks)} stocks")
+        return DayTradingLosersResponse(stocks=stocks)
+
+    except ValueError as e:
+        # Configuration error (e.g., missing API key)
+        error_detail = str(e)
+        logger.error(f"Configuration error: {error_detail}")
+        raise HTTPException(status_code=500, detail=error_detail)
+    except Exception as e:
+        # API call error
+        error_detail = str(e)
+        logger.error(f"API call error: {error_detail}")
+        raise HTTPException(status_code=500, detail=error_detail)

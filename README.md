@@ -237,6 +237,7 @@ A: 在終端機按 `Ctrl+C`，或執行 `make stop`
 ## 📄 參考
 
 [llm-stock-trader-trainer](https://github.com/jason8745/llm-stock-trader-trainer)  
+rapidapi [morning-star](https://rapidapi.com/apidojo/api/morning-star)  
 
 ## 📄 授權
 

@@ -12,12 +12,12 @@ logger = logging.getLogger(__name__)
 
 def get_top3_us_etf_losers() -> List[Dict[str, Any]]:
     """
-    獲取跌幅最大的前 3 個美國 ETF
-    
+    獲取跌幅最大的前 10 個美國 ETF
+
     Returns:
         包含 symbol, name, change_percent 的列表
     """
-    # 熱門美國 ETF 列表
+    # 熱門美國 ETF 列表（擴展到更多類型）
     etfs = [
         {'symbol': 'SPY', 'name': 'S&P 500'},
         {'symbol': 'QQQ', 'name': 'Nasdaq 100'},
@@ -26,11 +26,19 @@ def get_top3_us_etf_losers() -> List[Dict[str, Any]]:
         {'symbol': 'VTI', 'name': 'Total Market'},
         {'symbol': 'EEM', 'name': 'Emerging Markets'},
         {'symbol': 'GLD', 'name': 'Gold'},
-        {'symbol': 'TLT', 'name': 'Treasury'},
+        {'symbol': 'TLT', 'name': 'Treasury Bond'},
         {'symbol': 'XLF', 'name': 'Financial'},
         {'symbol': 'XLE', 'name': 'Energy'},
         {'symbol': 'XLK', 'name': 'Technology'},
         {'symbol': 'XLV', 'name': 'Healthcare'},
+        {'symbol': 'XLI', 'name': 'Industrial'},
+        {'symbol': 'XLP', 'name': 'Consumer Staples'},
+        {'symbol': 'XLY', 'name': 'Consumer Disc'},
+        {'symbol': 'XLU', 'name': 'Utilities'},
+        {'symbol': 'XLB', 'name': 'Materials'},
+        {'symbol': 'XLRE', 'name': 'Real Estate'},
+        {'symbol': 'VNQ', 'name': 'REIT'},
+        {'symbol': 'HYG', 'name': 'High Yield Bond'},
     ]
     
     results = []
@@ -61,24 +69,13 @@ def get_top3_us_etf_losers() -> List[Dict[str, Any]]:
                 logger.warning(f"Failed to get data for {etf['symbol']}: {e}")
                 continue
         
-        # 排序：跌幅最大的前 3 名
-        sorted_results = sorted(results, key=lambda x: x['change_percent'])[:3]
-        
+        # 排序：跌幅最大的前 10 名
+        sorted_results = sorted(results, key=lambda x: x['change_percent'])[:10]
+
         logger.info(f"Found {len(sorted_results)} US ETF losers")
         return sorted_results
         
     except Exception as e:
         logger.error(f"Error getting US ETF losers: {e}")
-        # 返回預設值
-        return _get_fallback_data()
-
-
-def _get_fallback_data() -> List[Dict[str, Any]]:
-    """
-    當無法獲取數據時的預設值
-    """
-    return [
-        {'code': 'GLD', 'symbol': 'GLD', 'name': 'Gold', 'change_percent': -1.5},
-        {'code': 'TLT', 'symbol': 'TLT', 'name': 'Treasury', 'change_percent': -0.8},
-        {'code': 'XLE', 'symbol': 'XLE', 'name': 'Energy', 'change_percent': -0.5},
-    ]
+        # 不返回預設值，返回空列表
+        return []

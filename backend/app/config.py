@@ -31,6 +31,9 @@ class Settings(BaseSettings):
     # Logging
     log_level: str = "INFO"
 
+    # External APIs
+    rapidapi_key: str = ""  # RapidAPI key for Morning Star API
+
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
 
