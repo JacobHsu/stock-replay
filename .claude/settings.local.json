@@ -6,7 +6,15 @@
       "Bash(npm run dev:*)",
       "Bash(curl:*)",
       "Bash(python:*)",
-      "Bash(uv run python:*)"
+      "Bash(uv run python:*)",
+      "Bash(Test-Path \"D:\\\\15-stock\\\\stock-replay\\\\backend\\\\scripts\\\\data\\\\taiwan_stocks.json\")",
+      "Bash(ls -la \"D:\\\\15-stock\\\\stock-replay\\\\backend\\\\scripts\\\\data\"\" 2>&1 || echo \"Directory not found \")",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(Get-Process)",
+      "Bash(Where-Object {$_ProcessName -like \"*node*\"})",
+      "Bash(Select-Object Id,ProcessName,Path)",
+      "Bash(Format-Table -AutoSize)"
     ],
     "deny": [],
     "ask": []

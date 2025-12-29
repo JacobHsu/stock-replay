@@ -58,18 +58,23 @@ export const DayTradingButtons: React.FC<DayTradingButtonsProps> = ({
   useEffect(() => {
     // 檢查交易時段
     const inMarketHours = checkMarketHours()
-    setIsMarketHours(inMarketHours)
 
-    if (inMarketHours) {
+    // 開發模式：如果強制使用台股模式，則忽略交易時段限制
+    const forceMode = import.meta.env.VITE_FORCE_MARKET_MODE?.toUpperCase()
+    const shouldShow = inMarketHours || forceMode === 'TAIWAN'
+
+    setIsMarketHours(shouldShow)
+
+    if (shouldShow) {
       loadDayTradingStocks()
-      
+
       // 每 5 分鐘更新一次
       const interval = setInterval(loadDayTradingStocks, 5 * 60 * 1000)
       return () => clearInterval(interval)
     }
   }, [])
 
-  // 非交易時段不顯示
+  // 非交易時段不顯示（除非開發模式強制顯示）
   if (!isMarketHours) {
     return null
   }

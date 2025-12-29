@@ -1,7 +1,7 @@
 {
   "description": "台股黑名單 - 這些股票將不會出現在系統中",
-  "last_updated": "2025-12-03",
-  "total_blacklisted": 68,
+  "last_updated": "2025-12-15",
+  "total_blacklisted": 108,
   "blacklist": [
     {
       "code": "1213",
@@ -342,6 +342,206 @@
       "code": "2913",
       "name": "農林",
       "reason": "https://statementdog.com/analysis/2913/stock-health-check"
+    },
+    {
+      "code": "3011",
+      "name": "今皓",
+      "reason": "https://statementdog.com/analysis/3011/stock-health-check"
+    },
+    {
+      "code": "3021",
+      "name": "鴻名",
+      "reason": "https://statementdog.com/analysis/3021/stock-health-check"
+    },
+    {
+      "code": "3035",
+      "name": "智原",
+      "reason": "https://statementdog.com/analysis/3035/stock-health-check"
+    },
+    {
+      "code": "3047",
+      "name": "訊舟",
+      "reason": "https://statementdog.com/analysis/3047/stock-health-check"
+    },
+    {
+      "code": "3049",
+      "name": "精金",
+      "reason": "https://statementdog.com/analysis/3049/stock-health-check"
+    },
+    {
+      "code": "3055",
+      "name": "蔚華科",
+      "reason": "https://statementdog.com/analysis/3055/stock-health-check"
+    },
+    {
+      "code": "3057",
+      "name": "喬鼎",
+      "reason": "https://statementdog.com/analysis/3057/stock-health-check"
+    },
+    {
+      "code": "3060",
+      "name": "銘異",
+      "reason": "https://statementdog.com/analysis/3060/stock-health-check"
+    },
+    {
+      "code": "3062",
+      "name": "建漢",
+      "reason": "https://statementdog.com/analysis/3062/stock-health-check"
+    },
+    {
+      "code": "3064",
+      "name": "泰偉",
+      "reason": "https://statementdog.com/analysis/3064/stock-health-check"
+    },
+    {
+      "code": "3066",
+      "name": "李洲",
+      "reason": "https://statementdog.com/analysis/3066/stock-health-check"
+    },
+    {
+      "code": "3067",
+      "name": "全域",
+      "reason": "https://statementdog.com/analysis/3067/stock-health-check"
+    },
+    {
+      "code": "3081",
+      "name": "聯亞",
+      "reason": "https://statementdog.com/analysis/3081/stock-health-check"
+    },
+    {
+      "code": "3085",
+      "name": "新零售",
+      "reason": "https://statementdog.com/analysis/3085/stock-health-check"
+    },
+    {
+      "code": "3115",
+      "name": "富榮綱",
+      "reason": "https://statementdog.com/analysis/3115/stock-health-check"
+    },
+    {
+      "code": "3191",
+      "name": "雲嘉南",
+      "reason": "https://statementdog.com/analysis/3191/stock-health-check"
+    },
+    {
+      "code": "3202",
+      "name": "樺晟",
+      "reason": "https://statementdog.com/analysis/3202/stock-health-check"
+    },
+    {
+      "code": "3287",
+      "name": "廣寰科",
+      "reason": "https://statementdog.com/analysis/3287/stock-health-check"
+    },
+    {
+      "code": "3297",
+      "name": "杭特",
+      "reason": "https://statementdog.com/analysis/3297/stock-health-check"
+    },
+    {
+      "code": "3313",
+      "name": "斐成",
+      "reason": "https://statementdog.com/analysis/3313/stock-health-check"
+    },
+    {
+      "code": "3321",
+      "name": "同泰",
+      "reason": "https://statementdog.com/analysis/3321/stock-health-check"
+    },
+    {
+      "code": "3322",
+      "name": "建舜電",
+      "reason": "https://statementdog.com/analysis/3322/stock-health-check"
+    },
+    {
+      "code": "3325",
+      "name": "旭品",
+      "reason": "https://statementdog.com/analysis/3325/stock-health-check"
+    },
+    {
+      "code": "3339",
+      "name": "泰谷",
+      "reason": "https://statementdog.com/analysis/3339/stock-health-check"
+    },
+    {
+      "code": "3349",
+      "name": "寶德",
+      "reason": "https://statementdog.com/analysis/3349/stock-health-check"
+    },
+    {
+      "code": "3372",
+      "name": "典範",
+      "reason": "https://statementdog.com/analysis/3372/stock-health-check"
+    },
+    {
+      "code": "3466",
+      "name": "德晉",
+      "reason": "https://statementdog.com/analysis/3466/stock-health-check"
+    },
+    {
+      "code": "3467",
+      "name": "台灣精材",
+      "reason": "https://statementdog.com/analysis/3467/stock-health-check"
+    },
+    {
+      "code": "3494",
+      "name": "誠研",
+      "reason": "https://statementdog.com/analysis/3494/stock-health-check"
+    },
+    {
+      "code": "3504",
+      "name": "揚明光",
+      "reason": "https://statementdog.com/analysis/3504/stock-health-check"
+    },
+    {
+      "code": "3511",
+      "name": "矽瑪",
+      "reason": "https://statementdog.com/analysis/3511/stock-health-check"
+    },
+    {
+      "code": "3523",
+      "name": "迎輝",
+      "reason": "https://statementdog.com/analysis/3523/stock-health-check"
+    },
+    {
+      "code": "3541",
+      "name": "西柏",
+      "reason": "https://statementdog.com/analysis/3541/stock-health-check"
+    },
+    {
+      "code": "3576",
+      "name": "聯合再生",
+      "reason": "https://statementdog.com/analysis/3576/stock-health-check"
+    },
+    {
+      "code": "3593",
+      "name": "力銘",
+      "reason": "https://statementdog.com/analysis/3593/stock-health-check"
+    },
+    {
+      "code": "3632",
+      "name": "研勤",
+      "reason": "https://statementdog.com/analysis/3632/stock-health-check"
+    },
+    {
+      "code": "3664",
+      "name": "安瑞-KY",
+      "reason": "https://statementdog.com/analysis/3664/stock-health-check"
+    },
+    {
+      "code": "3709",
+      "name": "鑫聯大投控",
+      "reason": "https://statementdog.com/analysis/3709/stock-health-check"
+    },
+    {
+      "code": "3710",
+      "name": "連展投控",
+      "reason": "https://statementdog.com/analysis/3710/stock-health-check"
+    },
+    {
+      "code": "3713",
+      "name": "新晶投控",
+      "reason": "https://statementdog.com/analysis/3713/stock-health-check"
     }
   ]
 }
