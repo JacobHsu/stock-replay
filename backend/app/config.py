@@ -26,6 +26,7 @@ class Settings(BaseSettings):
         "http://localhost:5173",
         "https://stock-replay.vercel.app",
         "https://stock-replay-*.vercel.app",  # 支持 Vercel 預覽部署
+        "https://*.app.github.dev",  # 支援 GitHub Codespaces
     ]
 
     # Logging

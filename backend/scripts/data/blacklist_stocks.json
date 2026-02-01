@@ -1,7 +1,7 @@
 {
   "description": "台股黑名單 - 這些股票將不會出現在系統中",
-  "last_updated": "2025-12-15",
-  "total_blacklisted": 108,
+  "last_updated": "2025-12-30",
+  "total_blacklisted": 109,
   "blacklist": [
     {
       "code": "1213",
@@ -197,6 +197,11 @@
       "code": "2022",
       "name": "聚亨",
       "reason": "https://statementdog.com/analysis/2022/stock-health-check"
+    },
+    {
+      "code": "2024",
+      "name": "志聯",
+      "reason": "https://statementdog.com/analysis/2024/stock-health-check"
     },
     {
       "code": "2033",
