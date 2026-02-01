@@ -262,9 +262,13 @@ uv run uvicorn app.main:app --host 0.0.0.0 --port 8888
 
 ### 連接 Vercel 前端
 
-1. 在 Codespace `PORTS` 標籤取得 URL（如：`https://xxx-8888.app.github.dev`）
-2. 在 Vercel 設定環境變數：`VITE_API_BASE_URL` = `你的 Codespace URL`
-3. 重新部署前端
+1. **設定 Port 為公開**（重要！否則會收到 302 重定向）
+   - 點擊 `PORTS` 標籤
+   - 找到 port `8888`
+   - 右鍵 → **Port Visibility** → **Public**
+2. 複製 URL（如：`https://xxx-8888.app.github.dev`）
+3. 在 Vercel 設定環境變數：`VITE_API_BASE_URL` = `你的 Codespace URL`
+4. 重新部署前端
 
 ---
 
