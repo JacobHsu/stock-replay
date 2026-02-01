@@ -214,6 +214,60 @@ GET /api/stocks/us-etf/losers           # 美股 ETF 跌幅榜
 
 ---
 
+## 🚀 部署到 GitHub Codespaces
+
+GitHub Codespaces 提供雲端開發環境，適合開發測試使用。
+
+### 快速開始
+
+1. **開啟 Codespace**
+   - 前往 GitHub repository
+   - 點擊綠色 `<> Code` 按鈕
+   - 選擇 `Codespaces` 標籤
+   - 點擊 `Create codespace on main`
+
+2. **等待環境建立**（約 2-3 分鐘）
+   - 自動安裝 Python 3.12
+   - 自動安裝 uv 和所有套件
+   - 自動啟動後端伺服器
+
+3. **存取 API**
+   - 點擊 `PORTS` 標籤
+   - 找到 port `8888`
+   - 點擊 🌐 開啟瀏覽器
+   - 加上 `/docs` 查看 API 文件
+
+### 手動啟動後端
+
+```bash
+cd /workspaces/stock-replay/backend
+uv run uvicorn app.main:app --host 0.0.0.0 --port 8888
+```
+
+### 常用指令
+
+| 指令 | 用途 |
+|-----|------|
+| `ps aux \| grep uvicorn` | 檢查服務是否運行 |
+| `curl http://localhost:8888/health` | 健康檢查 |
+| `pkill -f uvicorn` | 停止服務 |
+| `cat /tmp/backend.log` | 查看 log |
+
+### 注意事項
+
+- **閒置暫停**：30 分鐘無活動後自動暫停（不收費）
+- **免費額度**：每月 120 核心小時（約 60 小時 @ 2 核心）
+- **重新啟動**：暫停後需手動重新開啟 Codespace
+- **API 喚醒**：暫停狀態下 API 呼叫無法喚醒
+
+### 連接 Vercel 前端
+
+1. 在 Codespace `PORTS` 標籤取得 URL（如：`https://xxx-8888.app.github.dev`）
+2. 在 Vercel 設定環境變數：`VITE_API_BASE_URL` = `你的 Codespace URL`
+3. 重新部署前端
+
+---
+
 ## 🚀 部署到 Railway
 
 ### 快速部署
