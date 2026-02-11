@@ -234,6 +234,7 @@ GitHub Codespaces 提供雲端開發環境，適合開發測試使用。
 3. **存取 API**
    - 點擊 `PORTS` 標籤
    - 找到 port `8888`
+   - 右鍵 → **Port Visibility** → **Public**（外部存取必須設為公開，否則會 302 重定向）
    - 點擊 🌐 開啟瀏覽器
    - 加上 `/docs` 查看 API 文件
 
@@ -260,15 +261,6 @@ uv run uvicorn app.main:app --host 0.0.0.0 --port 8888
 - **重新啟動**：暫停後需手動重新開啟 Codespace
 - **API 喚醒**：暫停狀態下 API 呼叫無法喚醒
 
-### 連接 Vercel 前端
-
-1. **設定 Port 為公開**（重要！否則會收到 302 重定向）
-   - 點擊 `PORTS` 標籤
-   - 找到 port `8888`
-   - 右鍵 → **Port Visibility** → **Public**
-2. 複製 URL（如：`https://xxx-8888.app.github.dev`）
-3. 在 Vercel 設定環境變數：`VITE_API_BASE_URL` = `你的 Codespace URL`
-4. 重新部署前端
 
 ---
 

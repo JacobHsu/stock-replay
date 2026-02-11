@@ -14,7 +14,8 @@
       "Bash(Get-Process)",
       "Bash(Where-Object {$_ProcessName -like \"*node*\"})",
       "Bash(Select-Object Id,ProcessName,Path)",
-      "Bash(Format-Table -AutoSize)"
+      "Bash(Format-Table -AutoSize)",
+      "Bash(netsh interface ipv4 show excludedportrange:*)"
     ],
     "deny": [],
     "ask": []

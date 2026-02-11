@@ -1,5 +1,6 @@
 import axios from 'axios'
 import type {
+  CandleData,
   StockDataResponse,
   PlaybackCreateRequest,
   PlaybackStatusResponse,
@@ -25,12 +26,28 @@ import type {
 // Railway 線上：'https://stock-replay-production.up.railway.app'
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8888";
 
+// Serverless API URL（Phase 3+）
+// 設定後，股票數據會從 serverless 抓取，playback 在前端管理
+const SERVERLESS_URL = import.meta.env.VITE_SERVERLESS_URL || "";
+
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
 })
+
+// Serverless API client（僅在 SERVERLESS_URL 設定時使用）
+const serverlessApi = SERVERLESS_URL ? axios.create({
+  baseURL: SERVERLESS_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+}) : null;
+
+// 是否使用 serverless 模式
+export const isServerlessMode = !!SERVERLESS_URL;
+
 
 // Stock Data API
 export const getHistoricalData = async (
@@ -203,6 +220,42 @@ export const getUSETFLosers = async (): Promise<DayTradingStock[]> => {
 export const getMorningStarLosers = async (): Promise<DayTradingStock[]> => {
   const response = await api.get<DayTradingLosersResponse>('/api/stocks/morning-star/losers')
   return response.data.stocks
+}
+
+// ============================================================
+// Serverless API (Phase 3+)
+// 從 serverless 一次取得所有股票數據，前端管理 playback
+// ============================================================
+
+export interface ServerlessStockResponse {
+  symbol: string
+  data: CandleData[]
+  total_count: number
+  price_range: {
+    min_price: number
+    max_price: number
+  }
+  all_dates: string[]
+}
+
+/**
+ * 從 Serverless API 取得股票數據（一次全部回傳）
+ * 
+ * 取代 backend 的 playback/start + playback/next 組合。
+ * 前端拿到所有數據後，自己管理 playback index。
+ */
+export const getStockDataFromServerless = async (
+  symbol: string,
+  params?: { start_date?: string; end_date?: string; period?: string }
+): Promise<ServerlessStockResponse> => {
+  if (!serverlessApi) {
+    throw new Error('VITE_SERVERLESS_URL is not configured')
+  }
+  const response = await serverlessApi.get<ServerlessStockResponse>(
+    `/api/stock/${symbol}`,
+    { params }
+  )
+  return response.data
 }
 
 export default api

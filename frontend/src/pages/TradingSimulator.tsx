@@ -17,7 +17,11 @@ import {
   fetchNews,
   getTradingDatesWithNews,
   getNewsByDate,
+  // Phase 3: Serverless API
+  isServerlessMode,
+  getStockDataFromServerless,
 } from '../services/api'
+import { useLocalTrading } from '../hooks/useLocalTrading'
 import type { CandleData, TradingAccountStatus, Trade, DailyNews } from '../types'
 
 // Get initial symbol based on current time or forced mode
@@ -101,6 +105,10 @@ export default function TradingSimulator() {
   const [sessionKey, setSessionKey] = useState(0)
   const [priceRange, setPriceRange] = useState<{ min_price: number; max_price: number } | undefined>()
   
+  // Phase 3: Serverless mode - 所有 K 線數據（一次取完）
+  const [allCandles, setAllCandles] = useState<CandleData[]>([])
+  const [isInitialized, setIsInitialized] = useState(false)
+  
   // Trading account state
   const [tradingAccountId, setTradingAccountId] = useState<string | null>(null)
   const [accountStatus, setAccountStatus] = useState<TradingAccountStatus | null>(null)
@@ -118,40 +126,81 @@ export default function TradingSimulator() {
   
   const playIntervalRef = useRef<number | null>(null)
 
+  // Phase 4: Local trading for serverless mode
+  const { resetAccount, getAccountStatus: getLocalAccountStatus, localBuy, localSell } = useLocalTrading(symbol)
+
   // Initialize playback session
   const initializePlayback = async (withNews: boolean = false) => {
     setLoading(true)
     setError(null)
     setChartData([])
-    setTradeHistory([]) // Clear trade history for new session
+    setAllCandles([])
+    setTradeHistory([])
     setNewsEnabled(withNews)
     setNewsMarkers(new Set())
     setCurrentNewsList([])
     setShowNewsModal(false)
     
     try {
-      const requestData: any = { symbol, period }
-      
-      console.log('[initializePlayback] Request data:', requestData)
-      const response = await startPlayback(requestData)
-      console.log('[initializePlayback] Response:', response)
-      
-      setPlaybackId(response.playback_id)
-      setTotalCount(response.total_count)
-      setCurrentIndex(response.current_index)
-      setSessionKey(prev => prev + 1)
-      setPriceRange(response.price_range)
-      
-      if (response.current_data) {
-        setChartData([response.current_data])
-      }
+      if (isServerlessMode) {
+        // ============ Serverless 模式 ============
+        // 一次從 serverless 取得所有 K 線，前端管理 playback
+        console.log('[initializePlayback] 🚀 Serverless mode')
+        const response = await getStockDataFromServerless(symbol, { period })
+        console.log('[initializePlayback] Serverless response:', response.total_count, 'candles')
+        
+        setAllCandles(response.data)
+        setTotalCount(response.total_count)
+        setCurrentIndex(0)
+        setSessionKey(prev => prev + 1)
+        setPriceRange(response.price_range)
+        setIsInitialized(true)
+        // 不設 playbackId（serverless 不需要）
+        setPlaybackId('serverless')
+        
+        // 顯示第一根 K 線
+        if (response.data.length > 0) {
+          setChartData([response.data[0]])
+        }
 
-      // Create trading account automatically
-      await initializeTradingAccount(response.playback_id)
-      
-      // Fetch news if enabled
-      if (withNews && response.all_dates) {
-        await initializeNews(requestData, response.all_dates)
+        // Phase 4: 建立本地交易帳戶
+        resetAccount()
+        if (response.data.length > 0) {
+          const initialStatus = getLocalAccountStatus(response.data[0].close)
+          setAccountStatus(initialStatus)
+          setTradingAccountId('local')
+        }
+        
+        // Fetch news if enabled
+        if (withNews && response.all_dates) {
+          await initializeNews({ symbol, period }, response.all_dates)
+        }
+      } else {
+        // ============ Backend 模式（原始邏輯）============
+        const requestData: any = { symbol, period }
+        
+        console.log('[initializePlayback] 📦 Backend mode')
+        const response = await startPlayback(requestData)
+        console.log('[initializePlayback] Response:', response)
+        
+        setPlaybackId(response.playback_id)
+        setTotalCount(response.total_count)
+        setCurrentIndex(response.current_index)
+        setSessionKey(prev => prev + 1)
+        setPriceRange(response.price_range)
+        setIsInitialized(true)
+        
+        if (response.current_data) {
+          setChartData([response.current_data])
+        }
+
+        // Create trading account automatically
+        await initializeTradingAccount(response.playback_id)
+        
+        // Fetch news if enabled
+        if (withNews && response.all_dates) {
+          await initializeNews(requestData, response.all_dates)
+        }
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to initialize playback')
@@ -255,31 +304,36 @@ export default function TradingSimulator() {
 
   // Handle buy operation
   const handleBuy = async () => {
-    if (!tradingAccountId || !chartData.length || isTrading) return
+    if (!chartData.length || isTrading) return
     
     const currentCandle = chartData[chartData.length - 1]
     const currentPrice = currentCandle.close
     setIsTrading(true)
     
     try {
-      const response = await executeBuy(tradingAccountId, { current_price: currentPrice })
-      setAccountStatus(response.status)
-      
-      // Update the trade timestamp to match the current candle
-      const updatedTrade = {
-        ...response.trade,
-        timestamp: currentCandle.timestamp
+      if (isServerlessMode) {
+        // ============ Serverless: 本地交易 ============
+        const result = localBuy(currentPrice, currentCandle.timestamp)
+        if (result) {
+          setAccountStatus(result.status)
+          setTradeHistory(prev => [...prev, result.trade])
+          console.log('[handleBuy] Local trade executed: bought 1 @', currentPrice)
+        } else {
+          setError('Insufficient cash')
+        }
+      } else {
+        // ============ Backend: API 呼叫 ============
+        if (!tradingAccountId) return
+        const response = await executeBuy(tradingAccountId, { current_price: currentPrice })
+        setAccountStatus(response.status)
+        const updatedTrade = { ...response.trade, timestamp: currentCandle.timestamp }
+        setTradeHistory(prev => [...prev, updatedTrade])
+        console.log('[handleBuy] Trade executed:', response.message)
       }
-      
-      // Update trade history with corrected timestamp
-      setTradeHistory(prev => [...prev, updatedTrade])
-      
-      console.log('[handleBuy] Trade executed:', response.message)
     } catch (err: any) {
       console.error('Buy operation failed:', err)
       const errorMessage = err?.response?.data?.detail || err?.message || 'Failed to execute buy'
       setError(errorMessage)
-      console.error('Error details:', err?.response?.data)
     } finally {
       setIsTrading(false)
     }
@@ -287,31 +341,36 @@ export default function TradingSimulator() {
 
   // Handle sell operation
   const handleSell = async () => {
-    if (!tradingAccountId || !chartData.length || isTrading) return
+    if (!chartData.length || isTrading) return
     
     const currentCandle = chartData[chartData.length - 1]
     const currentPrice = currentCandle.close
     setIsTrading(true)
     
     try {
-      const response = await executeSell(tradingAccountId, { current_price: currentPrice })
-      setAccountStatus(response.status)
-      
-      // Update the trade timestamp to match the current candle
-      const updatedTrade = {
-        ...response.trade,
-        timestamp: currentCandle.timestamp
+      if (isServerlessMode) {
+        // ============ Serverless: 本地交易 ============
+        const result = localSell(currentPrice, currentCandle.timestamp)
+        if (result) {
+          setAccountStatus(result.status)
+          setTradeHistory(prev => [...prev, result.trade])
+          console.log('[handleSell] Local trade executed: sold 1 @', currentPrice)
+        } else {
+          setError('No position to sell')
+        }
+      } else {
+        // ============ Backend: API 呼叫 ============
+        if (!tradingAccountId) return
+        const response = await executeSell(tradingAccountId, { current_price: currentPrice })
+        setAccountStatus(response.status)
+        const updatedTrade = { ...response.trade, timestamp: currentCandle.timestamp }
+        setTradeHistory(prev => [...prev, updatedTrade])
+        console.log('[handleSell] Trade executed:', response.message)
       }
-      
-      // Update trade history with corrected timestamp
-      setTradeHistory(prev => [...prev, updatedTrade])
-      
-      console.log('[handleSell] Trade executed:', response.message)
     } catch (err: any) {
       console.error('Sell operation failed:', err)
       const errorMessage = err?.response?.data?.detail || err?.message || 'Failed to execute sell'
       setError(errorMessage)
-      console.error('Error details:', err?.response?.data)
     } finally {
       setIsTrading(false)
     }
@@ -319,77 +378,113 @@ export default function TradingSimulator() {
 
   // Get next candle
   const getNext = useCallback(async () => {
-    if (!playbackId) return
-    
-    try {
-      const response = await getNextCandle(playbackId, 1)
+    if (isServerlessMode) {
+      // ============ Serverless 模式：純前端操作 ============
+      const nextIndex = currentIndex + 1
+      if (nextIndex >= allCandles.length) {
+        setIsPlaying(false)
+        return
+      }
       
-      if (response.current_data) {
-        const timestamp = new Date(response.current_data.timestamp).getTime()
-        const newCandle = response.current_data
-        
-        setChartData(prev => {
-          const lastTimestamp = prev.length > 0 
-            ? new Date(prev[prev.length - 1].timestamp).getTime() 
-            : 0
-          
-          if (timestamp !== lastTimestamp) {
-            return [...prev, newCandle]
-          }
-          return prev
-        })
-        setCurrentIndex(response.current_index)
-        
-        // Update account status with new price if we have a position
-        if (accountStatus?.position && tradingAccountId) {
-          try {
-            const status = await getTradingAccountStatus(tradingAccountId, newCandle.close)
-            setAccountStatus(status)
-          } catch (err) {
-            console.error('Failed to update account status:', err)
-          }
-        }
-        
-        // Check for news on this date (if news enabled)
-        if (newsEnabled) {
-          const dateStr = new Date(newCandle.timestamp).toISOString().split('T')[0]
-          console.log('[getNext] Checking news for date:', dateStr, 'Has marker:', newsMarkers.has(dateStr))
-          
-          if (newsMarkers.has(dateStr)) {
-            // Pause playback
-            setIsPlaying(false)
-            
-            // Fetch and show news
-            try {
-              console.log('[getNext] Fetching news for:', symbol, dateStr)
-              const newsList = await getNewsByDate(symbol, dateStr)
-              console.log('[getNext] News fetched:', newsList)
-              
-              if (newsList && newsList.length > 0) {
-                setCurrentNewsList(newsList)
-                setShowNewsModal(true)
-              } else {
-                console.warn('[getNext] No news returned for date:', dateStr)
-              }
-            } catch (err) {
-              console.error('Failed to fetch news for date:', dateStr, err)
-            }
-          }
-        }
-        
-        if (!response.has_more) {
+      const newCandle = allCandles[nextIndex]
+      setChartData(prev => [...prev, newCandle])
+      setCurrentIndex(nextIndex)
+      
+      // Phase 4: 更新本地帳戶狀態
+      if (tradingAccountId === 'local') {
+        setAccountStatus(getLocalAccountStatus(newCandle.close))
+      }
+      
+      // Check for news on this date (if news enabled)
+      if (newsEnabled) {
+        const dateStr = new Date(newCandle.timestamp).toISOString().split('T')[0]
+        if (newsMarkers.has(dateStr)) {
           setIsPlaying(false)
+          try {
+            const newsList = await getNewsByDate(symbol, dateStr)
+            if (newsList && newsList.length > 0) {
+              setCurrentNewsList(newsList)
+              setShowNewsModal(true)
+            }
+          } catch (err) {
+            console.error('Failed to fetch news for date:', dateStr, err)
+          }
         }
       }
-    } catch (err) {
-      console.error('Error getting next candle:', err)
-      setIsPlaying(false)
+      
+      // Update account status with new price if we have a position
+      if (accountStatus?.position && tradingAccountId) {
+        try {
+          const status = await getTradingAccountStatus(tradingAccountId, newCandle.close)
+          setAccountStatus(status)
+        } catch (err) {
+          console.error('Failed to update account status:', err)
+        }
+      }
+    } else {
+      // ============ Backend 模式（原始邏輯） ============
+      if (!playbackId) return
+      
+      try {
+        const response = await getNextCandle(playbackId, 1)
+        
+        if (response.current_data) {
+          const timestamp = new Date(response.current_data.timestamp).getTime()
+          const newCandle = response.current_data
+          
+          setChartData(prev => {
+            const lastTimestamp = prev.length > 0 
+              ? new Date(prev[prev.length - 1].timestamp).getTime() 
+              : 0
+            
+            if (timestamp !== lastTimestamp) {
+              return [...prev, newCandle]
+            }
+            return prev
+          })
+          setCurrentIndex(response.current_index)
+          
+          // Update account status with new price if we have a position
+          if (accountStatus?.position && tradingAccountId) {
+            try {
+              const status = await getTradingAccountStatus(tradingAccountId, newCandle.close)
+              setAccountStatus(status)
+            } catch (err) {
+              console.error('Failed to update account status:', err)
+            }
+          }
+          
+          // Check for news on this date (if news enabled)
+          if (newsEnabled) {
+            const dateStr = new Date(newCandle.timestamp).toISOString().split('T')[0]
+            if (newsMarkers.has(dateStr)) {
+              setIsPlaying(false)
+              try {
+                const newsList = await getNewsByDate(symbol, dateStr)
+                if (newsList && newsList.length > 0) {
+                  setCurrentNewsList(newsList)
+                  setShowNewsModal(true)
+                }
+              } catch (err) {
+                console.error('Failed to fetch news for date:', dateStr, err)
+              }
+            }
+          }
+          
+          if (!response.has_more) {
+            setIsPlaying(false)
+          }
+        }
+      } catch (err) {
+        console.error('Error getting next candle:', err)
+        setIsPlaying(false)
+      }
     }
-  }, [playbackId, accountStatus, tradingAccountId, newsEnabled, newsMarkers, symbol])
+  }, [isServerlessMode, currentIndex, allCandles, playbackId, accountStatus, tradingAccountId, newsEnabled, newsMarkers, symbol])
 
   // Playback controls
   const handlePlay = async () => {
-    if (!playbackId) {
+    if (!isInitialized) {
       await initializePlayback(newsMode)
     }
     setIsPlaying(true)
@@ -404,26 +499,34 @@ export default function TradingSimulator() {
   }
 
   const handlePrevious = async () => {
-    if (currentIndex <= 0 || !playbackId) return
+    if (currentIndex <= 0) return
     
     setIsPlaying(false)
     
-    try {
+    if (isServerlessMode) {
+      // Serverless: 純前端操作
       const newIndex = currentIndex - 1
-      const response = await seekPlayback(playbackId, { index: newIndex })
-      
-      // Remove the last K-bar from chartData
-      if (response.current_data) {
-        setChartData(prev => prev.slice(0, -1))
-        setCurrentIndex(response.current_index)
+      setChartData(prev => prev.slice(0, -1))
+      setCurrentIndex(newIndex)
+    } else {
+      // Backend: API 呼叫
+      if (!playbackId) return
+      try {
+        const newIndex = currentIndex - 1
+        const response = await seekPlayback(playbackId, { index: newIndex })
+        if (response.current_data) {
+          setChartData(prev => prev.slice(0, -1))
+          setCurrentIndex(response.current_index)
+        }
+      } catch (err) {
+        console.error('Error going to previous:', err)
       }
-    } catch (err) {
-      console.error('Error going to previous:', err)
     }
   }
 
   const handleReset = () => {
     setIsPlaying(false)
+    setIsInitialized(false)
     initializePlayback(newsMode)
   }
   
@@ -435,23 +538,29 @@ export default function TradingSimulator() {
   const handleContinueFromNews = () => {
     setShowNewsModal(false)
     setCurrentNewsList([])
-    // Don't auto-resume, let user click play
   }
 
   const handleSeek = async (index: number) => {
-    if (!playbackId || index < 0 || index >= totalCount) return
+    if (index < 0 || index >= totalCount) return
     
-    try {
-      setIsPlaying(false)
-      const response = await seekPlayback(playbackId, { index })
-      
-      // Rebuild chartData up to the new index
-      if (response.current_data) {
-        setChartData(prev => prev.slice(0, index + 1))
-        setCurrentIndex(response.current_index)
+    setIsPlaying(false)
+    
+    if (isServerlessMode) {
+      // Serverless: 純前端操作 — 從 allCandles 重建顯示數據
+      setChartData(allCandles.slice(0, index + 1))
+      setCurrentIndex(index)
+    } else {
+      // Backend: API 呼叫
+      if (!playbackId) return
+      try {
+        const response = await seekPlayback(playbackId, { index })
+        if (response.current_data) {
+          setChartData(prev => prev.slice(0, index + 1))
+          setCurrentIndex(response.current_index)
+        }
+      } catch (err) {
+        console.error('Error seeking:', err)
       }
-    } catch (err) {
-      console.error('Error seeking:', err)
     }
   }
 
@@ -461,8 +570,8 @@ export default function TradingSimulator() {
 
   // Auto-play effect
   useEffect(() => {
-    if (isPlaying && playbackId) {
-      const intervalDuration = 1000 / playbackSpeed // Calculate interval based on speed
+    if (isPlaying && isInitialized) {
+      const intervalDuration = 1000 / playbackSpeed
       const interval = setInterval(() => {
         getNext()
       }, intervalDuration)
@@ -477,17 +586,18 @@ export default function TradingSimulator() {
         playIntervalRef.current = null
       }
     }
-  }, [isPlaying, playbackId, getNext, playbackSpeed])
+  }, [isPlaying, isInitialized, getNext, playbackSpeed])
 
   // Initialize on mount
   useEffect(() => {
+    console.log('[TradingSimulator] Mode:', isServerlessMode ? '🚀 Serverless' : '📦 Backend')
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
     initializePlayback(false)
   }, [])
 
   // Handle mode change - reload data if already initialized
   useEffect(() => {
-    if (playbackId) {
+    if (isInitialized) {
       setIsPlaying(false)
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
       initializePlayback(newsMode)
@@ -496,7 +606,7 @@ export default function TradingSimulator() {
   
   // Handle symbol or time range change - reload data if already initialized
   useEffect(() => {
-    if (playbackId) {
+    if (isInitialized) {
       setIsPlaying(false)
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
       initializePlayback(newsMode)
