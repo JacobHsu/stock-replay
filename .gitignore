@@ -240,3 +240,5 @@ Thumbs.db
 
 # Claude AI settings (local configuration)
 .claude/settings.local.json
+
+!serverless/lib/
