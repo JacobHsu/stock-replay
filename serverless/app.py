@@ -62,7 +62,8 @@ async def health_check() -> dict:
 # Phase 2: Stock Data API
 # ============================================================
 
-@app.get("/api/stock/{symbol}")
+@app.get("/api/stock/{symbol}", tags=["stock"])
+@app.get("/api/data/historical/{symbol}", tags=["stock"])  # 兼容舊版 API 路徑
 async def get_stock_data(
     symbol: str,
     period: Optional[str] = Query("1mo", description="Period: 1mo, 3mo, 6mo, 1y"),
@@ -114,17 +115,19 @@ async def get_stock_data(
         raise HTTPException(status_code=500, detail=str(e))
 
 
+
 # ============================================================
-# Phase 5: News API (待實作)
+# Phase 5: Stock Search API
+# ============================================================
+
+from api.search import router as search_router
+
+app.include_router(search_router)
+
+
+# ============================================================
+# Phase 6: News API (待實作)
 # ============================================================
 # @app.post("/api/news/fetch")
 # async def fetch_news(...):
-#     pass
-
-
-# ============================================================
-# Phase 6: Stock Search API (待實作)
-# ============================================================
-# @app.get("/api/stocks/search")
-# async def search_stocks(...):
 #     pass

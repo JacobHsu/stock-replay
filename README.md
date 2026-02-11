@@ -137,7 +137,25 @@ run.bat frontend
 視窗 1 - 啟動後端：
 ```powershell
 cd backend
+cd backend
 uv run python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8888
+```
+
+#### Serverless 版本 (Preview)
+
+如果你想測試 **Serverless 架構** 的版本（Port 8889），請使用以下指令：
+
+視窗 1 - 啟動 Serverless 後端：
+```powershell
+cd serverless
+.venv\Scripts\uvicorn app:app --reload --port 8889
+```
+
+視窗 2 - 啟動前端：
+```powershell
+cd frontend
+# 確保 .env.local 中有設定 VITE_SERVERLESS_URL=http://localhost:8889
+npm run dev
 ```
 
 視窗 2 - 啟動前端：

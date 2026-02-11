@@ -193,32 +193,37 @@ export const getTradingDatesWithNews = async (
 
 // Stock Search API
 export const getStockInfo = async (symbol: string): Promise<StockInfo> => {
-  const response = await api.get<StockInfo>(`/api/stocks/info/${symbol}`)
+  const client = serverlessApi || api
+  const response = await client.get<StockInfo>(`/api/stocks/info/${symbol}`)
   return response.data
 }
 
 export const searchStocks = async (query: string): Promise<StockInfo[]> => {
-  const response = await api.get<StockSearchResponse>('/api/stocks/search', {
+  const client = serverlessApi || api
+  const response = await client.get<StockSearchResponse>('/api/stocks/search', {
     params: { q: query }
   })
-  return response.data.results
+  return response.data.results || []
 }
 
 // Day Trading API
 export const getDayTradingLosers = async (): Promise<DayTradingStock[]> => {
-  const response = await api.get<DayTradingLosersResponse>('/api/stocks/day-trading/losers')
+  const client = serverlessApi || api
+  const response = await client.get<DayTradingLosersResponse>('/api/stocks/day-trading/losers')
   return response.data.stocks
 }
 
 // US ETF API
 export const getUSETFLosers = async (): Promise<DayTradingStock[]> => {
-  const response = await api.get<DayTradingLosersResponse>('/api/stocks/us-etf/losers')
+  const client = serverlessApi || api
+  const response = await client.get<DayTradingLosersResponse>('/api/stocks/us-etf/losers')
   return response.data.stocks
 }
 
 // Morning Star API
 export const getMorningStarLosers = async (): Promise<DayTradingStock[]> => {
-  const response = await api.get<DayTradingLosersResponse>('/api/stocks/morning-star/losers')
+  const client = serverlessApi || api
+  const response = await client.get<DayTradingLosersResponse>('/api/stocks/morning-star/losers')
   return response.data.stocks
 }
 

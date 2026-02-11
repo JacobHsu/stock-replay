@@ -23,8 +23,8 @@
 | Phase 2 | 股票數據 API（無狀態代理） | ✅ 完成 |
 | Phase 3 | 前端改造 - Playback 邏輯移至前端 | ✅ 完成 |
 | Phase 4 | 前端改造 - Trading 邏輯移至前端 | ✅ 完成 |
-| Phase 5 | 新聞 API 遷移 | ⬜ 待做 |
-| Phase 6 | Stock Search API 遷移 | ⬜ 待做 |
+| Phase 5 | Stock Search API 遷移 | ✅ 完成 |
+| Phase 6 | 新聞 API 遷移 | ⬜ 待做 |
 
 ---
 
@@ -290,19 +290,27 @@ Backend 模式 📦（向後相容）：
 
 ---
 
-## 🚀 Phase 5：新聞 API 遷移（待實作）
-
-### 目標
-- 將 News API 代理遷移到 Serverless
-- 注意：SQLite cache 在 Serverless 不可用，需改用其他方案
-
----
-
-## 🚀 Phase 6：Stock Search API 遷移（待實作）
+## 🚀 Phase 5：Stock Search API 遷移 ✅
 
 ### 目標
 - 將股票搜尋/資訊 API 遷移到 Serverless
 - 這些都是無狀態的，遷移最簡單
+
+### 遷移內容
+- `api/search.py`: Stock Search, Day Trading, Morning Star API
+- `lib/data/taiwan_stocks.json`: 靜態資料庫
+- `lib/stock_database.py`: 搜尋邏輯
+- `lib/day_trading_scraper.py`: 爬蟲
+- `lib/us_etf_losers.py`: Yahoo Finance
+- `lib/morning_star_losers.py`: RapidAPI
+
+---
+
+## 🚀 Phase 6：新聞 API 遷移（待實作）
+
+### 目標
+- 將 News API 代理遷移到 Serverless
+- 注意：SQLite cache 在 Serverless 不可用，需改用其他方案
 
 ---
 
