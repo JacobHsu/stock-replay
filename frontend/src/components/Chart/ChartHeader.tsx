@@ -175,7 +175,7 @@ export default function ChartHeader({
         </div>
 
         {/* Right: Mode Switcher */}
-        <div className="flex items-center gap-3">
+        <div className="hidden items-center gap-3">
           {/* Mode Switch Button Group */}
           <div className="inline-flex bg-[#2A2E39] rounded-md overflow-hidden">
             <button
@@ -202,6 +202,7 @@ export default function ChartHeader({
             </button>
           </div>
         </div>
+
       </div>
 
       {/* Time Period Switcher */}
