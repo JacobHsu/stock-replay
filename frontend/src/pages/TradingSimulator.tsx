@@ -93,6 +93,8 @@ const getInitialSymbol = (): string => {
 
 export default function TradingSimulator() {
   const [symbol, setSymbol] = useState(getInitialSymbol())
+  // displaySymbol 只在資料載入完成後才更新，避免 TradingViewChart 提前切換造成空白閃爍
+  const [displaySymbol, setDisplaySymbol] = useState(getInitialSymbol())
   const [period, setPeriod] = useState('1mo')
   const [playbackId, setPlaybackId] = useState<string | null>(null)
   const [chartData, setChartData] = useState<CandleData[]>([])
@@ -125,42 +127,55 @@ export default function TradingSimulator() {
   const [showNewsModal, setShowNewsModal] = useState(false)
   
   const playIntervalRef = useRef<number | null>(null)
+  // 用來跳過 mount 時 [symbol, period] effect 的首次觸發（mount effect 已處理）
+  const isFirstSymbolRender = useRef(true)
+  // 用來識別最新一次 load，忽略過時的 async 結果
+  const loadVersionRef = useRef(0)
 
   // Phase 4: Local trading for serverless mode
   const { resetAccount, getAccountStatus: getLocalAccountStatus, localBuy, localSell } = useLocalTrading(symbol)
 
   // Initialize playback session
   const initializePlayback = async (withNews: boolean = false) => {
+    // 每次 load 遞增版本號，用來忽略過時的 async 結果
+    loadVersionRef.current += 1
+    const currentVersion = loadVersionRef.current
+
     setLoading(true)
     setError(null)
-    setChartData([])
     setAllCandles([])
     setTradeHistory([])
     setNewsEnabled(withNews)
     setNewsMarkers(new Set())
     setCurrentNewsList([])
     setShowNewsModal(false)
-    
+
     try {
       if (isServerlessMode) {
         // ============ Serverless 模式 ============
         // 一次從 serverless 取得所有 K 線，前端管理 playback
         console.log('[initializePlayback] 🚀 Serverless mode')
         const response = await getStockDataFromServerless(symbol, { period })
+
+        // 若有更新的 load 已啟動，丟棄此次結果
+        if (currentVersion !== loadVersionRef.current) return
+
         console.log('[initializePlayback] Serverless response:', response.total_count, 'candles')
-        
+
         setAllCandles(response.data)
         setTotalCount(response.total_count)
         setCurrentIndex(0)
         setSessionKey(prev => prev + 1)
         setPriceRange(response.price_range)
         setIsInitialized(true)
-        // 不設 playbackId（serverless 不需要）
         setPlaybackId('serverless')
-        
+        setDisplaySymbol(symbol)
+
         // 顯示第一根 K 線
         if (response.data.length > 0) {
           setChartData([response.data[0]])
+        } else {
+          setChartData([])
         }
 
         // Phase 4: 建立本地交易帳戶
@@ -170,7 +185,7 @@ export default function TradingSimulator() {
           setAccountStatus(initialStatus)
           setTradingAccountId('local')
         }
-        
+
         // Fetch news if enabled
         if (withNews && response.all_dates) {
           await initializeNews({ symbol, period }, response.all_dates)
@@ -178,35 +193,42 @@ export default function TradingSimulator() {
       } else {
         // ============ Backend 模式（原始邏輯）============
         const requestData: any = { symbol, period }
-        
+
         console.log('[initializePlayback] 📦 Backend mode')
         const response = await startPlayback(requestData)
+
+        if (currentVersion !== loadVersionRef.current) return
+
         console.log('[initializePlayback] Response:', response)
-        
+
         setPlaybackId(response.playback_id)
         setTotalCount(response.total_count)
         setCurrentIndex(response.current_index)
         setSessionKey(prev => prev + 1)
         setPriceRange(response.price_range)
         setIsInitialized(true)
-        
+        setDisplaySymbol(symbol)
+
         if (response.current_data) {
           setChartData([response.current_data])
         }
 
         // Create trading account automatically
         await initializeTradingAccount(response.playback_id)
-        
+
         // Fetch news if enabled
         if (withNews && response.all_dates) {
           await initializeNews(requestData, response.all_dates)
         }
       }
     } catch (err) {
+      if (currentVersion !== loadVersionRef.current) return
       setError(err instanceof Error ? err.message : 'Failed to initialize playback')
       console.error('Playback initialization error:', err)
     } finally {
-      setLoading(false)
+      if (currentVersion === loadVersionRef.current) {
+        setLoading(false)
+      }
     }
   }
   
@@ -604,13 +626,16 @@ export default function TradingSimulator() {
     }
   }, [newsMode])
   
-  // Handle symbol or time range change - reload data if already initialized
+  // Handle symbol or time range change - reload data
+  // isFirstSymbolRender 跳過 mount 時的首次觸發（mount effect 已處理）
   useEffect(() => {
-    if (isInitialized) {
-      setIsPlaying(false)
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
-      initializePlayback(newsMode)
+    if (isFirstSymbolRender.current) {
+      isFirstSymbolRender.current = false
+      return
     }
+    setIsPlaying(false)
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    initializePlayback(newsMode)
   }, [symbol, period])
 
   return (
@@ -661,7 +686,7 @@ export default function TradingSimulator() {
             {symbol.endsWith('.TW') ? (
               <YahooFinanceChart symbol={symbol} period={period} height={380} />
             ) : (
-              <TradingViewChart symbol={symbol} period={period} height={380} />
+              <TradingViewChart symbol={displaySymbol} period={period} height={380} />
             )}
             
             {/* Playback Chart */}
@@ -730,7 +755,7 @@ export default function TradingSimulator() {
             {symbol.endsWith('.TW') ? (
               <YahooFinanceChart symbol={symbol} period={period} height={380} />
             ) : (
-              <TradingViewChart symbol={symbol} period={period} height={380} />
+              <TradingViewChart symbol={displaySymbol} period={period} height={380} />
             )}
           </div>
           <div className="lg:col-span-1">

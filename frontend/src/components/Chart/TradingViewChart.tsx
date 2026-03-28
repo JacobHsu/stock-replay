@@ -15,6 +15,7 @@ declare global {
 function TradingViewChart({ symbol, period = '1mo', height = 400 }: TradingViewChartProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const widgetRef = useRef<any>(null)
+  const isWidgetReadyRef = useRef(false)
 
   // Convert yfinance symbol to TradingView symbol format
   const convertToTradingViewSymbol = (symbol: string): string => {
@@ -68,23 +69,34 @@ function TradingViewChart({ symbol, period = '1mo', height = 400 }: TradingViewC
     function initWidget() {
       if (!containerRef.current || !window.TradingView) return
 
-      // Clean up previous widget
-      if (widgetRef.current) {
+      const tvSymbol = convertToTradingViewSymbol(symbol)
+
+      // 若 widget 已存在且已就緒，直接切換 symbol，避免 iframe 空白閃爍
+      if (widgetRef.current && isWidgetReadyRef.current) {
+        try {
+          widgetRef.current.activeChart().setSymbol(tvSymbol)
+          return
+        } catch {
+          // fallback to full reinit if in-place update fails
+        }
+      }
+
+      // 首次初始化或 fallback：清除後重建
+      isWidgetReadyRef.current = false
+      if (containerRef.current) {
         containerRef.current.innerHTML = ''
       }
 
-      // Create new widget
       widgetRef.current = new window.TradingView.widget({
         container_id: containerRef.current.id,
         autosize: false,
         width: '100%',
         height: height,
-        symbol: convertToTradingViewSymbol(symbol),
+        symbol: tvSymbol,
         interval: 'D',
-        // range: getTradingViewRange(period), // Set time range based on period
         timezone: 'Asia/Taipei',
         theme: 'dark',
-        style: '1', // Candlestick
+        style: '1',
         locale: 'zh_TW',
         toolbar_bg: '#131722',
         enable_publishing: false,
@@ -105,6 +117,9 @@ function TradingViewChart({ symbol, period = '1mo', height = 400 }: TradingViewC
         hotlist: false,
         calendar: false,
         studies_overrides: {},
+        onChartReady: () => {
+          isWidgetReadyRef.current = true
+        },
       })
     }
 
@@ -112,6 +127,7 @@ function TradingViewChart({ symbol, period = '1mo', height = 400 }: TradingViewC
       if (widgetRef.current && containerRef.current) {
         containerRef.current.innerHTML = ''
         widgetRef.current = null
+        isWidgetReadyRef.current = false
       }
     }
   }, [symbol, period, height])

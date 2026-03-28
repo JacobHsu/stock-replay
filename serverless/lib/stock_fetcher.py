@@ -55,15 +55,19 @@ def fetch_stock_data(
         if data.index.tz is not None:
             data.index = data.index.tz_localize(None)
 
-        # Convert DataFrame to list of dicts
+        # Convert DataFrame to list of dicts, skipping rows with null/NaN OHLC values
+        import math
         candles = []
         for timestamp, row in data.iterrows():
+            o, h, l, c = row["Open"], row["High"], row["Low"], row["Close"]
+            if any(v is None or (isinstance(v, float) and math.isnan(v)) for v in (o, h, l, c)):
+                continue
             candles.append({
                 "timestamp": timestamp.isoformat(),
-                "open": round(float(row["Open"]), 2),
-                "high": round(float(row["High"]), 2),
-                "low": round(float(row["Low"]), 2),
-                "close": round(float(row["Close"]), 2),
+                "open": round(float(o), 2),
+                "high": round(float(h), 2),
+                "low": round(float(l), 2),
+                "close": round(float(c), 2),
                 "volume": int(row["Volume"]),
             })
 

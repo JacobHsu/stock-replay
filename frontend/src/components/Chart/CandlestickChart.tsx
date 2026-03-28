@@ -181,14 +181,19 @@ export default function CandlestickChart({
     // Store current price range
     currentPriceRangeRef.current = { min: minPrice, max: maxPrice }
 
-    // Transform data - show all data
-    const visibleData = data.map((item) => ({
-      time: (new Date(item.timestamp).getTime() / 1000) as Time,
-      open: item.open,
-      high: item.high,
-      low: item.low,
-      close: item.close,
-    }))
+    // Transform data - filter out candles with null/NaN OHLC values (yfinance edge cases)
+    const visibleData = data
+      .filter((item) =>
+        item.open != null && item.high != null && item.low != null && item.close != null &&
+        isFinite(item.open) && isFinite(item.high) && isFinite(item.low) && isFinite(item.close)
+      )
+      .map((item) => ({
+        time: (new Date(item.timestamp).getTime() / 1000) as Time,
+        open: item.open,
+        high: item.high,
+        low: item.low,
+        close: item.close,
+      }))
 
     candlestickSeriesRef.current.setData(visibleData)
 

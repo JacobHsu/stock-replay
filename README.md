@@ -103,8 +103,11 @@ make run
 # 同時啟動前後端
 .\run.ps1 run
 
-# 或只啟動後端
+# 或只啟動後端（Port 8888）
 .\run.ps1 backend
+
+# 或只啟動 Serverless 後端（Port 8889，Preview）
+.\run.ps1 serverless
 
 # 或只啟動前端
 .\run.ps1 frontend
@@ -134,16 +137,21 @@ run.bat frontend
 
 開啟兩個 PowerShell 視窗：
 
+**選項 A：使用標準後端（Port 8888）**
+
 視窗 1 - 啟動後端：
 ```powershell
-cd backend
 cd backend
 uv run python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8888
 ```
 
-#### Serverless 版本 (Preview)
+視窗 2 - 啟動前端：
+```powershell
+cd frontend
+npm run dev
+```
 
-如果你想測試 **Serverless 架構** 的版本（Port 8889），請使用以下指令：
+**選項 B：使用 Serverless 後端（Port 8889，Preview）**
 
 視窗 1 - 啟動 Serverless 後端：
 ```powershell
@@ -154,15 +162,13 @@ cd serverless
 視窗 2 - 啟動前端：
 ```powershell
 cd frontend
-# 確保 .env.local 中有設定 VITE_SERVERLESS_URL=http://localhost:8889
 npm run dev
 ```
 
-視窗 2 - 啟動前端：
-```powershell
-cd frontend
-npm run dev
-```
+> 💡 Serverless 版本需在 `frontend/.env.local` 中設定：
+> ```
+> VITE_SERVERLESS_URL=http://localhost:8889
+> ```
 
 幾秒後，系統會自動開啟：
 - 🎨 **操作介面**: http://localhost:5173
@@ -214,7 +220,8 @@ npm run dev
 |------|------|
 | `.\run.ps1 run` | 啟動前後端 |
 | `.\run.ps1 stop` | 關閉所有服務 |
-| `.\run.ps1 backend` | 只啟動後端 |
+| `.\run.ps1 backend` | 只啟動後端（Port 8888） |
+| `.\run.ps1 serverless` | 只啟動 Serverless 後端（Port 8889） |
 | `.\run.ps1 frontend` | 只啟動前端 |
 | `.\run.ps1 install` | 安裝依賴套件 |
 | `.\run.ps1 help` | 查看所有指令 |

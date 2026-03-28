@@ -3,7 +3,7 @@
 
 param(
     [Parameter(Position=0)]
-    [ValidateSet('run', 'backend', 'frontend', 'stop', 'install', 'help')]
+    [ValidateSet('run', 'run-serverless', 'backend', 'serverless', 'frontend', 'stop', 'install', 'help')]
     [string]$Command = 'run'
 )
 
@@ -43,6 +43,12 @@ function Start-Backend {
     Write-Host "🔧 Starting backend server only..." -ForegroundColor Yellow
     Set-Location backend
     uv run python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8888
+}
+
+function Start-Serverless {
+    Write-Host "⚡ Starting serverless backend only (port 8889)..." -ForegroundColor Yellow
+    Set-Location serverless
+    .venv\Scripts\uvicorn app:app --reload --port 8889
 }
 
 function Start-Frontend {
@@ -108,8 +114,9 @@ function Show-Help {
     Write-Host "  Available Commands" -ForegroundColor Cyan
     Write-Host "========================================" -ForegroundColor Cyan
     Write-Host ".\run.ps1 run       - Start both backend and frontend" -ForegroundColor White
-    Write-Host ".\run.ps1 backend   - Start backend only" -ForegroundColor White
-    Write-Host ".\run.ps1 frontend  - Start frontend only" -ForegroundColor White
+    Write-Host ".\run.ps1 backend      - Start backend only (port 8888)" -ForegroundColor White
+    Write-Host ".\run.ps1 serverless   - Start serverless backend only (port 8889)" -ForegroundColor White
+    Write-Host ".\run.ps1 frontend     - Start frontend only" -ForegroundColor White
     Write-Host ".\run.ps1 stop      - Stop all services" -ForegroundColor White
     Write-Host ".\run.ps1 install   - Install all dependencies" -ForegroundColor White
     Write-Host ".\run.ps1 help      - Show this help message" -ForegroundColor White
@@ -120,7 +127,8 @@ function Show-Help {
 # Main execution
 switch ($Command) {
     'run'      { Start-All }
-    'backend'  { Start-Backend }
+    'backend'    { Start-Backend }
+    'serverless' { Start-Serverless }
     'frontend' { Start-Frontend }
     'stop'     { Stop-All }
     'install'  { Install-Dependencies }
