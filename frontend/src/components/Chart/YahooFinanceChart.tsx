@@ -130,8 +130,12 @@ export default function YahooFinanceChart({ symbol, period = '1mo', height = 400
 
   // Generate TradingView URL
   const getTradingViewUrl = (): string => {
-    if (symbol.endsWith('.TW') || symbol.endsWith('.TWO')) {
-      const code = symbol.replace('.TW', '').replace('.TWO', '')
+    if (symbol.endsWith('.TWO')) {
+      const code = symbol.replace('.TWO', '')
+      return `https://tw.tradingview.com/symbols/TPEX-${code}/technicals/`
+    }
+    if (symbol.endsWith('.TW')) {
+      const code = symbol.replace('.TW', '')
       return `https://tw.tradingview.com/symbols/TWSE-${code}/technicals/`
     }
     // 處理虛擬幣（如 BTC-USD）

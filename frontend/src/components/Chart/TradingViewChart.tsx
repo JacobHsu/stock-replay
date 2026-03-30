@@ -38,21 +38,8 @@ function TradingViewChart({ symbol, period = '1mo', height = 400 }: TradingViewC
     return symbol
   }
 
-  // Convert period to TradingView range format
-  // const getTradingViewRange = (period: string) => {
-  //   switch (period) {
-  //     case '1mo':
-  //       return '1M'
-  //     case '3mo':
-  //       return '3M'
-  //     case '6mo':
-  //       return '6M'
-  //     case '1y':
-  //       return '12M'
-  //     default:
-  //       return '1M'
-  //   }
-  // }
+  // Convert period to TradingView range format (reserved)
+  // const getTradingViewRange = (period: string) => { ... }
 
   useEffect(() => {
     // Load TradingView script if not already loaded
@@ -101,7 +88,7 @@ function TradingViewChart({ symbol, period = '1mo', height = 400 }: TradingViewC
         toolbar_bg: '#131722',
         enable_publishing: false,
         hide_side_toolbar: false,
-        allow_symbol_change: false,
+        allow_symbol_change: true,
         save_image: false,
         studies: [
           'BB@tv-basicstudies',
@@ -134,8 +121,12 @@ function TradingViewChart({ symbol, period = '1mo', height = 400 }: TradingViewC
 
   // Generate TradingView URL
   const getTradingViewUrl = (): string => {
-    if (symbol.endsWith('.TW') || symbol.endsWith('.TWO')) {
-      const code = symbol.replace('.TW', '').replace('.TWO', '')
+    if (symbol.endsWith('.TWO')) {
+      const code = symbol.replace('.TWO', '')
+      return `https://tw.tradingview.com/symbols/TPEX-${code}/technicals/`
+    }
+    if (symbol.endsWith('.TW')) {
+      const code = symbol.replace('.TW', '')
       return `https://tw.tradingview.com/symbols/TWSE-${code}/technicals/`
     }
     // 處理虛擬幣（如 BTC-USD）

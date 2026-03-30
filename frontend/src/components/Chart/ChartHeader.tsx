@@ -215,25 +215,27 @@ export default function ChartHeader({
 
       </div>
 
-      {/* Time Period Switcher */}
+      {/* Time Period Switcher — 僅 Yahoo Finance chart (.TW) 顯示，TV widget 有內建時間軸 */}
       <div className="flex items-center gap-4">
-        <div className="inline-flex bg-[#2A2E39] rounded-md overflow-hidden">
-          {PERIOD_OPTIONS.map((option, index) => (
-            <button
-              key={option.value}
-              onClick={() => onPeriodChange(option.value)}
-              className={`px-4 py-1.5 text-sm font-semibold transition-all ${
-                index > 0 ? 'border-l border-[#1E222D]' : ''
-              } ${
-                period === option.value
-                  ? 'bg-[#3E4149] text-white'
-                  : 'text-[#787B86] hover:text-white hover:bg-[#363A45]'
-              }`}
-            >
-              {option.label}
-            </button>
-          ))}
-        </div>
+        {symbol.endsWith('.TW') && (
+          <div className="inline-flex bg-[#2A2E39] rounded-md overflow-hidden">
+            {PERIOD_OPTIONS.map((option, index) => (
+              <button
+                key={option.value}
+                onClick={() => onPeriodChange(option.value)}
+                className={`px-4 py-1.5 text-sm font-semibold transition-all ${
+                  index > 0 ? 'border-l border-[#1E222D]' : ''
+                } ${
+                  period === option.value
+                    ? 'bg-[#3E4149] text-white'
+                    : 'text-[#787B86] hover:text-white hover:bg-[#363A45]'
+                }`}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* 產業別隱藏連結列表（僅台股交易時段顯示）*/}
         {isTaiwanStock && isMarketHours && industries.length > 0 && (
