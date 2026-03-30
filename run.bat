@@ -20,8 +20,8 @@ goto help
 :run
 echo Starting StockReplay...
 echo ========================================
-echo Starting backend server...
-start "Backend Server" cmd /k "cd backend && uv run python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8888"
+echo Starting serverless backend...
+start "Serverless Backend" cmd /k "cd serverless && .venv\Scripts\uvicorn app:app --reload --port 8889"
 timeout /t 3 /nobreak >nul
 echo Starting frontend server...
 start "Frontend Server" cmd /k "cd frontend && npm run dev"
@@ -29,9 +29,9 @@ timeout /t 2 /nobreak >nul
 echo ========================================
 echo Services started successfully!
 echo ========================================
-echo Backend API:    http://localhost:8888
+echo Serverless API: http://localhost:8889
 echo Frontend App:   http://localhost:5173
-echo API Docs:       http://localhost:8888/docs
+echo API Docs:       http://localhost:8889/docs
 echo ========================================
 echo Close the terminal windows to stop services
 echo.
@@ -81,7 +81,7 @@ goto end
 echo ========================================
 echo   StockReplay - Commands
 echo ========================================
-echo run.bat run       - Start both backend and frontend
+echo run.bat run       - Start frontend and serverless backend (port 8889)
 echo run.bat backend   - Start backend only
 echo run.bat frontend  - Start frontend only
 echo run.bat stop      - Stop all services

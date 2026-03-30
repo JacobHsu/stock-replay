@@ -100,14 +100,14 @@ make run
 打開 PowerShell，執行：
 
 ```powershell
-# 同時啟動前後端
+# 同時啟動前端與 Serverless 後端
 .\run.ps1 run
 
-# 或只啟動後端（Port 8888）
-.\run.ps1 backend
-
-# 或只啟動 Serverless 後端（Port 8889，Preview）
+# 或只啟動 Serverless 後端（Port 8889）
 .\run.ps1 serverless
+
+# 或只啟動標準後端（Port 8888）
+.\run.ps1 backend
 
 # 或只啟動前端
 .\run.ps1 frontend
@@ -123,10 +123,10 @@ make run
 打開命令提示字元（CMD），執行：
 
 ```cmd
-REM 同時啟動前後端
+REM 同時啟動前端與 Serverless 後端
 run.bat run
 
-REM 或只啟動後端
+REM 或只啟動標準後端（Port 8888）
 run.bat backend
 
 REM 或只啟動前端
@@ -172,7 +172,7 @@ npm run dev
 
 幾秒後，系統會自動開啟：
 - 🎨 **操作介面**: http://localhost:5173
-- 📚 **API 文件**: http://localhost:8888/docs
+- 📚 **API 文件**: http://localhost:8889/docs
 
 ## 🎮 怎麼使用？
 
@@ -218,7 +218,7 @@ npm run dev
 
 | 指令 | 用途 |
 |------|------|
-| `.\run.ps1 run` | 啟動前後端 |
+| `.\run.ps1 run` | 啟動前端與 Serverless 後端（Port 8889） |
 | `.\run.ps1 stop` | 關閉所有服務 |
 | `.\run.ps1 backend` | 只啟動後端（Port 8888） |
 | `.\run.ps1 serverless` | 只啟動 Serverless 後端（Port 8889） |
@@ -230,7 +230,7 @@ npm run dev
 
 | 指令 | 用途 |
 |------|------|
-| `run.bat run` | 啟動前後端 |
+| `run.bat run` | 啟動前端與 Serverless 後端（Port 8889） |
 | `run.bat stop` | 關閉所有服務 |
 | `run.bat backend` | 只啟動後端 |
 | `run.bat frontend` | 只啟動前端 |

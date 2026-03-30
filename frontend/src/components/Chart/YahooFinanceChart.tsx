@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { createChart, ColorType, IChartApi, ISeriesApi } from 'lightweight-charts'
-import { getHistoricalData } from '../../services/api'
+import { getHistoricalData, getStockDataFromServerless, isServerlessMode } from '../../services/api'
 
 interface YahooFinanceChartProps {
   symbol: string
@@ -67,7 +67,9 @@ export default function YahooFinanceChart({ symbol, period = '1mo', height = 400
       try {
         console.log('[YahooFinanceChart] Fetching data for:', symbol, 'period:', period)
         console.log('[YahooFinanceChart] API params:', { period })
-        const response = await getHistoricalData(symbol, { period: period || '1mo' })
+        const response = isServerlessMode
+          ? await getStockDataFromServerless(symbol, { period: period || '1mo' })
+          : await getHistoricalData(symbol, { period: period || '1mo' })
 
         console.log('[YahooFinanceChart] Response:', response)
         console.log('[YahooFinanceChart] Data count:', response.data.length)

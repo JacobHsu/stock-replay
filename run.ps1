@@ -19,21 +19,21 @@ function Start-All {
     Show-Header
     Write-Host "🚀 Starting StockReplay..." -ForegroundColor Green
     Write-Host "========================================" -ForegroundColor Cyan
-    
-    Write-Host "▶ Starting backend server..." -ForegroundColor Yellow
-    Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd backend; uv run python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8888"
+
+    Write-Host "▶ Starting serverless backend..." -ForegroundColor Yellow
+    Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd serverless; .venv\Scripts\uvicorn app:app --reload --port 8889"
     Start-Sleep -Seconds 3
-    
+
     Write-Host "▶ Starting frontend server..." -ForegroundColor Yellow
     Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd frontend; npm run dev"
     Start-Sleep -Seconds 2
-    
+
     Write-Host "========================================" -ForegroundColor Cyan
     Write-Host "✅ Services started successfully!" -ForegroundColor Green
     Write-Host "========================================" -ForegroundColor Cyan
-    Write-Host "🌐 Backend API:    http://localhost:8888" -ForegroundColor White
+    Write-Host "🌐 Serverless API: http://localhost:8889" -ForegroundColor White
     Write-Host "🌐 Frontend App:   http://localhost:5173" -ForegroundColor White
-    Write-Host "📚 API Docs:       http://localhost:8888/docs" -ForegroundColor White
+    Write-Host "📚 API Docs:       http://localhost:8889/docs" -ForegroundColor White
     Write-Host "========================================" -ForegroundColor Cyan
     Write-Host "Close the PowerShell windows to stop services" -ForegroundColor Gray
     Write-Host ""

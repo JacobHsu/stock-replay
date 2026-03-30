@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect, useRef, useMemo } from 'react'
 import StockSearch from '../StockSearch'
 import DayTradingButtons from '../DayTradingButtons'
 import CryptoButtons from '../CryptoButtons'
@@ -46,6 +46,7 @@ export default function ChartHeader({
   const [showStockSearch, setShowStockSearch] = useState(false)
   const [dayTradingStocks, setDayTradingStocks] = useState<DayTradingStock[]>([])
   const [isMarketHours, setIsMarketHours] = useState(false)
+  const hasAutoSelectedRef = useRef(false)
 
   // 判斷當前股票類型
   const isTaiwanStock = symbol.endsWith('.TW') || symbol.endsWith('.TWO')
@@ -76,6 +77,15 @@ export default function ChartHeader({
     try {
       const data = await getDayTradingLosers()
       setDayTradingStocks(data)
+
+      // 首次載入時，若預設是 .TW，自動切換到第一支 .TWO（有 TradingView 圖表）
+      if (!hasAutoSelectedRef.current && symbol.endsWith('.TW')) {
+        const firstTWO = data.find(s => s.symbol.endsWith('.TWO'))
+        if (firstTWO) {
+          hasAutoSelectedRef.current = true
+          onSymbolChange(firstTWO.symbol)
+        }
+      }
     } catch (error) {
       console.error('Failed to load day trading stocks:', error)
     }

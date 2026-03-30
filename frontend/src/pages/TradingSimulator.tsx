@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import CandlestickChart from '../components/Chart/CandlestickChart'
 import TradingViewChart from '../components/Chart/TradingViewChart'
-import YahooFinanceChart from '../components/Chart/YahooFinanceChart'
+import YahooFinanceChart from '../components/Chart/YahooFinanceChart' // reserved for future use
 import PlaybackControls from '../components/Player/PlaybackControls'
 import TradingPanel from '../components/Trading/TradingPanel'
 import NewsModal from '../components/News/NewsModal'
@@ -682,9 +682,10 @@ export default function TradingSimulator() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           {/* Left Column: Charts */}
           <div className="lg:col-span-2 space-y-3">
-            {/* Reference Chart - TradingView for US stocks, Yahoo Finance for Taiwan stocks */}
-            {symbol.endsWith('.TW') ? (
-              <YahooFinanceChart symbol={symbol} period={period} height={380} />
+            {/* Reference Chart - TWSE (.TW) uses Yahoo Finance (TWSE not on free TV widget)
+                TPEX (.TWO), US stocks, and Crypto use TradingView */}
+            {displaySymbol.endsWith('.TW') ? (
+              <YahooFinanceChart symbol={displaySymbol} period={period} height={380} />
             ) : (
               <TradingViewChart symbol={displaySymbol} period={period} height={380} />
             )}
@@ -752,8 +753,8 @@ export default function TradingSimulator() {
       {chartData.length === 0 && (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="lg:col-span-2">
-            {symbol.endsWith('.TW') ? (
-              <YahooFinanceChart symbol={symbol} period={period} height={380} />
+            {displaySymbol.endsWith('.TW') ? (
+              <YahooFinanceChart symbol={displaySymbol} period={period} height={380} />
             ) : (
               <TradingViewChart symbol={displaySymbol} period={period} height={380} />
             )}
