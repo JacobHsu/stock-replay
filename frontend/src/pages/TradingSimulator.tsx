@@ -36,7 +36,7 @@ const getInitialSymbol = (): string => {
         selectedSymbol = 'BTC-USD'
         break
       case 'TAIWAN':
-        selectedSymbol = '5274.TWO'
+        selectedSymbol = '006201.TWO'
         break
       case 'US':
         selectedSymbol = 'SPY'
@@ -79,7 +79,7 @@ const getInitialSymbol = (): string => {
   let reason = '非交易時段'
 
   if (isTaiwanMarketHours) {
-    selectedSymbol = '5274.TWO'
+    selectedSymbol = '006201.TWO'
     reason = '台股交易時段'
   } else if (isUSMarketHours) {
     selectedSymbol = 'SPY'
